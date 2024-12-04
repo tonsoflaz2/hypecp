@@ -1,0 +1,1 @@
+Server time: {{ date('Y-m-d h:i:s') }}
