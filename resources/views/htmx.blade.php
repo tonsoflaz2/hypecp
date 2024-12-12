@@ -10,8 +10,7 @@
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    
 
     <style>
         .copy-button {
@@ -21,13 +20,99 @@
             color: #ddd;
             cursor: pointer;
         }
+        .example i {
+            background: #eee;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: .9em;
+            color:#333;
+        }
+        .example p b {
+            color:black;
+            font-weight: bold;
+        }
+        .example p {
+            padding: 15px 15px 0px 15px;
+        }
+        .example button {
+
+          align-items: center;
+          appearance: none;
+          background-color: #3EB2FD;
+          background-image: linear-gradient(1deg, #4F58FD, #149BF3 99%);
+          background-size: calc(100% + 20px) calc(100% + 20px);
+          border-radius: 100px;
+          border-width: 0;
+          box-shadow: none;
+          box-sizing: border-box;
+          color: #FFFFFF;
+          cursor: pointer;
+          display: inline-flex;
+          font-family: CircularStd,sans-serif;
+          font-size: 1rem;
+          height: auto;
+          justify-content: center;
+          line-height: 1.5;
+          padding: 6px 20px;
+          position: relative;
+          text-align: center;
+          text-decoration: none;
+          transition: background-color .2s,background-position .2s;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+          vertical-align: top;
+          white-space: nowrap;
+          margin: 5px 0px;
+        }
+
+        .example button:active,
+        .example button:focus {
+          outline: none;
+        }
+
+        .example button:hover {
+          background-position: -20px -20px;
+        }
+
+        .example button:focus:not(:active) {
+          box-shadow: rgba(40, 170, 255, 0.25) 0 0 0 .125em;
+        }
+
+        .example input {
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            padding: 6px 10px;
+            min-width: 200px;
+            margin: 5px 0px;
+        }
+        .example select {
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            padding: 6px 10px;
+            min-width: 200px;
+            margin: 5px 0px;
+        }
+        #some-notification-target > div {
+            padding: 15px;
+            background: green;
+            color:white;
+        }
+    </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"> -->
+    <style>
+        pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}.hljs{color:#abb2bf;background:#282c34}.hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}.hljs-doctag,.hljs-formula,.hljs-keyword{color:#c678dd}.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#e06c75}.hljs-literal{color:#56b6c2}.hljs-addition,.hljs-attribute,.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#98c379}.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#d19a66}.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#61aeee}.hljs-built_in,.hljs-class .hljs-title,.hljs-title.class_{color:#e6c07b}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}.hljs-link{text-decoration:underline}
     </style>
 </head>
 <body>
 
     <div class="flex w-full min-h-screen bg-white">
         <div style="width: 350px;" 
-             class="bg-gray-200 h-screen overflow-scroll">
+             class="hidden md:block bg-gray-200 h-screen overflow-scroll">
             <div>
                 @include('htmx.sidebar')
             </div>
@@ -39,6 +124,10 @@
             <div class="">
                 @include('htmx.main')
             </div>
+        </div>
+        <div id="some-notification-target"
+             class="fixed top-0 right-0 m-8 bg-white">
+            
         </div>
     </div>
 
@@ -56,8 +145,6 @@
                 codeWrapper.appendChild(button);
 
             })
-            initCopyCodeBlocks();
-            initCopyCodeBlocks();
             initCopyCodeBlocks();
         });
 
