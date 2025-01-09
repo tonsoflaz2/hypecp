@@ -1,18 +1,47 @@
 
 <div id="htmx-sidebar" class="w-full">
-	<div style="margin: 15px; height: 320px; width: 320px;" class="border shadow bg-white rounded-lg" 	   src="/images/logo.png">
+	<div style="margin: 15px; height: 320px; width: 320px;" class="flex border shadow bg-white rounded-lg items-center text-center" src="/images/logo.png">
+		
+		<div class="mx-auto transform -rotate-12 text-blue-400 font-black text-8xl">
+			hype<br>
+			<span class="text-gray-900">cp</span>
+		</div>
 	</div>
+
 
 	<div id="htmx-attributes" 
 		 class="p-8 text-gray-500">
-		<a href="#htmx-requests" 
+
+		<a href="#htmx-essentials" 
 		   class="block font-bold">
-		   REQUESTS
+		   HTMX ESSENTIALS
 		</a>
 
 		<div class="ml-8">
 			<a href="#htmx-hx-get" 
-			   class="block hover:text-black">hx-get</a>	
+			   class="block hover:text-black">1. hx-get</a>
+		</div>
+		<div class="ml-8">
+			<a href="#htmx-hx-trigger" 
+			   class="block hover:text-black">2. hx-trigger</a>
+		</div>
+		<div class="ml-8">
+			<a href="#htmx-hx-target" 
+			   class="block hover:text-black">3. hx-target</a>
+		</div>
+		<div class="ml-8">
+			<a href="#htmx-hx-swap" 
+			   class="block hover:text-black">4. hx-swap</a>
+		</div>
+
+		<a href="#htmx-requests" 
+		   class="block font-bold mt-4">
+		   REQUESTS
+		</a>
+
+		<div class="ml-8">
+			<!-- <a href="#htmx-hx-get" 
+			   class="block hover:text-black">hx-get</a> -->	
 			<a href="#htmx-hx-post" 
 			   class="block hover:text-black">hx-post</a>	
 			<a href="#htmx-hx-put" 

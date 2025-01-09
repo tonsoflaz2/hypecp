@@ -10,7 +10,7 @@
 		<pre><code class="hljs language-html rounded-t-xl lg:rounded-tr-none lg:rounded-l-xl">{!! htmlentities($code) !!}</code></pre>
 		</div>
 
-		<div class="w-full border working-example lg:w-2/5 p-4 rounded-b-xl lg:rounded-bl-none lg:rounded-r-xl text-blue-500 shadow">
+		<div class="w-full border working-example lg:w-2/5 p-4 rounded-b-xl lg:rounded-bl-none lg:rounded-r-xl text-blue-500 shadow-sm bg-slate-100">
 			{{ $code }}
 		</div>
 	</div>

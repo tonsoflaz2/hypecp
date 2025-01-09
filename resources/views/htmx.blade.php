@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hype cp | Hypermedia Copy & Paste</title>
 
-    <!-- <meta http-equiv="refresh" content="5"> -->
+    <meta http-equiv="refresh" content="5">
 
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
     <style>
         .copy-button {
@@ -100,8 +100,6 @@
         }
     </style>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css"> -->
     <style>
