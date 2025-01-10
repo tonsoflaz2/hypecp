@@ -1,12 +1,53 @@
 <div class="p-12 text-gray-500">
+
+	@php
+		$htmxcdn = "<script src='https://unpkg.com/htmx.org@2.0.4'></script>";
+	@endphp
+
+	<p class="mb-8 text-sm p-2 px-4 italic bg-blue-50 rounded-lg">
+		NOTE: If you don't know what htmx is, you should check out <a class="text-blue-500 font-bold" target="_blank" href="https://htmx.org">htmx.org</a> first!
+	</p>
+
 	<div id="htmx-requests"
-		 class="font-black text-gray-700 text-3xl border-b-8 pb-4">
-		REQUESTS
+		 class="font-black text-gray-700 text-3xl pb-4 border-b-4">
+		HTMX ESSENTIALS
+	</div>
+
+	
+
+	<p class="p-4">
+		Before you get started, be sure to include the htmx cdn at the top of your page:
+	</p>
+
+	<div class="lg:flex w-full">
+		<div class="w-full code-block relative">
+		<pre><code class="hljs language-html rounded-xl">{!! htmlentities($htmxcdn) !!}</code></pre>
+		</div>
+	</div>
+
+	
+
+	<div class="p-4">
+		There are 4 primary attributes that you will need to do 80% (more like 99%) of your work on your htmx sites. They are: 
+		<ol class="list-decimal m-4 ml-8">
+			<li><b>hx-get</b> - This creates a simple GET ajax request to the url you specify. i.e. <i>hx-get="/examples/1/details"</i></li>
+			<li><b>hx-trigger</b> - This decides how to trigger the ajax request in <i>hx-get</i>. i.e. <i>hx-trigger="click"</i></li>
+			<li><b>hx-target</b> - This uses a css selector to decide where in the dom you will place the returned html from the <i>hx-get</i>. i.e. <i>hx-target="#target-div"</i></li>
+			<li><b>hx-swap</b> - This decides <i>how</i> you will swap the html into the dom, i.e. <i>hx-swap="outerHTML"</i></li>
+		</ol>
+		Using these 4 attributes allows you to trigger requests and place data from your server anywhere into your page.
+
+		<div class="my-4 bg-blue-50 p-4 rounded-lg italic">
+			Goal: You need to click a specific div on the page to load dynamic data from the server into another div on the page.
+		</div>
+
+
+		This next section of examples will build on each of these 4 essential htmx attributes to get to accomplish that goal.
 	</div>
 
 	<div id="htmx-hx-get"
 		 class="mt-8 text-xl font-bold text-black">
-		hx-get
+		1. hx-get
 	</div>
 
 
