@@ -10,3 +10,6 @@ Route::view('demo', 'demo');
 Route::view('/htmx/time', 'htmx.responses.time');
 Route::view('/htmx/form', 'htmx.responses.form');
 
+// ======================> RANDOM
+Route::view('big-html', 'random.big-html');
+
