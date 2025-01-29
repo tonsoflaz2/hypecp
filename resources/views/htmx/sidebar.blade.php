@@ -34,6 +34,11 @@
 			   class="block hover:text-black">4. hx-swap</a>
 		</div>
 
+		<div class="ml-8 mt-2">
+			<a href="#htmx-hx-essentials-examples" 
+			   class="block hover:text-black">Essentials examples</a>
+		</div>
+
 		<a href="#htmx-requests" 
 		   class="block font-bold mt-4">
 		   REQUESTS
