@@ -279,7 +279,7 @@
 			</p>
 
 			<p>
-				<div class="text-sm italic bg-blue-50 p-4 rounded-lg"> Check out the folowing examples for a few ways to fix this form example.</div>
+				<div class="text-sm italic bg-blue-50 p-4 rounded-lg"> Check out the following examples for a few ways to fix this form example.</div>
 			</p>
 		</x-slot>
 	</x-htmx-example>
@@ -345,37 +345,11 @@
 		</x-slot>
 	</x-htmx-example>
 
-	<x-htmx-example>
-		<x-slot:title>
-			
-		</x-slot>
-
-		<x-slot:code>
-
-		</x-slot>
-
-		<x-slot:description>
-			
-		</x-slot>
-	</x-htmx-example>
-
-	<x-htmx-example>
-		<x-slot:title>
-			
-		</x-slot>
-
-		<x-slot:code>
-
-		</x-slot>
-
-		<x-slot:description>
-			
-		</x-slot>
-	</x-htmx-example>
+	
 
 	<div id="htmx-hx-trigger"
 		 class="mt-8 text-xl font-bold text-black">
-		hx-trigger
+		2. hx-trigger
 	</div>
 
 	<x-htmx-example>
@@ -399,6 +373,11 @@
 		</x-slot>
 	</x-htmx-example>
 
+	<div id="htmx-hx-target"
+		 class="mt-8 text-xl font-bold text-black">
+		3. hx-target
+	</div>
+
 	<x-htmx-example>
 		<x-slot:title>
 			
@@ -406,6 +385,98 @@
 
 		<x-slot:code>
 
+		</x-slot>
+
+		<x-slot:description>
+			
+		</x-slot>
+	</x-htmx-example>
+
+
+	<div id="htmx-hx-swap"
+		 class="mt-8 text-xl font-bold text-black">
+		4. hx-swap
+	</div>
+
+	<x-htmx-example>
+		<x-slot:title>
+			
+		</x-slot>
+
+		<x-slot:code>
+
+		</x-slot>
+
+		<x-slot:description>
+			
+		</x-slot>
+	</x-htmx-example>
+
+	<div id="htmx-hx-essentials-examples"
+		 class="mt-8 text-xl font-bold text-black">
+		Essentials examples
+	</div>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Dynamic Modal
+		</x-slot>
+
+		<x-slot:code>
+<style>
+    dialog {
+        display: flex;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.9);
+    }
+    dialog[open] {
+        display: flex;
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: inherit;
+        transition: opacity 0.1s ease-in,
+         			transform 0.1s ease-in;
+    }
+    dialog::backdrop {
+        background: rgba(0,0,0,0.3);
+        backdrop-filter: blur(3px);
+    }
+</style>
+
+<button hx-get="/examples/modal-form"
+        hx-trigger="mouseenter"
+        hx-target="#modal-content"
+        onclick="window.my_modal.showModal()">
+    Open Modal
+</button>
+
+<dialog id="my_modal" 
+		class="rounded-lg shadow-lg w-3/4">
+    <div class="w-full">
+        <div class="font-bold text-black text-lg border-b p-4">
+            <div class="float-right cursor-pointer text-gray-400 hover:text-gray-600 transition" 
+            	 onclick="window.my_modal.close()">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                	 fill="none" 
+                	 viewBox="0 0 24 24" 
+                	 stroke-width="1.5" 
+                	 stroke="currentColor" 
+                	 class="size-6">
+                  	<path stroke-linecap="round" 
+                  		  stroke-linejoin="round"d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </div>
+            Dynamic Modal Example
+        </div>
+
+        <div id="modal-content">
+            <div class="p-8 text-center text-xl text-gray-400">
+                Loading....
+            </div>
+        </div>
+    </div>
+</dialog>
 		</x-slot>
 
 		<x-slot:description>
