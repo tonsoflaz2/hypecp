@@ -28,12 +28,20 @@ return new class extends Migration
         Schema::connection('wave')->create('chats', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('room_id')->index();
-            $table->string('member_id')->index();
+            $table->unsignedInteger('member_id');
             $table->dateTime('sent_at')->nullable();
-            $table->text('content');
+            $table->text('content')->nullable();
+            $table->bigInteger('updated_milliseconds');
             $table->softDeletes();
             $table->timestamps();
+
+            // Add a composite index on room_id and sent_at
+            $table->index(['room_id', 'sent_at']);
+            $table->index(['room_id', 'updated_milliseconds']);
+            $table->index(['room_id', 'member_id']);
+
         });
+
     }
 
     /**

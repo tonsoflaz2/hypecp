@@ -13,7 +13,6 @@ class Chat extends Model
     use SoftDeletes;
     
     protected $casts = [
-        'sent_at' => 'datetime',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
@@ -52,6 +51,15 @@ class Chat extends Model
             $diffInMonths < 12 => "{$diffInMonths}mo ago",
             default => "{$diffInYears}y ago",
         };
+    }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::saving(function ($chat) {
+            $chat->updated_milliseconds = round(microtime(true) * 1000); // Current time in milliseconds
+        });
     }
 }
 
