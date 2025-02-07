@@ -13,6 +13,7 @@ class Chat extends Model
     use SoftDeletes;
     
     protected $casts = [
+        'sent_at'    => 'datetime',
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
