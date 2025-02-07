@@ -63,7 +63,7 @@
 
         </div>
 
-        <div data-on-load="{{ datastar()->get('_datastar/room-updater') }}"></div>
+        
 
         <div id="chat-container" data-signals-room_id="{{ $room->id }}"
              class="absolute z-10 bottom-0 w-full">
@@ -82,13 +82,11 @@
                     @endif
 
                 </div>
-                <div class="text-gray-500 absolute right-16 text-sm bottom-8">
-                    <a class="flex" target="blank" href="https://data-star.dev">
-                        Powered by <img class="ml-2 h-6 w-auto" src="https://data-star.dev/static/images/rocket-304e710dde0b42b15673e10937623789adf72cae569c0e0defe7ec21c0bdf293.webp" alt="Datastar">
-                    </a>
-                </div>
+                
             </div>
         </div>
+
+        <div data-on-load="{{ datastar()->get('_datastar/room-updater') }}"></div>
     </div>
 
     <script>
