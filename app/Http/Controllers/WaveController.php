@@ -15,7 +15,7 @@ class WaveController extends Controller
         $room->name = request('room_name');
         $room->code = strtoupper(Str::random(6));
         $room->save();
-        return redirect('wave/rooms/'.$room->code);
+        return redirect('wave/'.$room->code);
     }
     public function createMember()
     {
@@ -27,7 +27,7 @@ class WaveController extends Controller
 
         session([$room->code => ['member_id' => $member->id]]);
 
-        return redirect('wave/rooms/'.$room->code);
+        return redirect('wave/'.$room->code);
     }
 
     public function room($code)
