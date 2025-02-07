@@ -7,7 +7,7 @@
     // browser was killing
     ini_set('max_execution_time', 36000);
 
-    $last_updated = \Carbon\Carbon::now();
+    $last_updated = round(microtime(true) * 1000); 
     $sleeptime = 50 * 1000; // 1000 * milliseconds
 
 @endphp
@@ -16,17 +16,17 @@
 @while(true)
     @php
         $updates = \App\Models\Datastar\Chat::where('room_id', $room->id)
-                                   ->where('updated_at', '>', $last_updated)
+                                   ->where('updated_milliseconds', '>', $last_updated)
                                    ->withTrashed()
                                    ->count();                    
     @endphp
 
-    @if ($updates > 0 || $last_updated < \Carbon\Carbon::now()->subSeconds(20))
+    @if ($updates > 0 || $last_updated < round(microtime(true) * 1000) - 20000)
         @mergefragments
             @include('wave.room')
         @endmergefragments
 
-        @php($last_updated = \Carbon\Carbon::now())
+        @php($last_updated = round(microtime(true) * 1000))
 
         @executescript
             scrollToBottom();
