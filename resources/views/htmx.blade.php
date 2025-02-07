@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>hype cp | Hypermedia Copy & Paste</title>
 
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
     <!-- <meta http-equiv="refresh" content="5"> -->
 
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
