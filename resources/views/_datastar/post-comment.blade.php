@@ -13,9 +13,8 @@
     }
 
     if ($comment) {
-        $milliseconds = round(microtime(true) * 1000);
         $current_chat->content = $comment;
-        $current_chat->sent_at = $milliseconds;
+        $current_chat->sent_at = \Carbon\Carbon::now();
         $current_chat->save();
     } else {
         $current_chat->delete();
