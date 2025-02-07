@@ -25,5 +25,11 @@
           </button>
       </div>
 
+      <div class="text-gray-500 absolute right-4 text-sm bottom-3">
+                    <a class="flex" target="blank" href="https://data-star.dev">
+                        Powered by <img class="ml-2 h-6 w-auto" src="https://data-star.dev/static/images/rocket-304e710dde0b42b15673e10937623789adf72cae569c0e0defe7ec21c0bdf293.webp" alt="Datastar">
+                    </a>
+                </div>
+
   </div>
 </div>
