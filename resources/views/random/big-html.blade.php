@@ -56,16 +56,45 @@
             padding: 1rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        table {
+        .table {
             width: 100%;
             margin: 40px;
         }
-        td {
+        .row > div {
             vertical-align: top;
             border-top: 1px solid lightgray;
             padding: 5px;
         }
+        
+        .extra-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out, padding 0.3s ease-out;
+            padding: 0;
+        }
+        .expanded {
+            max-height: 200px; /* Adjust to fit content */
+            padding: 10px 0;
+        }
     </style>
+
+    <script>
+        document.addEventListener("click", function(event) {
+            if (event.target.classList.contains("expand-button")) {
+                let row = event.target.closest(".row");
+                let extraContent = row.querySelector(".extra-content");
+
+                // Toggle expansion with a smooth transition
+                if (extraContent.classList.contains("expanded")) {
+                    extraContent.classList.remove("expanded");
+                    event.target.textContent = "Expand";
+                } else {
+                    extraContent.classList.add("expanded");
+                    event.target.textContent = "Collapse";
+                }
+            }
+        });
+    </script>
 </head>
 <body>
 
@@ -84,11 +113,11 @@
 </nav>
 
 <h2>The large interactive Table</h2>
-<table style="width:100%">
-    @for ($i=0; $i<10000; $i++)
+<div class="table" style="width:100%;">
+    @for ($i=0; $i<1000; $i++)
         @include('random.big-html-row')
     @endfor
-</table>
+</div>
 
 @for ($i=0; $i<500; $i++)
 
