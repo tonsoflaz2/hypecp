@@ -19,7 +19,7 @@
                 hx-swap="outerHTML">
             Change the row
         </button>
-        <button class="expand-button">Expand</button>
+        <!-- <button class="expand-button">Expand</button> -->
     </div>
 </div>
 
