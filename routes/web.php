@@ -13,6 +13,8 @@ Route::view('/htmx/form', 'htmx.responses.form');
 
 // ======================> RANDOM
 Route::view('big-html', 'random.big-html');
+Route::view('big-html-row', 'random.big-html-row');
+Route::view('big-html-row-new', 'random.big-html-row-new');
 
 // ======================> DATASTAR
 Route::view('wave', 'wave.index');

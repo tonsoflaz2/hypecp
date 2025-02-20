@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sample Long HTML Page</title>
+    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,6 +56,15 @@
             padding: 1rem;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        table {
+            width: 100%;
+            margin: 40px;
+        }
+        td {
+            vertical-align: top;
+            border-top: 1px solid lightgray;
+            padding: 5px;
+        }
     </style>
 </head>
 <body>
@@ -72,6 +82,13 @@
         <li><a href="#section4">Section 4</a></li>
     </ul>
 </nav>
+
+<h2>The large interactive Table</h2>
+<table style="width:100%">
+    @for ($i=0; $i<10000; $i++)
+        @include('random.big-html-row')
+    @endfor
+</table>
 
 @for ($i=0; $i<500; $i++)
 
