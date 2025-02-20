@@ -115,7 +115,7 @@
 
 <div style="margin:40px; border: 1px solid lightgray;">
     <div class="table">
-        @for ($i=0; $i<1000; $i++)
+        @for ($i=0; $i<10000; $i++)
             @include('random.big-html-row')
         @endfor
     </div>
