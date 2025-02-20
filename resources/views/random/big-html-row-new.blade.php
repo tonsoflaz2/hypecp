@@ -23,6 +23,6 @@
                     hx-swap="outerHTML">
                 Change it back
             </button>
-        <button class="expand-button">Expand</button>
+        <!-- <button class="expand-button">Expand</button> -->
     </div>
 </div>
