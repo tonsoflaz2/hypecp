@@ -58,7 +58,6 @@
         }
         .table {
             width: 100%;
-            margin: 40px;
         }
         .row > div {
             vertical-align: top;
@@ -113,10 +112,13 @@
 </nav>
 
 <h2>The large interactive Table</h2>
-<div class="table" style="width:100%;">
-    @for ($i=0; $i<1000; $i++)
-        @include('random.big-html-row')
-    @endfor
+
+<div style="margin:40px; border: 1px solid lightgray;">
+    <div class="table">
+        @for ($i=0; $i<1000; $i++)
+            @include('random.big-html-row')
+        @endfor
+    </div>
 </div>
 
 @for ($i=0; $i<500; $i++)
