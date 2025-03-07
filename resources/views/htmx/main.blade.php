@@ -354,6 +354,186 @@
 
 	<x-htmx-example>
 		<x-slot:title>
+			Load html with "click" trigger
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="click"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div hx-get="/htmx/time"
+	 hx-trigger="click">
+	Click me to load html
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Put description here
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Load html on click but only once 
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="click once"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div hx-get="/htmx/time"
+	 hx-trigger="click once">
+	This will load just once
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Loads when input changed
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Load html when input is changed 
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="changed"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div id="select-target">
+	Load the html when the input is changed
+</div>
+<select hx-get="/htmx/time"
+	    hx-trigger="change"
+	    hx-target="#select-target">
+	<option value="">None</option>
+	<option value="1">One</option>
+	<option value="2">Two</option>
+</select>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Loads html when the select changes.
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Load html when the div is revealed
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="revealed"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div hx-get="/htmx/time"
+	 hx-trigger="revealed">
+	 When this gets to the to right place on the page, it will be replaced.
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Loads html when the select changes.
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Load html when the mouse goes over it
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="mouseenter"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div hx-get="/htmx/time"
+	 hx-trigger="mouseenter">
+	 This will be replaced when the mouse goes over it
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Loads html when the select changes.
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Load html when the mouse leaves a div
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="mouseleave"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div hx-get="/htmx/time"
+	 hx-trigger="mouseleave">
+	 This will be replaced when the mouse leaves the div
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Mouse leave
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Load html when any key is pressed on an input
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="keyup"</b>
+		</x-slot>
+
+		<x-slot:code>
+<input hx-get="/htmx/time"
+	   hx-trigger="keyup"
+	   hx-target="#input-keyup-div" />
+<div id="input-keyup-div">
+	This will get replaced
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				When key pressed
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
+	 
+
+	<x-htmx-example>
+		<x-slot:title>
 			Lazy-load html with "load" trigger
 		</x-slot>
 
@@ -373,6 +553,30 @@
 		</x-slot>
 	</x-htmx-example>
 
+	<x-htmx-example>
+		<x-slot:title>
+			Load html with the "every" trigger (aka polling)
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			<b>hx-trigger="every 5s"</b>
+		</x-slot>
+
+		<x-slot:code>
+<div hx-get="/htmx/time"
+	 hx-trigger="every 5s">
+	Polling every 5 seconds
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Put description here
+			</p>
+		</x-slot>
+	</x-htmx-example>
+
 	<div id="htmx-hx-target"
 		 class="mt-8 text-xl font-bold text-black">
 		3. hx-target
@@ -380,11 +584,59 @@
 
 	<x-htmx-example>
 		<x-slot:title>
-			
+			Put html into a target with an id on a click
 		</x-slot>
 
 		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#time-target-click">
+	Click me
+</button>
+<div id="time-target-click">
+	Replace this target on click
+</div>
+		</x-slot>
 
+		<x-slot:description>
+			
+		</x-slot>
+	</x-htmx-example>
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Put html into a target with a class on a click
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target=".time-target-click">
+	Click me
+</button>
+<div class="time-target-click">
+	Replace this target on click
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			
+		</x-slot>
+	</x-htmx-example>
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Put html into a target with the 'closest' css selector
+		</x-slot>
+
+		<x-slot:code>
+<div>
+	Replace this target on click
+	<button hx-get="/htmx/time"
+			hx-target="closest div">
+		Click me
+	</button>
+</div>
 		</x-slot>
 
 		<x-slot:description>
@@ -400,15 +652,184 @@
 
 	<x-htmx-example>
 		<x-slot:title>
-			
+			Swap data to replace the innerHTML
 		</x-slot>
 
 		<x-slot:code>
-
+<button hx-get="/htmx/time"
+		hx-target="#swap-target">
+	Click to replace html			
+</button>
+<div id="swap-target">
+	This will be replaced
+</div>
 		</x-slot>
 
 		<x-slot:description>
 			
+		</x-slot>
+	</x-htmx-example>
+
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Swap data to replace the outerHTML
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target"
+		hx-swap="outerHTML">
+	Click to replace html			
+</button>
+<div id="swap-target">
+	This will be replaced
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
+		</x-slot>
+	</x-htmx-example>
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Swap data to the target using beforebegin
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target-list"
+		hx-swap="beforebegin">
+	Click to place the new html before the list		
+</button>
+<ul id="swap-target-list" style="border: 2px solid gray; padding: 5px;">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
+		</x-slot>
+	</x-htmx-example>
+
+
+	<x-htmx-example>
+		<x-slot:title>
+			Swap data to the target using afterbegin
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target-list-after"
+		hx-swap="afterbegin">
+	Click to place the new html at the top of the list	
+</button>
+<ul id="swap-target-list-after" style="border: 2px solid gray; padding: 5px;">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Swap data to the target using beforeend
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target-list-bottom"
+		hx-swap="beforeend">
+	Click to place the new html at the bottom of the list	
+</button>
+<ul id="swap-target-list-bottom" style="border: 2px solid gray; padding: 5px;">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Swap data to the target using afterend
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target-list-under"
+		hx-swap="afterend">
+	Click to place the new html underneath the list	
+</button>
+<ul id="swap-target-list-under" style="border: 2px solid gray; padding: 5px;">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Delete a targeted item after loading
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target-list-delete"
+		hx-swap="delete">
+	Click to delete the list after the html loads
+</button>
+<ul id="swap-target-list-delete" style="border: 2px solid gray; padding: 5px;">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
+		</x-slot>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Do nothing on the swap
+		</x-slot>
+
+		<x-slot:code>
+<button hx-get="/htmx/time"
+		hx-target="#swap-target-list-none"
+		hx-swap="none">
+	Click to not change the the list after the html loads
+</button>
+<ul id="swap-target-list-none" style="border: 2px solid gray; padding: 5px;">
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+</ul>
+		</x-slot>
+
+		<x-slot:description>
+			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
 		</x-slot>
 	</x-htmx-example>
 
