@@ -34,34 +34,50 @@
 </head>
 <body class="p-32">
 
-    @for ($i=0; $i<10; $i++)
-        <button hx-get="/examples/modal-form"
-                hx-trigger="mouseenter"
-                hx-target="#modal-content"
-                class="block m-4 text-white bg-blue-500 hover:bg-blue-600 transition rounded-full hover:shadow px-4 py-2"
-                onclick="window.my_modal.showModal()">
-            Open Modal
-        </button>
-    @endfor
+    <div class="buttons">
+        @for ($i=1; $i<10000; $i++)
+            @php
+                $article = \App\Models\Article::find($i);
+                if (!$article) {
+                    $article = new \App\Models\Article;
+                    $article->content = "Article ".$i;
+                    $article->save();
+                }
+            @endphp
+            
+            @include('pages.examples.modal-row')
+
+        @endfor
+    </div>
 
 
-    <dialog id="my_modal" class="rounded-lg shadow-lg w-3/4">
+    <dialog id="my_modal_sm" class="rounded-lg shadow-lg w-1/3">
 
-        <div class="w-full">
-            <div class="font-bold text-black text-lg border-b p-4">
-                <div class="float-right cursor-pointer text-gray-400 hover:text-gray-600 transition" onclick="window.my_modal.close()">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                    </svg>
-                </div>
-                My Special Editing Modal
+        <div id="modal_content_sm" class="w-full">
+            <div class="p-8 text-center text-xl text-gray-400">
+                Loading....
             </div>
 
-            <div id="modal-content">
-                <div class="p-8 text-center text-xl text-gray-400">
-                    Loading....
-                </div>
+        </div>
+    </dialog>
+
+    <dialog id="my_modal_md" class="rounded-lg shadow-lg w-1/2">
+
+        <div id="modal_content_md" class="w-full">
+            <div class="p-8 text-center text-xl text-gray-400">
+                Loading....
             </div>
+
+        </div>
+    </dialog>
+
+    <dialog id="my_modal_lg" class="rounded-lg shadow-lg w-3/4">
+
+        <div id="modal_content_lg" class="w-full">
+            <div class="p-8 text-center text-xl text-gray-400">
+                Loading....
+            </div>
+
         </div>
     </dialog>
 </body>

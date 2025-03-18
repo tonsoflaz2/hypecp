@@ -7,6 +7,15 @@ Route::view('/', 'htmx');
 
 Route::view('demo', 'demo');
 
+Route::post('/examples/modal', function (Request $request) {
+	$article = App\Models\Article::find(request('id'));
+	$article->content = request('content');
+	$article->save();
+
+	return view('pages.examples.modal-row', compact('article'));
+	//return redirect()->back();
+});
+
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
 Route::view('/htmx/form', 'htmx.responses.form');

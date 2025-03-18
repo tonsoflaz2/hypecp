@@ -18,13 +18,15 @@
 
 		@php
 			$items = [
-				'Setup',
-				'Button',
-				'Open and Close Dialog',
-				'Vanilla CSS Styling',
-				'Tailwind Styling',
-				'Loading Content with Htmx',
-				'Next time: Updating Data, Reusing your modal!',
+				'Recap Hypermedia Modal',
+				'Reusing your modal',
+				'Clearing out on close',
+				'Race conditions',
+				'Creating persistent data',
+				'Updating data with modal',
+				'Smooth updating with htmx',
+				'Small, Medium, Large modals',
+				'Are we done?',
 			];
 
 			$count = 0;
@@ -38,7 +40,7 @@
 		<div id="main" class="w-full h-screen bg-gray-800 text-4xl font-bold text-gray-200 p-16 pt-32">
 			<div class="text-center text-5xl">
 				<!-- <span class="text-4xl pb-2">hypecp.com</span><br> -->
-				Htmx Dynamic Modal<br>
+				Htmx Dynamic Modal - Pt. 2<br>
 				<!-- <div class="text-gray-400 text-2xl pt-2">August 26th, 2024</div> -->
 			</div>
 			<div class="mt-16">
