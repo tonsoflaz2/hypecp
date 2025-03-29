@@ -16,6 +16,9 @@ Route::post('/examples/modal', function (Request $request) {
 	//return redirect()->back();
 });
 
+// ======================> DEMOS
+Route::view('demos/live-widget', 'demos.live-widget.index');
+
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
 Route::view('/htmx/form', 'htmx.responses.form');
