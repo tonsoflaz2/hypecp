@@ -18,7 +18,7 @@ Route::post('/examples/modal', function (Request $request) {
 
 // ======================> DEMOS
 Route::view('demos/live-widget', 'demos.live-widget.index');
-Route::view('demos/live-dash', 'demos.live-dash-oob.index');
+Route::view('demos/live-dashboard', 'demos.live-dash-oob.index');
 
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
