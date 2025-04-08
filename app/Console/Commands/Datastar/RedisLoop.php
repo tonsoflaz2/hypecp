@@ -15,8 +15,8 @@ class RedisLoop extends Command
     {
         $this->info('Starting Redis ripple loop. Press Ctrl+C to stop.');
 
-        $width = 80;
-        $height = 60;
+        $width = 60;
+        $height = 45;
 
         // Initialize grid
         $current = array_fill(0, $height, array_fill(0, $width, 0));

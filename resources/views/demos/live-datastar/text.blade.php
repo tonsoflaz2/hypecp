@@ -19,7 +19,11 @@
         }
         .grid {
             white-space: nowrap;
-                transform: rotateX(53deg) rotateZ(45deg) scale(1.8) translateX(150px) translateY(100px);
+                transform: rotateX(53deg) 
+                           rotateZ(45deg) 
+                           scale(2.4) 
+                           translateX(350px) 
+                           translateY(150px);
                 transform-style: preserve-3d;
         }
         /*.grid > span {
