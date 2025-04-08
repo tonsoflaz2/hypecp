@@ -20,7 +20,10 @@ Route::post('/examples/modal', function (Request $request) {
 Route::view('demos/live-widget', 'demos.live-widget.index');
 Route::view('demos/live-dashboard', 'demos.live-dash-oob.index');
 Route::view('demos/live-datastar', 'demos.live-datastar.index');
+Route::view('demos/datastar-pool', 'demos.live-datastar.pool');
+Route::view('demos/datastar-text', 'demos.live-datastar.text');
 Route::view('demos/live-datastar/stream', 'demos.live-datastar.stream');
+Route::view('demos/live-datastar/text-stream', 'demos.live-datastar.text-stream');
 Route::view('demos/live-datastar/ripple', 'demos.live-datastar.ripple');
 Route::view('demos/csvs', 'demos.csvs.index');
 

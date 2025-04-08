@@ -15,8 +15,8 @@ class RedisLoop extends Command
     {
         $this->info('Starting Redis ripple loop. Press Ctrl+C to stop.');
 
-        $width = 55;
-        $height = 40;
+        $width = 80;
+        $height = 60;
 
         // Initialize grid
         $current = array_fill(0, $height, array_fill(0, $width, 0));
@@ -36,19 +36,11 @@ class RedisLoop extends Command
                 echo "Signal $x $y $z\n";
                 if ($x >= 1 && $x < $width-1 && $y >= 1 && $y < $height-1) {
                     $previous[$y][$x] = $z; // Inject a ripple
-                    $previous[$y][$x-1] = 10;
-                    $previous[$y][$x+1] = 10;
-                    $previous[$y-1][$x] = 10;
-                    $previous[$y-1][$x-1] = 10;
-                    $previous[$y-1][$x+1] = 10;
-                    $previous[$y+1][$x] = 10;
-                    $previous[$y+1][$x-1] = 10;
-                    $previous[$y+1][$x+1] = 10; 
                 }
                 $redis->del('ripple_signal'); // Clear signal after use
             }
 
-            // if (rand(1,50) == 45) {
+            // if (rand(1,200) == 45) {
             //     $first = rand(2,$height-2);
             //     $second = rand(2,$width-2);
             //     $current[$first][$second] = rand(20,40);
@@ -112,6 +104,7 @@ class RedisLoop extends Command
                 echo "\n";
             }
             */
+            echo "Updated ripple frame at " . microtime()."\r";
             usleep(15000); // 20ms
         }
     }
