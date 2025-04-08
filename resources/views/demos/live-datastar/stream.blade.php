@@ -1,13 +1,11 @@
 
-@signals(x_y)
+@signals(x,y,z)
 
 @php 
     ignore_user_abort(false);
     ini_set('max_execution_time', 36000);
     $redis = \Illuminate\Support\Facades\Redis::connection();
     $oldgrid = json_decode($redis->get('ripple_grid'));
-    $max = 0;
-    $min = 0;
 @endphp
 
 @while(true)
