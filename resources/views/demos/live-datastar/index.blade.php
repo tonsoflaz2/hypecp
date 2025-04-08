@@ -48,7 +48,7 @@
     <!-- style="background-image: url(/images/pool.jpg);" -->
     <div class="grid" 
          id="rippleGrid">
-=======
+
 <body data-on-load="@get('/demos/live-datastar/stream')"
       data-on-click="@get('/demos/live-datastar/ripple?x='+evt.target.getAttribute('x')+'&y='+evt.target.getAttribute('y')+'&z=120')"
       data-on-mouseover="@get('/demos/live-datastar/ripple?x='+evt.target.getAttribute('x')+'&y='+evt.target.getAttribute('y')+'&z=20')">
