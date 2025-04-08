@@ -42,45 +42,27 @@
 
     </style>
 </head>
+
 <body data-on-load="@get('/demos/live-datastar/stream')">
 
     <!-- style="background-image: url(/images/pool.jpg);" -->
     <div class="grid" 
          id="rippleGrid">
+=======
+<body data-on-load="@get('/demos/live-datastar/stream')"
+      data-on-click="@get('/demos/live-datastar/ripple?x='+evt.target.getAttribute('x')+'&y='+evt.target.getAttribute('y')+'&z=120')"
+      data-on-mouseover="@get('/demos/live-datastar/ripple?x='+evt.target.getAttribute('x')+'&y='+evt.target.getAttribute('y')+'&z=20')">
+
+    <!-- style="background-image: url(/images/pool.jpg);" -->
+    <div class="grid" 
+         id="rippleGrid"
+         >
         @foreach ($grid as $y => $row)
             @foreach ($row as $x => $val)
                 <div class="cell" x="{{ $x }}" y="{{ $y }}"></div>
             @endforeach
         @endforeach
     </div>
-
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", () => {
-            const grid = document.getElementById("rippleGrid");
-
-            grid.addEventListener("click", function (e) {
-
-                const cell = e.target.closest(".cell");
-                if (!cell) return;
-
-                const x = cell.getAttribute("x");
-                const y = cell.getAttribute("y");
-
-                fetch(`/demos/live-datastar/ripple?x=${x}&y=${y}&z=150`);
-            });
-
-            grid.addEventListener("mouseover", function (e) {
-
-                const cell = e.target.closest(".cell");
-                if (!cell) return;
-
-                const x = cell.getAttribute("x");
-                const y = cell.getAttribute("y");
-
-                fetch(`/demos/live-datastar/ripple?x=${x}&y=${y}&z=20`);
-            });
-        });
-    </script>
 
 </body>
 </html>
