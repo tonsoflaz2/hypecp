@@ -45,8 +45,8 @@
 
 
 <body data-on-load="@get('/demos/live-datastar/stream')"
-      data-on-click="@get('/demos/live-datastar/ripple?x='+evt.target.getAttribute('x')+'&y='+evt.target.getAttribute('y')+'&z=120')"
-      data-on-mouseover="@get('/demos/live-datastar/ripple?x='+evt.target.getAttribute('x')+'&y='+evt.target.getAttribute('y')+'&z=20')">
+      data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
+      data-on-mouseover="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 20)">
 
     <!-- style="background-image: url(/images/pool.jpg);" -->
     <div class="grid" 
@@ -59,5 +59,10 @@
         @endforeach
     </div>
 
+    <script type="text/javascript">
+        function ripple(x, y, z) {
+            new Image().src = `/demos/live-datastar/ripple?x=${x}&y=${y}&z=${z}`;
+        }
+    </script>
 </body>
 </html>
