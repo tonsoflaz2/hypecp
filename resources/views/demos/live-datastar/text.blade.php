@@ -7,6 +7,7 @@
         $grid = json_decode($redis->get('ripple_grid'));
 
         //dd($grid);
+
     @endphp
 
     <title>Ripple Grid</title>
@@ -18,8 +19,8 @@
         }
         .grid {
             white-space: nowrap;
-            transform: rotateX(53deg) rotateZ(45deg) scale(1.8) translateX(100px) translateY(100px);
-            transform-style: preserve-3d;
+                transform: rotateX(53deg) rotateZ(45deg) scale(1.8) translateX(150px) translateY(100px);
+                transform-style: preserve-3d;
         }
         /*.grid > span {
             height:10px;
@@ -33,10 +34,28 @@
 
 
 <body data-on-load="@get('/demos/live-datastar/text-stream')"
-      data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
-      data-on-mouseover="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 20)">
+      data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)">
 
     <div class="grid" id="rippleGrid">
+        
+        @foreach ($grid as $y => $row)
+            @foreach ($row as $x => $val)
+
+                @php
+                    $ascii = asciiByWhitespace(abs($val));
+                @endphp
+               
+                @if ($val > 5)
+                    <span x="{{$x}}" y="{{$y}}" style="color: white;">{{ $ascii }}</span>
+                @elseif ($val < -1)
+                    <span x="{{$x}}" y="{{$y}}" style="color: black;">{{ $ascii }}</span>
+                @else
+                    <span x="{{$x}}" y="{{$y}}">{{ $ascii }}</span>
+                @endif
+
+            @endforeach
+            <br>
+        @endforeach
         
     </div>
 

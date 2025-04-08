@@ -3,6 +3,25 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WaveController;
 
+function asciiByWhitespace($value) {
+    // Clamp input value between 0 and 50
+    $value = max(0, min(10, $value));
+
+    // Ordered from most whitespace to most visually dense
+    $asciiScale = [
+        '.', '.', '`', ':', ',', '-', '~', '_', 'i', 'l',
+        '!', '|', '/', '\\', '(', ')', '[', ']', '{', '}',
+        '^', '<', '>', '=', '+', '*', '?', 't', 'r', 'c',
+        's', 'v', 'o', 'u', 'n', 'a', 'e', 'x', 'd', 'g',
+        'q', 'b', 'p', 'y', 'm', 'w', '#', '%', '&', '@',
+        'M', 'W'
+    ];
+
+    // Map 0–10 to the index of the array
+    $index = (int) round($value * (count($asciiScale) - 1) / 10);
+    return $asciiScale[$index];
+}
+
 Route::view('/', 'htmx');
 
 Route::view('demo', 'demo');
