@@ -29,17 +29,19 @@ class RedisLoop extends Command
 
         while (true) {
             // Check for any incoming ripple trigger
-            $signal = json_decode($redis->get('ripple_signal'), true);
-            if (isset($signal['x']) && isset($signal['y'])) {
+            if ($json_signal = $redis->get('ripple_signal')) {
+                $signal = json_decode($json_signal, true);
+                if (isset($signal['x']) && isset($signal['y'])) {
 
-                $x = (int)$signal['x'];
-                $y = (int)$signal['y'];
-                $z = (int)$signal['z'];
-                echo "Signal $x $y $z\n";
-                if ($x >= 1 && $x < $width-1 && $y >= 1 && $y < $height-1) {
-                    $previous[$y][$x] = $z; // Inject a ripple
+                    $x = (int)$signal['x'];
+                    $y = (int)$signal['y'];
+                    $z = (int)$signal['z'];
+                    echo "Signal $x $y $z\n";
+                    if ($x >= 1 && $x < $width-1 && $y >= 1 && $y < $height-1) {
+                        $previous[$y][$x] = $z; // Inject a ripple
+                    }
+                    $redis->del('ripple_signal'); // Clear signal after use
                 }
-                $redis->del('ripple_signal'); // Clear signal after use
             }
 
             // if (rand(1,200) == 45) {
@@ -107,7 +109,7 @@ class RedisLoop extends Command
             }
             */
             //echo "Updated ripple frame at " . microtime()."\r";
-            usleep(15000); // 20ms
+            usleep(10000); // 20ms
 
             $now = microtime(true);
             $fps = 1 / ($now - $lastTime);
