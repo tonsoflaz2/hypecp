@@ -33,19 +33,45 @@ class RipplesController extends Controller
                     $str = "";
                     foreach ($grid as $y => $row) {
                         foreach ($row as $x => $val) {
-                            $str .= $ascii = asciiByWhitespace(abs($val));
+                            if (!$val) {
+                                $str .= ".";
+                                continue;
+                            }
+                            $ascii = asciiByWhitespace(abs($val));
+
+                            if ($val > 1) {
+                                $str .= "<span style='color: #FFF;'>$ascii</span>";
+                            } elseif ($val < -1) {
+                                $str .= "<span style='color: #000;'>$ascii</span>";
+                            } else {
+                                $str .= $ascii;
+                            }
                         }
-                        $str .= "\n";
+                        $str .= "<br>";
                     }
                     
-                    $this->mergeSignals(['_contents' => $str]);
+                    //$this->mergeSignals(['_contents' => $str]);
 
-                    $str = "<div id='html' style='color:#FFF'>".nl2br($str)."</div>";
+                    $str = "<div id='html'>".$str."</div>";
+
+                    $str .= "<span id='fps_server'>".$redis->get('ripple_server_fps')."</span>";
+                    
+                    $str .= "<span id='fps_stream'>".$fps."</span>";
+
                     $this->mergeFragments($str);
                 }
 
                             
                 usleep(20000);
+
+                $now = microtime(true);
+                $delta = $now - $lastFrameTime;
+
+                if ($delta > 0) {
+                    $fps = round(1 / $delta);
+                }
+
+                $lastFrameTime = $now;
             }
         });
     }
