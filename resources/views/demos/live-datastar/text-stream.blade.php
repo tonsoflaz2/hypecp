@@ -5,10 +5,10 @@
     $redis = \Illuminate\Support\Facades\Redis::connection();
     $oldgrid = json_decode($redis->get('ripple_grid'));
 
-    //dd($oldgrid);
-
-    
+    $lastFrameTime = microtime(true);
+    $fps = 0;
 @endphp
+
 
 @while(true)
     @php
@@ -41,6 +41,8 @@
                     @endforeach
                 
             </div>
+            <span id="fps_server">{{ $redis->get('ripple_server_fps') }}</span>
+            <span id="fps_stream">{{ $fps }}</span>
             
         @endmergefragments
         @php
@@ -48,8 +50,18 @@
         @endphp
     @endif
 
+
     @php
         usleep(10000);
+
+        $now = microtime(true);
+        $delta = $now - $lastFrameTime;
+
+        if ($delta > 0) {
+            $fps = round(1 / $delta, 2);
+        }
+
+        $lastFrameTime = $now;
     @endphp
 
 @endwhile

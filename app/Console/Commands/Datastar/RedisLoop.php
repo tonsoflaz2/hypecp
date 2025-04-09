@@ -54,18 +54,15 @@ class RedisLoop extends Command
             //     $current[$first][$second] = rand(20,40);
             // }
 
-            $waveSpeedFactor = 0.25; 
             // Run one ripple step
             for ($y = 1; $y < $height - 1; $y++) {
                 for ($x = 1; $x < $width - 1; $x++) {
-                    $current[$y][$x] = $current[$y][$x] + $waveSpeedFactor * (
-                        (
-                            $previous[$y - 1][$x] +
-                            $previous[$y + 1][$x] +
-                            $previous[$y][$x - 1] +
-                            $previous[$y][$x + 1]
-                        ) / 2 - $current[$y][$x]
-                    );
+                    $current[$y][$x] = (
+                        $previous[$y - 1][$x] +
+                        $previous[$y + 1][$x] +
+                        $previous[$y][$x - 1] +
+                        $previous[$y][$x + 1]
+                    ) / 2 - $current[$y][$x];
 
                     $current[$y][$x] *= 0.98;
                 }
@@ -121,6 +118,8 @@ class RedisLoop extends Command
             $now = microtime(true);
             $fps = 1 / ($now - $lastTime);
             $lastTime = $now;
+
+            $redis->set('ripple_server_fps', round($fps, 2));
 
             echo "FPS: " . round($fps, 2) . "\r";
         }
