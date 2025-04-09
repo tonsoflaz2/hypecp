@@ -25,6 +25,8 @@ class RedisLoop extends Command
 
         $redis = Redis::connection();
 
+        $lastTime = microtime(true);
+
         while (true) {
             // Check for any incoming ripple trigger
             $signal = json_decode($redis->get('ripple_signal'), true);
@@ -59,17 +61,17 @@ class RedisLoop extends Command
                     $current[$y][$x] *= 0.98;
                 }
             }
-
+            
             // Round down to zero
             for ($y = 0; $y < $height; $y++) {
                 for ($x = 0; $x < $width; $x++) {
                     $current[$y][$x] = round($current[$y][$x], 3);
                     $previous[$y][$x] = round($previous[$y][$x], 3);
 
-                    if (abs($current[$y][$x]) < 0.5) {
+                    if (abs($current[$y][$x]) < 0.2) {
                         $current[$y][$x] = 0;
                     }
-                    if (abs($previous[$y][$x]) < 0.5) {
+                    if (abs($previous[$y][$x]) < 0.2) {
                         $previous[$y][$x] = 0;
                     }
                 }
@@ -84,7 +86,7 @@ class RedisLoop extends Command
                 $current[$j][0] = 0;
                 $current[$j][$width - 1] = 0;
             }
-
+            
 
             // Swap buffers
             $temp = $previous;
@@ -104,8 +106,14 @@ class RedisLoop extends Command
                 echo "\n";
             }
             */
-            echo "Updated ripple frame at " . microtime()."\r";
+            //echo "Updated ripple frame at " . microtime()."\r";
             usleep(15000); // 20ms
+
+            $now = microtime(true);
+            $fps = 1 / ($now - $lastTime);
+            $lastTime = $now;
+
+            echo "FPS: " . round($fps, 2) . "\r";
         }
     }
 }
