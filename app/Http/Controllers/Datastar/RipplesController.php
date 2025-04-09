@@ -13,6 +13,14 @@ class RipplesController extends Controller
 {
     use DatastarEventStream;
 
+    public function getNewRun($val)
+    {
+        if ($val > 5) {
+            return 'white';
+        }
+        return 'clear';
+    }
+
     public function textStream(): StreamedResponse
     {
         ignore_user_abort(false);
@@ -32,25 +40,40 @@ class RipplesController extends Controller
 
                     $str = "";
                     foreach ($grid as $y => $row) {
+                        $current_run = 'clear'; // white, black, clear
                         foreach ($row as $x => $val) {
+                            $new_run = $this->getNewRun($val);
+                            
+                            if ($new_run != $current_run) {
+                                if ($current_run != 'blank') {
+                                    $str .= "</span>";
+                                }
+                                if ($new_run == 'white') {
+                                    $str .= "<span style='color:#FFF;'>";
+                                }
+                                $current_run = $new_run;
+                            }
                             if (!$val) {
                                 $str .= ".";
                                 continue;
                             }
-                            $ascii = asciiByWhitespace(abs($val));
-
-                            if ($val > 1) {
-                                $str .= "<span style='color: #FFF;'>$ascii</span>";
-                            } elseif ($val < -1) {
-                                $str .= "<span style='color: #000;'>$ascii</span>";
-                            } else {
-                                $str .= $ascii;
+                            if ($val < -1) {
+                                $str .= "&nbsp;";
+                                continue;
                             }
+                            $ascii = asciiByWhitespace(abs($val));
+                            $str .= $ascii;                            
                         }
-                        $str .= "<br>";
+                        if ($current_run != 'blank') {
+                            $str .= "</span>";
+                        }
+                        $str .= "\n";
                     }
                     
                     //$this->mergeSignals(['_contents' => $str]);
+
+                    // for coordinates after transform
+                    $str .= '<div class="handle nw"></div><div class="handle ne"></div><div class="handle se"></div><div class="handle sw"></div>';
 
                     $str = "<div id='html'>".$str."</div>";
 
@@ -58,7 +81,7 @@ class RipplesController extends Controller
                     
                     $str .= "<span id='fps_stream'>".$fps."</span>";
 
-                    $this->mergeFragments($str);
+                    $this->mergeFragments(nl2br($str));
                 }
 
                             
@@ -76,3 +99,16 @@ class RipplesController extends Controller
         });
     }
 }
+
+/*
+    
+    $asciiScale = [
+        '.', '.', '`', ':', ',', '-', '~', '_', 'i', 'l',
+        '!', '|', '/', '\\', '(', ')', '[', ']', '{', '}',
+        '^', '<', '>', '=', '+', '*', '?', 't', 'r', 'c',
+        's', 'v', 'o', 'u', 'n', 'a', 'e', 'x', 'd', 'g',
+        'q', 'b', 'p', 'y', 'm', 'w', '#', '%', '&', '@',
+        'M', 'W'
+    ];
+
+*/

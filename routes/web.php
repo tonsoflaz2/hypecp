@@ -6,7 +6,7 @@ use App\Http\Controllers\Datastar\RipplesController;
 
 function asciiByWhitespace($value) {
     // Clamp input value between 0 and 50
-    $value = max(0, min(10, $value));
+    $value = max(0, min(50, $value));
 
     // Ordered from most whitespace to most visually dense
     $asciiScale = [
@@ -18,8 +18,8 @@ function asciiByWhitespace($value) {
         'M', 'W'
     ];
 
-    // Map 0–10 to the index of the array
-    $index = (int) round($value * (count($asciiScale) - 1) / 10);
+    // Map 0–50 to the index of the array
+    $index = (int) round($value * (count($asciiScale) - 1) / 50);
     return $asciiScale[$index];
 }
 
