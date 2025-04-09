@@ -38,7 +38,8 @@
 
 
 <body data-on-load="@get('/demos/live-datastar/text-stream')"
-      data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)">
+      data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
+      data-on-mouseover="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 20)">
 
     FPS Server: <span id="fps_server"></span><br>
     FPS Stream: <span id="fps_stream"></span>

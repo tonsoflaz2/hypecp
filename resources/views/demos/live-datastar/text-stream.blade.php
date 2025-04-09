@@ -19,26 +19,26 @@
         @mergefragments
             <div class="grid" id="rippleGrid">
         
-                    @foreach ($grid as $y => $row)
-                        @foreach ($row as $x => $val)
+                @foreach ($grid as $y => $row)
+                    @foreach ($row as $x => $val)
 
-                            @php
-                                $ascii = asciiByWhitespace(abs($val));
-                            @endphp
-                           
-                            @if ($val > 5)
-                                <span x="{{$x}}" y="{{$y}}" style="color: white;">{{ $ascii }}</span>
-                            @elseif ($val < -1)
-                                <span x="{{$x}}" y="{{$y}}" style="color: black;">{{ $ascii }}</span>
-                            @else
-                                <span x="{{$x}}" y="{{$y}}">{{ $ascii }}</span>
-                            @endif
-                                
+                        @php
+                            $ascii = asciiByWhitespace(abs($val));
+                        @endphp
+                       
+                        @if ($val > 5)
+                            <span x="{{$x}}" y="{{$y}}" style="color: white;">{{ $ascii }}</span>
+                        @elseif ($val < -1)
+                            <span x="{{$x}}" y="{{$y}}" style="color: black;">{{ $ascii }}</span>
+                        @else
+                            <span x="{{$x}}" y="{{$y}}">{{ $ascii }}</span>
+                        @endif
                             
-                            
-                        @endforeach
-                        <br>
+                        
+                        
                     @endforeach
+                    <br>
+                @endforeach
                 
             </div>
             <span id="fps_server">{{ $redis->get('ripple_server_fps') }}</span>
@@ -52,13 +52,13 @@
 
 
     @php
-        usleep(10000);
+        usleep(5000);
 
         $now = microtime(true);
         $delta = $now - $lastFrameTime;
 
         if ($delta > 0) {
-            $fps = round(1 / $delta, 2);
+            $fps = round(1 / $delta, 1);
         }
 
         $lastFrameTime = $now;

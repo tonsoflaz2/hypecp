@@ -113,15 +113,15 @@ class RedisLoop extends Command
             }
             */
             //echo "Updated ripple frame at " . microtime()."\r";
-            usleep(12000); // 20ms
+            usleep(24000); // 20ms
 
             $now = microtime(true);
             $fps = 1 / ($now - $lastTime);
             $lastTime = $now;
 
-            $redis->set('ripple_server_fps', round($fps, 2));
+            $redis->set('ripple_server_fps', round($fps, 1));
 
-            echo "FPS: " . round($fps, 2) . "\r";
+            echo "FPS: " . round($fps, 1) . "\r";
         }
     }
 }
