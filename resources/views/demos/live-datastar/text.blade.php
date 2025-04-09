@@ -26,10 +26,9 @@
                            translateY(150px);
                 transform-style: preserve-3d;
         }
-        /*.grid > span {
-            height:10px;
-            width:10px;
-        }*/
+        .grid > span {
+              
+        }
      
 
     </style>
@@ -37,12 +36,14 @@
 
 
 
-<body data-on-load="@get('/demos/live-datastar/text-stream')"
+<body data-on-load="{{ datastar()->get('demos.live-datastar.text-stream') }}"
       data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
       data-on-mouseover="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 20)">
 
-    FPS Server: <span id="fps_server"></span><br>
-    FPS Stream: <span id="fps_stream"></span>
+    <div style="background: black; margin: 5px; padding: 5px; z-index: 2; position: fixed;">
+        FPS Server: <span id="fps_server"></span><br>
+        FPS Stream: <span id="fps_stream"></span>
+    </div>
 
     <div class="grid" id="rippleGrid">
         
@@ -53,8 +54,10 @@
                     $ascii = asciiByWhitespace(abs($val));
                 @endphp
                
-                @if ($val > 5)
+                @if ($val > 10)
                     <span x="{{$x}}" y="{{$y}}" style="color: white;">{{ $ascii }}</span>
+                @elseif ($val > 2)
+                    <span x="{{$x}}" y="{{$y}}" style="color: #ccc;">{{ $ascii }}</span>
                 @elseif ($val < -1)
                     <span x="{{$x}}" y="{{$y}}" style="color: black;">{{ $ascii }}</span>
                 @else

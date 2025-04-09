@@ -48,11 +48,11 @@ class RedisLoop extends Command
                 $redis->del('ripple_signals');
             }
 
-            // if (rand(1,200) == 45) {
-            //     $first = rand(2,$height-2);
-            //     $second = rand(2,$width-2);
-            //     $current[$first][$second] = rand(20,40);
-            // }
+            if (rand(1,200) == 45) {
+                $first = rand(2,$height-2);
+                $second = rand(2,$width-2);
+                $current[$first][$second] = rand(20,40);
+            }
 
             // Run one ripple step
             for ($y = 1; $y < $height - 1; $y++) {
@@ -119,9 +119,9 @@ class RedisLoop extends Command
             $fps = 1 / ($now - $lastTime);
             $lastTime = $now;
 
-            $redis->set('ripple_server_fps', round($fps, 1));
+            $redis->set('ripple_server_fps', round($fps));
 
-            echo "FPS: " . round($fps, 1) . "\r";
+            echo "FPS: " . round($fps) . "\r";
         }
     }
 }

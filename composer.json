@@ -14,7 +14,7 @@
         "laravel/framework": "^11.31",
         "laravel/tinker": "^2.9",
         "predis/predis": "^2.3",
-        "putyourlightson/laravel-datastar": "^1.0.0-beta.1",
+        "putyourlightson/laravel-datastar": "^1.0.0-beta.7",
         "starfederation/datastar-php": "^1.0@beta"
     },
     "require-dev": {

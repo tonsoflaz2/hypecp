@@ -52,13 +52,13 @@
 
 
     @php
-        usleep(5000);
+        usleep(50000);
 
         $now = microtime(true);
         $delta = $now - $lastFrameTime;
 
         if ($delta > 0) {
-            $fps = round(1 / $delta, 1);
+            $fps = round(1 / $delta);
         }
 
         $lastFrameTime = $now;

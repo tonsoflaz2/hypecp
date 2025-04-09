@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WaveController;
+use App\Http\Controllers\Datastar\RipplesController;
 
 function asciiByWhitespace($value) {
     // Clamp input value between 0 and 50
@@ -45,6 +46,9 @@ Route::view('demos/live-datastar/stream', 'demos.live-datastar.stream');
 Route::view('demos/live-datastar/text-stream', 'demos.live-datastar.text-stream');
 Route::view('demos/live-datastar/ripple', 'demos.live-datastar.ripple');
 Route::view('demos/csvs', 'demos.csvs.index');
+
+Route::view('demos/pure-text', 'demos.live-datastar.pure-text');
+Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
