@@ -34,6 +34,10 @@ class RipplesController extends Controller
             return null;
         }
 
+        $sessionId = uniqid('session_', true);
+
+        $redis->sadd('visitors', $sessionId);
+
         $lastFrameTime = microtime(true);
         $fps = 0;
 
@@ -44,6 +48,7 @@ class RipplesController extends Controller
         return $this->getStreamedResponse(function() use ($redis, $oldgrid, $lastFrameTime, $fps, $white_max) {
 
             while(true) {
+
                 $grid = json_decode($redis->get('ripple_grid'));
                 
                 $total_white = 0;
@@ -95,6 +100,9 @@ class RipplesController extends Controller
                     $str .= "<span id='fps_server'>".$redis->get('ripple_server_fps')."</span>";
                     
                     $str .= "<span id='fps_stream'>".$fps."</span>";
+
+                    $count = $redis->hlen('ripple_users');
+                    $str .= "<span id='active_count'>".$count."</span>";
 
                     $this->mergeFragments(nl2br($str));
                 }
