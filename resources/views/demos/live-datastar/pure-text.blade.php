@@ -94,7 +94,7 @@
             Real-time interactivity from the server
             <br><br>
             <span style="color:white;font-weight:900;font-size:20px;">
-            <span id="active_count"></span></span> CONCURRENT USERS<br>
+            <span id="active_count"></span></span> USERS MAKING RIPPLES<br>
             <span id="visitor_count"></span> visits
             <br><br>
             A hypermedia project<br>
