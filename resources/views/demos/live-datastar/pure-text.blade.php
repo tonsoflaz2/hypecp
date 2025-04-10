@@ -88,13 +88,14 @@
             FPS Browse: <span id="fps_browse"></span>
         </div>
 
-        <div style="line-height: 15px; background: black; top: 0; right: 0; margin: 20px; padding: 5px; z-index: 2; position: fixed; text-align: right;">
+        <div style="line-height: 15px; top: 0; right: 0; margin: 20px; padding: 5px; z-index: 2; position: fixed; text-align: right;">
             <div style="font-size: 20px;">communal ripples</div>
             <br><br>
             Real-time interactivity from the server
             <br><br>
             <span style="color:white;font-weight:900;font-size:20px;">
-            <span id="active_count"></span></span> CONCURRENT USERS
+            <span id="active_count"></span></span> CONCURRENT USERS<br>
+            <span id="visitor_count"></span> visits
             <br><br>
             A hypermedia project<br>
             by Lazarus Morrison<br>

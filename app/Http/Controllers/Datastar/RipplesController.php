@@ -104,6 +104,9 @@ class RipplesController extends Controller
                     $count = $redis->hlen('ripple_users');
                     $str .= "<span id='active_count'>".$count."</span>";
 
+                    $vcount = $redis->scard('visitors');
+                    $str .= "<span id='visitor_count'>".$vcount."</span>";
+
                     $this->mergeFragments(nl2br($str));
                 }
 
