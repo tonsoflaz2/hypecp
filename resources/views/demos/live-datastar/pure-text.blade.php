@@ -180,9 +180,6 @@
 
             */
             (function () {
-                let updateCount = 0;
-                let lastUpdateTime = performance.now();
-
                 const fpsBrowseEl = document.getElementById('fps_browse');
                 const target = document.getElementById('html');
 
@@ -191,19 +188,32 @@
                     return;
                 }
 
-                const observer = new MutationObserver(() => {
-                    updateCount++;
-                    const now = performance.now();
+                // Stores the last 10 seconds of update counts
+                const updateHistory = new Array(10).fill(0);
+                let currentSecond = 0;
+                let currentCount = 0;
 
-                    if (now - lastUpdateTime >= 1000) {
-                        fpsBrowseEl.textContent = updateCount.toString();
-                        updateCount = 0;
-                        lastUpdateTime = now;
-                    }
+                // Track mutations as they happen
+                const observer = new MutationObserver(() => {
+                    currentCount++;
                 });
 
                 observer.observe(target, { childList: true, characterData: true, subtree: true });
+
+                // Every second, update the rolling history
+                setInterval(() => {
+                    updateHistory[currentSecond] = currentCount;
+                    currentSecond = (currentSecond + 1) % 10;
+
+                    const total = updateHistory.reduce((a, b) => a + b, 0);
+                    const average = (total / 10).toFixed();
+                    fpsBrowseEl.textContent = average;
+
+                    currentCount = 0;
+                }, 1000);
             })();
+
+
         </script>
 
             
