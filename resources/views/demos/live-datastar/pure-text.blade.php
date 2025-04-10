@@ -15,10 +15,10 @@
             #transformer {
                 pointer-events: none;
                 position: relative;
-                transform: rotateX(60deg) 
+                transform: rotateX(53deg) 
                            rotateZ(45deg) 
                            scale(2.4) 
-                           translateX(250px) 
+                           translateX(300px) 
                            translateY(150px);
                 transform-style: preserve-3d;
             }
@@ -78,10 +78,11 @@
 
     <body data-signals="{_contents: 'random text goes here'}"
           data-on-load="@get('/demos/pure-text/stream')"
-          data-on-click="console.log(evt.target);ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)">
+          data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
+          data-on-mouseover="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 15)">
 
 
-        <div style="background: black; margin: 5px; padding: 5px; z-index: 2; position: fixed;">
+        <div style="background: black; bottom: 0; margin: 5px; padding: 5px; z-index: 2; position: fixed;">
             FPS Server: <span id="fps_server"></span><br>
             FPS Stream: <span id="fps_stream"></span><br>
             FPS Browse: <span id="fps_browse"></span>

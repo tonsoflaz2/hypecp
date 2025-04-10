@@ -13,9 +13,12 @@ class RipplesController extends Controller
 {
     use DatastarEventStream;
 
+    protected $white_threshhold = 5;
+    protected $white_max_percent = 10;
+
     public function getNewRun($val)
     {
-        if ($val > 5) {
+        if ($val > $this->white_threshhold) {
             return 'white';
         }
         return 'clear';
@@ -27,15 +30,24 @@ class RipplesController extends Controller
         ini_set('max_execution_time', 36000);
         $redis = Redis::connection();
         $oldgrid = json_decode($redis->get('ripple_grid'));
+        if (!$oldgrid) {
+            return null;
+        }
 
         $lastFrameTime = microtime(true);
         $fps = 0;
 
-        return $this->getStreamedResponse(function() use ($redis, $oldgrid, $lastFrameTime, $fps) {
+        $squares = count($oldgrid) * count($oldgrid[0]);
+
+        $white_max = floor(($this->white_max_percent/100) * $squares);
+
+        return $this->getStreamedResponse(function() use ($redis, $oldgrid, $lastFrameTime, $fps, $white_max) {
 
             while(true) {
                 $grid = json_decode($redis->get('ripple_grid'));
                 
+                $total_white = 0;
+
                 if ($oldgrid != $grid) {
 
                     $str = "";
@@ -43,6 +55,10 @@ class RipplesController extends Controller
                         $current_run = 'clear'; // white, black, clear
                         foreach ($row as $x => $val) {
                             $new_run = $this->getNewRun($val);
+
+                            if ($new_run == 'white') {
+                                $total_white++;
+                            }
                             
                             if ($new_run != $current_run) {
                                 if ($current_run != 'blank') {
@@ -73,7 +89,6 @@ class RipplesController extends Controller
                     //$this->mergeSignals(['_contents' => $str]);
 
                     // for coordinates after transform
-                    $str .= '<div class="handle nw"></div><div class="handle ne"></div><div class="handle se"></div><div class="handle sw"></div>';
 
                     $str = "<div id='html'>".$str."</div>";
 
@@ -84,6 +99,11 @@ class RipplesController extends Controller
                     $this->mergeFragments(nl2br($str));
                 }
 
+                if ($total_white > $white_max) {
+                    $this->white_threshhold = max($this->white_threshhold + 1, 5);
+                } else {
+                    $this->white_threshhold = max($this->white_threshhold - 1, 5);
+                }
                             
                 usleep(20000);
 
