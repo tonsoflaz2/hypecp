@@ -768,7 +768,7 @@ rect.legend-mouseover-inactive,
 	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304,
 		U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }</style></head>
-  <body id="main" data-on-interval__duration.5s="@get('/demos/live-datastar')"
+  <body id="main"
         x-data="{ page: &#39;ecommerce&#39;, &#39;loaded&#39;: true, &#39;darkMode&#39;: false, &#39;stickyMenu&#39;: false, &#39;sidebarToggle&#39;: false, &#39;scrollTop&#39;: false }" x-init="
          darkMode = JSON.parse(localStorage.getItem(&#39;darkMode&#39;));
          $watch(&#39;darkMode&#39;, value =&gt; localStorage.setItem(&#39;darkMode&#39;, JSON.stringify(value)))" :class="{&#39;dark bg-gray-900&#39;: darkMode === true}" class="">
@@ -2110,6 +2110,7 @@ rect.legend-mouseover-inactive,
               <div class="col-span-12 xl:col-span-5">
                 <!-- ====== Chart Two Start -->
   <div id="user-activity"
+       data-on-interval__duration.5s="@get('/demos/live-datastar')"
          class="rounded-2xl border border-gray-200 bg-gray-100 dark:border-gray-800 dark:bg-white/[0.03]">
   <div class="shadow-default rounded-2xl bg-white px-5 pb-11 pt-5 dark:bg-gray-900 sm:px-6 sm:pt-6">
     <div class="flex justify-between">

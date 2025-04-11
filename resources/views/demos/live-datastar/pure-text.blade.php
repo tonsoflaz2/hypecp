@@ -57,6 +57,19 @@
                 font-size: 4px;
             }
 
+            @media(max-width: 768px) {
+                 #transformer {
+                    pointer-events: none;
+                    position: relative;
+                    transform: rotateX(53deg) 
+                               rotateZ(45deg) 
+                               scale(2.4) 
+                               translateX(-300px) 
+                               translateY(0px);
+                    transform-style: preserve-3d;
+                }   
+            }
+
 
         </style>
     </head>

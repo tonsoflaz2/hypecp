@@ -48,6 +48,7 @@ Route::view('demos/live-datastar/ripple', 'demos.live-datastar.ripple');
 Route::view('demos/csvs', 'demos.csvs.index');
 
 Route::view('demos/ripples', 'demos.live-datastar.pure-text');
+Route::view('demos/datastar-signals', 'demos.datastar-signals');
 Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 
 // ======================> RESPONSES
