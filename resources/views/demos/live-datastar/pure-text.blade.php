@@ -89,10 +89,10 @@
         }
     @endphp
 
-    <body data-signals="{_contents: 'random text goes here'}"
+    <body data-signals="{_contents: 'random text goes here', active_count:0}"
           data-on-load="@get('/demos/pure-text/stream')"
           data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
-          data-on-mouseover="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 15)">
+          data-on-mouseover="($active_count < 20) ? ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 15) : null">
 
 
         <div style="background: black; bottom: 0; margin: 5px; padding: 5px; z-index: 2; position: fixed;">
@@ -107,7 +107,7 @@
             Real-time interactivity from the server
             <br><br>
             <span style="color:white;font-weight:900;font-size:20px;">
-            <span id="active_count"></span></span> USERS MAKING RIPPLES<br>
+            <span data-text="$active_count"></span></span> USERS MAKING RIPPLES<br>
             <span id="visitor_count"></span> visits
             <br><br>
             A hypermedia project<br>

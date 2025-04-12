@@ -91,7 +91,7 @@ class RipplesController extends Controller
                         $str .= "\n";
                     }
                     
-                    //$this->mergeSignals(['_contents' => $str]);
+                    
 
                     // for coordinates after transform
 
@@ -102,11 +102,13 @@ class RipplesController extends Controller
                     $str .= "<span id='fps_stream'>".$fps."</span>";
 
                     $count = $redis->hlen('ripple_users');
-                    $str .= "<span id='active_count'>".$count."</span>";
+                    // $str .= "<span id='active_count'>".$count."</span>";
+
 
                     $vcount = $redis->scard('visitors');
                     $str .= "<span id='visitor_count'>".$vcount."</span>";
 
+                    $this->mergeSignals(['active_count' => $count]);
                     $this->mergeFragments(nl2br($str));
                 }
 
