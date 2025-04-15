@@ -14,9 +14,9 @@
                 overflow: hidden;
                 
             }
-            #transformer {
-                pointer-events: none;
-                position: relative;
+
+            #transformer.isometric {
+                
                 transform: rotateX(53deg) 
                            rotateZ(45deg) 
                            scale(2.4) 
@@ -24,6 +24,12 @@
                            translateY(150px);
                 transform-style: preserve-3d;
             }
+            #transformer {
+                pointer-events: none;
+                position: relative;
+                transition: all 0.5s ease;
+            }
+            
             #html {
                 pointer-events: none;
                 letter-spacing: 8px;
@@ -58,6 +64,9 @@
                 color: white;
                 font-size: 4px;
             }
+            .white {
+                color:white;
+            }
 
             @media(max-width: 768px) {
                  #transformer {
@@ -91,7 +100,7 @@
         }
     @endphp
 
-    <body data-signals="{_contents: 'random text goes here', active_count:0}"
+    <body data-signals="{_contents: 'random text goes here', active_count:0, isometric: true}"
           data-on-load="@get('/demos/pure-text/stream')"
           data-on-click="ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 120)"
           data-on-mouseover="($active_count < 20) ? ripple(evt.target.getAttribute('x'), evt.target.getAttribute('y'), 15) : null">
@@ -103,9 +112,17 @@
             FPS Browse: <span id="fps_browse"></span>
         </div>
 
+        <div style="background: black; bottom: 0; right:0; margin: 5px; padding: 5px; z-index: 2; position: fixed; cursor: pointer;">
+            <span data-on-click="$isometric = true" 
+                  data-class="{'white':$isometric}">Isometric</span> 
+            | 
+            <span data-on-click="$isometric = false" 
+                  data-class="{'white':!$isometric}">Grid</span>
+        </div>
+
         <div style="line-height: 15px; top: 0; right: 0; margin: 20px; padding: 5px; z-index: 2; position: fixed; text-align: right;">
             <div style="font-size: 20px;">communal ascii pond</div>
-            <br><br>
+            <br>
             Real-time interactivity from the server
             <br><br>
             <span style="color:white;font-weight:900;font-size:20px;">
@@ -118,13 +135,14 @@
                 Powered by Laravel,<br>
                 Redis, and <a target="_blank" style="text-decoration: none; color:white;" href="https://data-star.dev">Datastar</a>
                 <br><br>
-                See the <a target="_blank" style="text-decoration: none; color:white;" href="https://youtube.com/@hypermedia-tv">full video</a>
+
+                <!-- See the <a target="_blank" style="text-decoration: none; color:white;" href="https://youtube.com/@hypermedia-tv">full video</a> -->
             </div>
 
         </div>
 
 
-        <div id="transformer">
+        <div id="transformer" data-class="{'isometric':$isometric}">
             <div id="clickable"
                  >
                 @for ($y=0; $y<$rows; $y++)
