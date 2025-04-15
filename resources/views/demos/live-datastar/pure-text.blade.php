@@ -102,7 +102,7 @@
         </div>
 
         <div style="line-height: 15px; top: 0; right: 0; margin: 20px; padding: 5px; z-index: 2; position: fixed; text-align: right;">
-            <div style="font-size: 20px;">communal ripples</div>
+            <div style="font-size: 20px;">communal ascii pool</div>
             <br><br>
             Real-time interactivity from the server
             <br><br>
