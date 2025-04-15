@@ -10,17 +10,17 @@
 	<script type="module" src="https://cdn.jsdelivr.net/gh/starfederation/datastar@1.0.0-beta.11/bundles/datastar.js"></script>
 
 </head>
-<body data-signals="{'toggle-enabled':false}">
+<body daa-signals="{'toggle-enabled':false}">
 
 	<div class="bg-gray-50 py-6">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
     <h2 class="text-center text-base/7 font-semibold text-indigo-600">
     	Hypermedia tv presents
 
-    	<button data-on-click="$toggle-enabled = !$toggle-enabled" data-class="{'bg-indigo-600': $toggle-enabled}" class="float-right mt-1 relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false">
+    	<button daa-on-click="$toggle-enabled = !$toggle-enabled" daa-class="{'bg-indigo-600': $toggle-enabled}" type="button" class="float-right mt-1 relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false">
 		  <span class="sr-only">Use setting</span>
 		  <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-		  <span data-class="{'translate-x-5': $toggle-enabled}" aria-hidden="true" class="pointer-events-none inline-block size-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
+		  <span daa-class="{'translate-x-5': $toggle-enabled}" aria-hidden="true" class="pointer-events-none inline-block size-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
 		</button>
 
     </h2>
@@ -31,7 +31,7 @@
 
         <!-- ======================> TABS <===================== -->
 
-        <div data-signals-tab="'phone'" class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+        <div daa-signals-tab="'phone'" class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
           <div class="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Active Tabs</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Set a signal for the active tab name. Then, each tab sets the name that is clicked. The contents show/hide based on the name.</p>
@@ -45,14 +45,14 @@
 			    <div class="border-b border-gray-200 pl-12">
 			      <nav class="-mb-px flex space-x-8" aria-label="Tabs">
 			        <!-- Current: "border-indigo-500 text-indigo-600", Default: "border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700" -->
-			        <a data-on-click="$tab = 'phone'"
-			           data-class="{'border-indigo-500 text-indigo-600': $tab == 'phone'}" 
+			        <a daa-on-click="$tab = 'phone'"
+			           daa-class="{'border-indigo-500 text-indigo-600': $tab == 'phone'}" 
 			           class="whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium text-gray-500 hover:text-gray-700">Some App</a>
-			        <a data-on-click="$tab = 'cat'" 
-			           data-class="{'border-indigo-500 text-indigo-600': $tab == 'cat'}" 
+			        <a daa-on-click="$tab = 'cat'" 
+			           daa-class="{'border-indigo-500 text-indigo-600': $tab == 'cat'}" 
 			           class="whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium text-gray-500 hover:text-gray-700">Cat</a>
-			        <a data-on-click="$tab = 'logo'" 
-			           data-class="{'border-indigo-500 text-indigo-600': $tab == 'logo'}" 
+			        <a daa-on-click="$tab = 'logo'" 
+			           daa-class="{'border-indigo-500 text-indigo-600': $tab == 'logo'}" 
 			           class="whitespace-nowrap border-b-2 px-1 py-4 text-sm font-medium text-gray-500">Logo</a>
 			      </nav>
 			    </div>
@@ -60,16 +60,16 @@
 			</div>
           <div class="relative min-h-[24rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
 
-            <div data-show="$tab == 'phone'" class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+            <div daa-show="$tab == 'phone'" class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
               <img class="size-full object-cover object-top" src="https://tailwindcss.com/plus-assets/img/component-images/bento-03-mobile-friendly.png" alt="">
             </div>
 
-            <div data-show="$tab == 'cat'" class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+            <div daa-show="$tab == 'cat'" class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
               <img class="size-full object-cover object-top" src="https://placecats.com/400/600" alt="">
             </div>
 
-            <div data-show="$tab == 'logo'" class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
-              <img class="size-full object-cover object-top" src="https://data-star.dev/static/images/rocket-304e710dde0b42b15673e10937623789adf72cae569c0e0defe7ec21c0bdf293.webp" alt="">
+            <div daa-show="$tab == 'logo'" class="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+              <img class="size-full object-cover object-top" src="https://daa-star.dev/static/images/rocket-304e710dde0b42b15673e10937623789adf72cae569c0e0defe7ec21c0bdf293.webp" alt="">
             </div>
 
           </div>
@@ -87,14 +87,15 @@
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Local counter</p>
             <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">Set a signal for the counter, then show it and add one button to decrease and one button to increase.</p>
           </div>
-          <div data-signals-counter="100" class="flex py-1 px-8">
-          	<div class="text-indigo-600 text-3xl" data-text="$counter">0</div>
+          <div daa-signals-counter="100"
+          		class="flex py-1 px-8">
+          	<div class="text-indigo-600 text-3xl" daa-text="$counter">0</div>
           	<div class="ml-auto">
           	<span class="isolate inline-flex rounded-md shadow-sm">
-			  <button data-on-click="$counter--" type="button" class="relative inline-flex items-center rounded-l-md bg-white px-2 py-1 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">
+			  <button daa-on-click="$counter--" type="button" class="relative inline-flex items-center rounded-l-md bg-white px-2 py-1 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">
 			    -
 			  </button>
-			  <button data-on-click="$counter++" type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-2 py-1 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">
+			  <button daa-on-click="$counter++" type="button" class="relative -ml-px inline-flex items-center rounded-r-md bg-white px-2 py-1 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-10">
 			    +
 			  </button>
 			</span>
@@ -111,20 +112,20 @@
       <!-- ======================> DROP-DOWN <===================== -->
 
 
-      <div data-signals-buttonhover="false"
-      		 data-signals-menuhover="false" 
-      		 class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+      <div class="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
         <div class="absolute inset-px rounded-lg bg-white"></div>
         <div class="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
 
-        	<div class="ml-auto w-100 m-8">
+        	<div daa-signals-hoverbutton="false" 
+        		 daa-signals-hovermenu="false" 
+        		 class="ml-auto w-100 m-8">
 	          	<div class="relative inline-block text-left">
 				  <div>
-				    <button data-on-mouseover="$buttonhover = true"
-				    				data-on-mouseleave="$buttonhover = false"
-				    				type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
+				    <button daa-on-mouseover="$hoverbutton = true;" 
+				    		daa-on-mouseleave="$hoverbutton = false"
+				    		type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50" id="menu-button" aria-expanded="true" aria-haspopup="true">
 				      Options
-				      <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
+				      <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" daa-slot="icon">
 				        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
 				      </svg>
 				    </button>
@@ -140,10 +141,10 @@
 				      From: "transform opacity-100 scale-100"
 				      To: "transform opacity-0 scale-95"
 				  -->
-				  <div data-show="$buttonhover || $menuhover" 
-				  		 data-on-mouseover="$menuhover = true"
-				  		 data-on-mouseleave="$menuhover = false"
-				  		 class="absolute right-0 z-10 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+				  <div daa-show="$hoverbutton || $hovermenu" 
+				  	   daa-on-mouseover="$hovermenu = true"
+				  	   daa-on-mouseleave="$hovermenu = false"
+				  	   class="absolute right-0 z-10 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
 				    <div class="py-1" role="none">
 				      <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
 				      <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
@@ -159,7 +160,7 @@
 
           <div class="px-8 pt-8 sm:px-10 sm:pt-10">
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">Drop-down on hover</p>
-            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">This uses two signals: <b>hoverbutton</b> and <b>hovermenu</b>. We set them with data-on-mouseover and data-on-mouseleave. If you are hovering over either, show the menu.</p>
+            <p class="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">This uses two signals: <b>hoverbutton</b> and <b>hovermenu</b>. We set them with daa-on-mouseover and daa-on-mouseleave. If you are hovering over either, show the menu.</p>
           </div>
           <div class="flex flex-1 items-center [container-type:inline-size] max-lg:py-6 lg:pb-2">
           	
@@ -179,10 +180,10 @@
 
             <p class="mt-2 text-lg font-medium tracking-tight text-gray-950 max-lg:text-center">
             	<!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
-				<button data-on-click="$toggle-enabled = !$toggle-enabled" data-class="{'bg-indigo-600': $toggle-enabled}" type="button" class="float-right mt-1 relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false">
+				<button daa-on-click="$toggle-enabled = !$toggle-enabled" daa-class="{'bg-indigo-600': $toggle-enabled}" type="button" class="float-right mt-1 relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false">
 				  <span class="sr-only">Use setting</span>
 				  <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
-				  <span data-class="{'translate-x-5': $toggle-enabled}" aria-hidden="true" class="pointer-events-none inline-block size-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
+				  <span daa-class="{'translate-x-5': $toggle-enabled}" aria-hidden="true" class="pointer-events-none inline-block size-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
 				</button>
             	Global toggle
             </p>

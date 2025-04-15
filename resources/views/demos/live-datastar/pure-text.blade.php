@@ -110,11 +110,14 @@
             <span data-text="$active_count"></span></span> USERS MAKING RIPPLES<br>
             <span id="visitor_count"></span> visits
             <br><br>
-            A hypermedia project<br>
-            by Lazarus Morrison<br>
-            Powered by <a target="_blank" style="text-decoration: none; color:white;" href="https://data-star.dev">Datastar</a>
-            <br><br>
-            See the <a target="_blank" style="text-decoration: none; color:white;" href="https://youtube.com/@hypermedia-tv">full video</a>
+            <div style="font-size: 12px;">
+                A hypermedia project<br>
+                by Lazarus Morrison<br><br>
+                Powered by Laravel,<br>
+                Redis, and <a target="_blank" style="text-decoration: none; color:white;" href="https://data-star.dev">Datastar</a>
+                <br><br>
+                See the <a target="_blank" style="text-decoration: none; color:white;" href="https://youtube.com/@hypermedia-tv">full video</a>
+            </div>
 
         </div>
 
@@ -146,7 +149,14 @@
             const { width: charWidth, height: charHeight } = getCharSize(htmlEl);
 
 
+            let lastRippleTime = 0;
+            const rippleCooldown = 60; // in milliseconds
+
             function ripple(x, y, z) {
+                const now = Date.now();
+                if (now - lastRippleTime < rippleCooldown) return;
+
+                lastRippleTime = now;
                 new Image().src = `/demos/live-datastar/ripple?x=${x}&y=${y}&z=${z}&id={{ substr(session()->getId(), 0, 6) }}`;
             }
 
