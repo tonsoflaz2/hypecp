@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ripple Grid</title>
+        <title>Datastar communal ascii pond</title>
+
+        <link rel="shortcut icon" type="image/png" href="/favicon.png">
         <style>
             body {
                 background-color: #000;
@@ -102,7 +104,7 @@
         </div>
 
         <div style="line-height: 15px; top: 0; right: 0; margin: 20px; padding: 5px; z-index: 2; position: fixed; text-align: right;">
-            <div style="font-size: 20px;">communal ascii pool</div>
+            <div style="font-size: 20px;">communal ascii pond</div>
             <br><br>
             Real-time interactivity from the server
             <br><br>
