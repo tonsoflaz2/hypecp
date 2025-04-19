@@ -51,6 +51,8 @@ Route::view('demos/ripples', 'demos.live-datastar.pure-text');
 Route::view('demos/datastar-signals', 'demos.datastar-signals');
 Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 
+Route::view('demos/htmx-structure', 'demos.htmx-structure.main');
+
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
 Route::view('/htmx/form', 'htmx.responses.form');
