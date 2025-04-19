@@ -63,6 +63,16 @@ return [
             'journal_mode' => null,
             'synchronous' => null,
         ],
+        'structure' => [
+            'driver' => 'sqlite',
+            'url' => env('DB_URL'),
+            'database' => database_path('structure.sqlite'),
+            'prefix' => '',
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+            'busy_timeout' => null,
+            'journal_mode' => null,
+            'synchronous' => null,
+        ],
 
         'mysql' => [
             'driver' => 'mysql',
