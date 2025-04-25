@@ -1,0 +1,367 @@
+
+* {
+	margin: 0;
+}
+*:nth-child(-n+5) {
+	transition: all 0.3s;
+}
+body {
+	font-family: arial;
+	font-size:16px;
+	color: #888;
+	padding: 40px;
+}
+input {
+	border-radius: 20px;
+	border:none;
+	padding: 10px 20px;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	padding: 3px;
+}
+span {
+	 display:none;
+}
+.layout {
+	position: relative;
+	z-index: 1;
+}
+.layout.hovered {
+	position: absolute;
+	z-index: 1001;
+	pointer-events: auto;
+}
+#structure_toggle {
+	position: absolute;
+	top: 0;
+	right: 0;
+	margin: 10px;
+	z-index: 30;
+}
+#app {
+	margin:auto;
+	border-radius: 16px;			
+	min-height: 80vh;
+}
+#navigation {
+	display: flex;
+	list-style: none;
+	align-items: center;
+}
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+li {
+	padding: 20px 10px;
+	font-weight: bold;
+	cursor:pointer;
+	margin: 0px 10px;
+}
+
+li.active {
+	color:black;
+}
+li:hover {
+	color:#222;
+}
+#emails {
+	margin-top: 30px;
+	min-height: 220px;
+}
+
+.links {
+	margin: 0px;
+}
+
+#backdrop-blur-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	backdrop-filter: blur(10px);
+	background: rgba(255, 255, 255, 0.1); /* optional tint */
+	z-index: 1000;
+	pointer-events: none;
+}
+
+
+.show-structure {
+	display:none;
+}
+.hide-structure {
+	display:block;
+}
+img {
+	width: 150px;
+}
+table {
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+td {
+	vertical-align: top;
+	position: relative;
+}
+
+img {
+	margin-bottom: -10px;
+}
+.link-editor {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+	padding-top: 5px;
+	border-top: 1px solid lightgray;
+}
+.link-editor > select {
+	display: block;
+	margin: 5px;
+	padding: 5px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+.link-editor > input {
+	display: block;
+	margin: 5px;
+	padding: 5px;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+.link-editor > div {
+	display: block;
+	padding: 5px;
+	width: 150px;
+}
+button {
+	opacity:.5;
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+button:hover {
+	opacity: 1;
+}
+.links i {
+	opacity: 0.5;
+	padding-bottom: 10px;
+}
+.lookup-person {
+	display: table-row;
+	padding: 2px;
+}
+.lookup-person > div {
+	display: table-cell;
+}
+.results {
+	padding-left: 120px;
+}
+.lookup-person button {
+	border-radius: 8px;
+	background: oklch(70.7% 0.165 254.624);
+	color: white;
+	padding: 4px 6px;
+	white-space: nowrap;
+	margin: 2px;
+}
+.editing img {
+	width: 30px;
+	display: block;
+	margin:auto;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.details {
+	display: inline;
+}
+.hidden {
+	display:none;
+}
+.status {
+	cursor: pointer;
+}
+
+
+/* =======================> STANDARD LAYOUT <=============== */
+
+body.standard #navigation {
+	padding-left: 20px;
+}
+body.standard #navigation li.active {
+	border-bottom: 6px solid lightgray;
+	color: black;
+}
+body.standard #navigation li {
+	border-bottom: 6px solid transparent;
+	padding: 15px 10px;
+	margin: 0px 10px;
+}
+body.standard #navigation li:first-child {
+	width: 200px;
+}
+body.standard #filters li {
+	padding: 10px 20px;
+	color: #bbb;
+}
+body.standard #filters li.active {
+	color: black;
+	background: #f8f8f8;
+	border-radius: 100px;
+}
+body.standard #filters {
+	padding: 20px;
+	margin-top: 20px;
+	font-size: 14px;
+	width: 220px;
+}
+body.standard #filters input {
+	margin-top: 20px;
+	border-bottom: 1px solid lightgray;
+	border-radius: 0px;
+	display:block;
+	margin-left: -10px;
+}
+body.standard td {
+	border-top: 1px solid lightgray;
+	padding: 10px;
+}
+body.standard #app {
+	max-width: 1280px;
+	margin: auto;
+	color: #999;
+}
+body.standard #emails {
+	font-size: 12px;
+	flex: 1;
+}
+body.standard #emails b {
+	color: #333;
+}
+body.standard #content {
+	display:flex;
+	width: 100%;
+	margin-top: 30px;
+}
+body.standard .edit {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 8px;
+	cursor: pointer;
+	color: lightblue;
+}
+body.standard .full {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	color: lightblue;
+}
+body.standard .editing {
+	border: 1px solid lightgray;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)
+}
+body.standard .editing > form {
+	margin: 3px;
+}
+
+ 
+/* =======================> STRUCTURE LAYOUT <=============== */
+body.structure span {
+	position: absolute;
+	top: 0;
+	left:0;
+	cursor:default; 
+	color:#999; 
+	font-weight:bolder;
+	opacity: 0;
+	display: block;
+	margin: 5px;
+	font-size: 12px;
+}
+body.structure #content {
+	margin-top: 30px;
+}
+body.structure #filters {
+	display: flex;
+	list-style: none;
+	align-items: center;	
+}
+body.structure .layout:hover > span {
+	opacity: 1;
+}
+body.structure tr:hover > td:not(.layout) > span {
+	opacity: 1;
+}
+body.structure {
+	background: black;
+	color: #ddd;
+	font-family: monospace;
+}
+body.structure .layout {
+	padding: 30px;
+	border-radius: 8px;
+	border: 4px solid #888;
+	background: rgba(255,255,255,0.1);
+}
+body.structure li {
+	color: #777;
+}
+body.structure li.active {
+	color:white;
+}
+body.structure .show-structure {
+	display:block;
+}
+body.structure .hide-structure {
+	display:none;
+}
+body.structure td {
+	padding: 30px;
+}
+body.structure input::-webkit-input-placeholder {
+  font-family: monospace;
+  font-weight: bold;
+}
+body.structure #links {
+	min-height: 200px;
+}
+body.structure .edit, body.structure .full {
+	color: lightblue;	
+	float: right;
+	cursor:pointer;
+}
+body.structure .link-editor {
+	margin-top: 20px;
+	padding-top: 20px;
+	border-top: 4px solid #888;
+}
+body.structure .editing form button {
+	width: 20px;
+	height: 20px;
+	background-color: #ccc;
+	padding: 2px;
+	font-size: 10px;
+	border-radius: 6px;
+	border: 1px solid gray;
+}
+

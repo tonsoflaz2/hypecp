@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WaveController;
 use App\Http\Controllers\Datastar\RipplesController;
+use App\Http\Controllers\Htmx\StructureController;
 
 function asciiByWhitespace($value) {
     // Clamp input value between 0 and 50
@@ -51,7 +52,18 @@ Route::view('demos/ripples', 'demos.live-datastar.pure-text');
 Route::view('demos/datastar-signals', 'demos.datastar-signals');
 Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 
-Route::view('demos/htmx-structure', 'demos.htmx-structure.main');
+Route::get('demos/htmx-structure', [StructureController::class, 'index']);
+Route::get('demos/htmx-structure/emails/{id}/row', [StructureController::class, 'row']);
+Route::get('demos/htmx-structure/emails/{id}/row-edit', [StructureController::class, 'rowEdit']);
+
+Route::get('demos/htmx-structure/emails/{id}/people/lookup', [StructureController::class, 'peopleLookup']);
+Route::get('demos/htmx-structure/emails/{id}/toggle-status', [StructureController::class, 'toggleActive']);
+Route::post('demos/htmx-structure/emails/{id}/tag-link', [StructureController::class, 'tagLink']);
+Route::post('demos/htmx-structure/emails/{id}/tag-unlink', [StructureController::class, 'tagUnlink']);
+Route::post('demos/htmx-structure/emails/{id}/person-link', [StructureController::class, 'personLink']);
+Route::post('demos/htmx-structure/emails/{id}/person-unlink', [StructureController::class, 'personUnlink']);
+Route::post('demos/htmx-structure/emails/{id}/campaign-link', [StructureController::class, 'campaignLink']);
+Route::post('demos/htmx-structure/emails/{id}/campaign-unlink', [StructureController::class, 'campaignUnlink']);
 
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
