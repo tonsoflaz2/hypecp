@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Datastar Signals</title>
+	<link rel="shortcut icon" type="image/png" href="/favicon.png">
 
 	<script src="https://cdn.tailwindcss.com"></script>
 
@@ -14,17 +15,21 @@
 
 	<div class="bg-gray-50 py-6">
   <div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8">
-    <h2 class="text-center text-base/7 font-semibold text-indigo-600">
-    	Hypermedia tv presents
+    <div class="mx-auto flex flex-col items-center text-center gap-y-2 lg:flex-row lg:justify-center lg:gap-x-12">
+  <a href="/demos/htmx-structure" class="text-sm/6 font-semibold text-indigo-600">Htmx Structure</a>
+  <a href="/demos/live-widget" class="text-sm/6 font-semibold text-indigo-600">Htmx Dashboard</a>
+  <a href="/demos/datastar-signals" class="text-sm/6 font-semibold text-indigo-600">Datastar Signals</a>
+  <a href="/demos/live-dashboard" class="text-sm/6 font-semibold text-indigo-600">hx-swap-oob</a>
+</div>
 
-    	<button data-on-click="$toggle-enabled = !$toggle-enabled" data-class="{'bg-indigo-600': $toggle-enabled}" class="float-right mt-1 relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false">
+<button data-on-click="$toggle-enabled = !$toggle-enabled" data-class="{'bg-indigo-600': $toggle-enabled}" class="float-right mt-1 relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-gray-200 transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 bg-gray-200" role="switch" aria-checked="false">
 		  <span class="sr-only">Use setting</span>
 		  <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
 		  <span data-class="{'translate-x-5': $toggle-enabled}" aria-hidden="true" class="pointer-events-none inline-block size-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out translate-x-0"></span>
 		</button>
 
-    </h2>
-    <p class="mx-auto mt-2 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Using Datastar <span class="text-indigo-600">Signals</span> for front-end reactivity</p>
+
+    <p class="mx-auto my-12 max-w-lg text-balance text-center text-4xl font-semibold tracking-tight text-gray-950 sm:text-5xl">Using Datastar <span class="text-indigo-600">Signals</span> for front-end reactivity</p>
     <div class="mt-4 grid gap-4 sm:mt-8 lg:grid-cols-3 lg:grid-rows-2">
       <div class="relative lg:row-span-2">
         <div class="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]"></div>
@@ -206,6 +211,14 @@
       </div>
     </div>
   </div>
+
+  <div class="mx-auto max-w-2xl px-6 lg:max-w-2xl lg:px-8 relative min-h-[24rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm rounded-xl overflow-hidden mt-12 inset-px">
+  		
+		  <iframe class="rounded-3xl" width="100%" height="400" src="https://www.youtube.com/embed/csPFLpm8OYI?si=d1Qdc8IqjStxnGwy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	</div>
+
+
 </div>
 
 

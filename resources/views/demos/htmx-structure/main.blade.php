@@ -25,6 +25,12 @@
 		<a href="?" onclick="setBodyClass('structure'); return false;">Structure</a>
 	</div>
 
+	<div class="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 relative min-h-[24rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm rounded-xl overflow-hidden mt-12 inset-px">
+  		
+		  <iframe class="rounded-3xl" width="100%" height="600" src="https://www.youtube.com/embed/csPFLpm8OYI?si=d1Qdc8IqjStxnGwy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+	</div>
+
 	<div id="app" class="layout">
 		<div class="layout">
 			<span>SITE NAVIGATION</span>

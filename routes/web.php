@@ -37,6 +37,11 @@ Route::post('/examples/modal', function (Request $request) {
 	//return redirect()->back();
 });
 
+/*
+i run it with this on the command line:
+./tailwindcss -i ./public/css/input.css -o public/css/output.css --minify
+*/
+
 // ======================> DEMOS
 Route::view('demos/live-widget', 'demos.live-widget.index');
 Route::view('demos/live-dashboard', 'demos.live-dash-oob.index');
@@ -53,6 +58,7 @@ Route::view('demos/datastar-signals', 'demos.datastar-signals');
 Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 
 Route::get('demos/htmx-structure', [StructureController::class, 'index']);
+Route::view('demos/infinite-scroll', 'demos.infinite-scroll.main');
 Route::get('demos/htmx-structure/emails/{id}/row', [StructureController::class, 'row']);
 Route::get('demos/htmx-structure/emails/{id}/row-edit', [StructureController::class, 'rowEdit']);
 
