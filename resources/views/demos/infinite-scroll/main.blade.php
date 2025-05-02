@@ -100,9 +100,9 @@
               <a target="_blank" href="https://github.com/tonsoflaz2/hypecp/blob/main/resources/views/demos/infinite-scroll" class="text-sm/6 font-semibold text-white">See the code <span aria-hidden="true">→</span></a>
             </div>
           </div>
-          <!-- <iframe class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24" width="100%" height="500" src="https://www.youtube.com/embed/mChohsMBnrU?si=KaS_gbCwHwYJO-ez" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+          <iframe class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24" width="100%" height="500" src="https://www.youtube.com/embed/lgbNlhYwdus?si=KaS_gbCwHwYJO-ez" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-          <img src="/images/infinite-scroll-thumb.jpg" alt="App screenshot" width="2432" height="1442" class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24">
+          <!-- <img src="/images/infinite-scroll-thumb.jpg" alt="App screenshot" width="2432" height="1442" class="mt-16 rounded-md bg-white/5 shadow-2xl ring-1 ring-white/10 sm:mt-24"> -->
         </div>
       </div>
       <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
