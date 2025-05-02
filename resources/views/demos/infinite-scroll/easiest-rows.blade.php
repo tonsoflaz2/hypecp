@@ -11,6 +11,8 @@
 @foreach ($inspections as $inspection)
 
   @php
+    // Just wanted some randomized logos
+    // logo sprite sheet is 600X900px, 4X6 = 24 images
     $tilesize = 40;
     $x = rand(0, 5) * $tilesize;
     $y = rand(0, 3) * $tilesize;
@@ -66,9 +68,10 @@
     </td>
   </tr>
 @endforeach
+
 <tr hx-get="/demos/infinite-scroll/rows?page={{ $page + 1 }}"
-    hx-trigger="revealed"
-    hx-swap="outerHTML">
+    hx-swap="outerHTML"
+    hx-trigger="revealed">
   <td colspan="100" class="text-white text-center">
     <img src="/images/spinner.png" class="spinner block mx-auto" />
   </td>

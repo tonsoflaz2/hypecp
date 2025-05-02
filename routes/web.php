@@ -63,7 +63,7 @@ Route::view('demos/infinite-scroll', 'demos.infinite-scroll.easiest');
 Route::view('demos/infinite-scroll/smoother', 'demos.infinite-scroll.better');
 Route::view('demos/infinite-scroll/insane', 'demos.infinite-scroll.insane');
 Route::view('demos/infinite-scroll/rows', 'demos.infinite-scroll.easiest-rows');
-Route::view('demos/infinite-scroll/better-rows', 'demos.infinite-scroll.better-rows');
+Route::view('demos/infinite-scroll/smoother-rows', 'demos.infinite-scroll.better-rows');
 Route::view('demos/infinite-scroll/insane-rows', 'demos.infinite-scroll.insane-rows');
 
 Route::get('demos/htmx-structure/emails/{id}/row', [StructureController::class, 'row']);

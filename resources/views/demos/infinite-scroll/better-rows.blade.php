@@ -4,24 +4,22 @@
     $page = 1;
   }
   $perpage = 20;
-  $inspections = \App\Models\Infinite\Inspection::paginate($perpage);
+  $inspections = \App\Models\Infinite\Inspection::simplePaginate($perpage);
 @endphp
 
-<tbody class="divide-y divide-white/5"
-       hx-get="/demos/infinite-scroll/better-rows?page={{ $page + 1 }}"
+<tbody hx-get="/demos/infinite-scroll/smoother-rows?page={{ $page + 1 }}"
        hx-trigger="revealed"
        hx-swap="afterend">
 
 @foreach ($inspections as $inspection)
 
   @php
+    // Just wanted some randomized logos
+    // logo sprite sheet is 600X900px, 4X6 = 24 images
     $tilesize = 40;
-    // actual logo sprite is 600X900px, 4X6 images
-
     $x = rand(0, 5) * $tilesize;
     $y = rand(0, 3) * $tilesize;
   @endphp
-
 
   <tr>
     <td class="py-4 pl-4 pr-8 sm:pl-6 lg:pl-8">

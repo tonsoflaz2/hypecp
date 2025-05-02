@@ -31,10 +31,12 @@
 
   <div class="bg-gray-900 py-10">
 
+
     <h2 class="px-4 sm:px-6 lg:px-8 text-base text-gray-400">
       <span class="font-semibold text-lg text-white">Restaurant health inspections</span><br>
     performed in <span class="text-white">Anchorage, Alaska</span> <br>
-  since the year <span class="text-white">2000</span></h2>
+  since the year <span class="text-white">2000</span><br>
+    <a target="_blank" class="text-sm text-gray-500" href="https://vincentarelbundock.github.io/Rdatasets/datasets.html">View source</a></h2>
   
   <table class="mt-6 w-full whitespace-nowrap text-left">
     <colgroup>

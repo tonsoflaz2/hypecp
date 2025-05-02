@@ -3,27 +3,25 @@
   if (!$page) {
     $page = 1;
   }
-  $ahead = 10;
   $perpage = 20;
-  $inspections = \App\Models\Infinite\Inspection::simplePaginate($perpage);
+  $inspections = \App\Models\Infinite\Inspection::paginate($perpage);
+
+  $ahead = 3;
   $totalpages = ceil(\App\Models\Infinite\Inspection::count() / $perpage);
-
-
 @endphp
 
 <tbody id="page_{{ $page }}"
        hx-get="/demos/infinite-scroll/insane-rows?page={{ $page + $ahead }}"
        hx-target="#page_{{ $page + $ahead }}"
        hx-trigger="revealed"
-       hx-swap="outerHTML"
-       class="divide-y divide-white/5">
+       hx-swap="outerHTML">
 
 @foreach ($inspections as $inspection)
 
   @php
+    // Just wanted some randomized logos
+    // logo sprite sheet is 600X900px, 4X6 = 24 images
     $tilesize = 40;
-    // actual logo sprite is 600X900px, 4X6 images
-
     $x = rand(0, 5) * $tilesize;
     $y = rand(0, 3) * $tilesize;
   @endphp
@@ -78,13 +76,13 @@
     </td>
   </tr>
 @endforeach
+
 </tbody>
 
 @if ($page == 1)
-  
+
   @for ($i=0; $i < $ahead; $i++)
-    <tbody class="divide-y divide-white/5"
-           hx-get="/demos/infinite-scroll/insane-rows?page={{ $i + 2 }}"
+    <tbody hx-get="/demos/infinite-scroll/insane-rows?page={{ $i + 2 }}"
            hx-trigger="load"
            hx-swap="outerHTML">
         <tr>
@@ -96,10 +94,16 @@
   @endfor
 
   @for ($j=$ahead; $j < $totalpages; $j++)
-    <tbody id="page_{{ $j }}"></tbody>
+    <tbody id="page_{{ $j }}"
+           hx-get="/demos/infinite-scroll/insane-rows?page={{ $j }}"
+           hx-trigger="revealed"
+           hx-swap="outerHTML"><tr>
+          <td colspan="100" class="text-white text-center">
+            <img src="/images/spinner.png" class="spinner block mx-auto" />
+          </td>
+        </tr></tbody>
   @endfor
-  
-@else
-  
+
 @endif
+
 

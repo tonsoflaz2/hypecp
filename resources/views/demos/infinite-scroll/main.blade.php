@@ -6,6 +6,7 @@
   <title>Infinite scroll with htmx</title>
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <script src='https://unpkg.com/htmx.org@2.0.4'></script>
 
   <style>
@@ -93,7 +94,7 @@
         <div class="mx-auto max-w-4xl px-6 lg:px-8">
           <div class="mx-auto max-w-2xl text-center">
             <h1 class="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">Scrolling to infinity with htmx</h1>
-            <p class="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">I don't know what you're scrolling to. I don't care what you want to find. <br>But listen: neither do you. You just keep scrolling.</p>
+            <p class="mt-8 text-pretty text-lg font-medium text-gray-400 sm:text-xl/8">I don't know what you're scrolling to. I don't care. <br>But listen: neither do you. You just keep scrolling.</p>
             <div class="mt-10 flex items-center justify-center gap-x-6">
               <a href="#scroller" class="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Click or scroll down to get started</a>
               <a target="_blank" href="https://github.com/tonsoflaz2/hypecp/blob/main/resources/views/demos/infinite-scroll" class="text-sm/6 font-semibold text-white">See the code <span aria-hidden="true">→</span></a>
