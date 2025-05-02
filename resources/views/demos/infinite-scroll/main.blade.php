@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <meta property="og:title" content="Infinite scrolling with htmx" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://hypecp.com/images/thumbnail.png" />
+    <meta property="og:url" content="https://hypecp.com/demos/infinite-scroll" />
+    <meta property="og:description" content="3 ways to implement infinite scrolling with htmx." />
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Infinite scroll with htmx</title>
