@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WaveController;
 use App\Http\Controllers\Datastar\RipplesController;
 use App\Http\Controllers\Htmx\StructureController;
+use App\Http\Controllers\Htmx\ValidationController;
 
 function asciiByWhitespace($value) {
     // Clamp input value between 0 and 50
@@ -59,6 +60,15 @@ Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 
 Route::get('demos/htmx-structure', [StructureController::class, 'index']);
 
+// ======================> VALIDATION
+Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);
+Route::post('demos/htmx-validation/validate',   [ValidationController::class, 'validate']);
+Route::view('demos/htmx-validation',            [ValidationController::class, 'index']);
+
+// ======================> BASECOAT
+Route::view('demos/basecoat', 'demos.basecoat.index');
+
+
 Route::view('demos/infinite-scroll', 'demos.infinite-scroll.easiest');
 Route::view('demos/infinite-scroll/smoother', 'demos.infinite-scroll.better');
 Route::view('demos/infinite-scroll/insane', 'demos.infinite-scroll.insane');
@@ -92,4 +102,7 @@ Route::view('wave', 'wave.index');
 Route::post('wave/rooms', [WaveController::class, 'createRoom']);
 Route::post('wave/members', [WaveController::class, 'createMember']);
 Route::get('wave/{code}', [WaveController::class, 'room']);
+
+// ======================> BASECOAT
+
 
