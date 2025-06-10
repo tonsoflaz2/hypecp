@@ -5,6 +5,7 @@ use App\Http\Controllers\WaveController;
 use App\Http\Controllers\Datastar\RipplesController;
 use App\Http\Controllers\Htmx\StructureController;
 use App\Http\Controllers\Htmx\ValidationController;
+use App\Http\Controllers\Htmx\ValidationHtmlController;
 
 function asciiByWhitespace($value) {
     // Clamp input value between 0 and 50
@@ -61,6 +62,10 @@ Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 Route::get('demos/htmx-structure', [StructureController::class, 'index']);
 
 // ======================> VALIDATION
+Route::get('demos/html-validation',             [ValidationHtmlController::class, 'index']);
+Route::post('demos/html-validation/validate',   [ValidationHtmlController::class, 'validate']);
+Route::post('demos/html-validation',            [ValidationHtmlController::class, 'create']);
+
 Route::get('demos/htmx-validation',             [ValidationController::class, 'index']);
 Route::post('demos/htmx-validation/validate',   [ValidationController::class, 'validate']);
 Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);

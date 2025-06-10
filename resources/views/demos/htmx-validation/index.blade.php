@@ -16,7 +16,16 @@
 
 	<div class="max-w-lg mx-auto">
 
-		<img class="w-full sm:w-2/5 mx-auto" src="/images/zdate-logo.png" />
+		<div class="flex items-end text-xs text-blue-400">
+			<div class="w-3/10 px-4 py-1 text-gray-700">
+				<b>With htmx</b>
+			</div>
+			<img class="w-4/10" src="/images/zdate-logo.png" />
+			<div class="w-3/10 text-right px-4 py-1">
+				<a href="/demos/html-validation">Pure html</a>
+			</div>
+		</div>
+
 
 		@include('demos.htmx-validation.form')
 

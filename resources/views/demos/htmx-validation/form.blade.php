@@ -43,7 +43,7 @@
 		      <div class="grid gap-2">
 		        <div class="flex items-center gap-2">
 		        	<label>Create Password</label>
-					<div class="ml-auto inline-block text-xs text-gray-500">Unique, 8+ characters, 1 special</div>
+					<div class="ml-auto inline-block text-xs text-gray-500">7+ characters, 1 special, unique</div>
 		        </div>
 		        <input type="password" name="create_password" value="{{ request('create_password') }}">
 		      </div>

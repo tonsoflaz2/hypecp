@@ -7,25 +7,24 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class ValidationController extends Controller
+class ValidationHtmlController extends Controller
 {
     public function index()
     {
-        return view('demos.htmx-validation.index');
+        return view('demos.html-validation.index');
     }
     public function validate()
     {
         $errors = $this->requestIsValid();
-        return view('demos.htmx-validation.errors', compact('errors'));
+        return view('demos.html-validation.errors', compact('errors'));
     }
     public function create()
     {
         $errors = $this->requestIsValid();
-        //dd($errors);
         if ($errors) {
-            return view('demos.htmx-validation.index', compact('errors'));
+            return view('demos.html-validation.index', compact('errors'));
         }
-        return view('demos.htmx-validation.success');
+        return view('demos.html-validation.success');
     }
 
     public function requestIsValid()

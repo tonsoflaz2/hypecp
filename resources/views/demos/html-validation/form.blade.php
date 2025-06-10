@@ -1,4 +1,4 @@
-<form action="/demos/htmx-validation"
+<form action="/demos/html-validation"
 	  method="POST"
 	  class="mb-8">
 
@@ -24,7 +24,7 @@
 
 			      <div class="w-1/2 grid gap-2 pl-2">
 			      	<div class="flex items-center gap-2">
-			        	<label>SSN @include('demos.htmx-validation.info-ssn')
+			        	<label>SSN @include('demos.html-validation.info-ssn')
 						</label>
 						<div class="ml-auto inline-block text-xs text-gray-500">Nine digits, verified</div>
 					</div>
@@ -43,7 +43,7 @@
 		      <div class="grid gap-2">
 		        <div class="flex items-center gap-2">
 		        	<label>Create Password</label>
-					<div class="ml-auto inline-block text-xs text-gray-500">Unique, 8+ characters, 1 special</div>
+					<div class="ml-auto inline-block text-xs text-gray-500">7+ characters, 1 special, unique</div>
 		        </div>
 		        <input type="password" name="create_password" value="{{ request('create_password') }}">
 		      </div>
@@ -60,7 +60,7 @@
 		  </section>
 		  <div id="errors" class="px-8">
 		  	@if ($errors)
-		  		@include('demos.htmx-validation.errors')
+		  		@include('demos.html-validation.errors')
 		  	@endif
 		  </div>
 		  <footer class="flex flex-col items-center gap-2">
