@@ -30,7 +30,8 @@ class ValidationHtmlController extends Controller
     public function requestIsValid()
     {
         $name = request('name');
-        $ssn = request('ssn');
+        $raw_ssn = request('ssn');
+        $ssn = str_replace('-', '', $raw_ssn);
         $email = request('email');
         $raw_password = request('create_password');
         $password = Hash::make(request('create_password'));
@@ -64,7 +65,7 @@ class ValidationHtmlController extends Controller
         if (!$email) {
             $errors['email']['required'] = 'Email is required.';
         }
-        if (!$email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors['email']['format'] = 'Email must be valid format.';
         }
         $user = User::where('email', $email)

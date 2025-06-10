@@ -20,10 +20,11 @@ class ValidationController extends Controller
     }
     public function create()
     {
+        sleep(3);
         $errors = $this->requestIsValid();
         //dd($errors);
         if ($errors) {
-            return view('demos.htmx-validation.index', compact('errors'));
+            return view('demos.htmx-validation.form', compact('errors'));
         }
         return view('demos.htmx-validation.success');
     }
@@ -31,7 +32,8 @@ class ValidationController extends Controller
     public function requestIsValid()
     {
         $name = request('name');
-        $ssn = request('ssn');
+        $raw_ssn = request('ssn');
+        $ssn = str_replace('-', '', $raw_ssn);
         $email = request('email');
         $raw_password = request('create_password');
         $password = Hash::make(request('create_password'));
@@ -65,7 +67,7 @@ class ValidationController extends Controller
         if (!$email) {
             $errors['email']['required'] = 'Email is required.';
         }
-        if (!$email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if ($email && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors['email']['format'] = 'Email must be valid format.';
         }
         $user = User::where('email', $email)
