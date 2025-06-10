@@ -6,7 +6,6 @@
 	<link rel="shortcut icon" type="image/png" href="/images/zdate-icon.png">
 	<link rel="stylesheet" type="text/css" href="/css/output.css">
 
-	<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 	<script src="//unpkg.com/alpinejs" defer></script>
 
 	<title></title>
