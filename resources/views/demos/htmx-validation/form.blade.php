@@ -1,4 +1,9 @@
-<form hx-post="/demos/htmx-validation">
+<form hx-post="/demos/htmx-validation"
+	  hx-target="#errors"
+	  class="mb-8">
+
+	<input type="hidden" name="_token" value="{{ csrf_token() }}" />
+
 	<div class="card w-full">
 	  <header>
 	    <h2>Create your account</h2>
@@ -32,7 +37,7 @@
 		        	<label>Email</label>
 					<div class="ml-auto inline-block text-xs text-gray-500">Well-formatted, unique</div>
 				</div>
-		        <input type="email">
+		        <input name="email" type="email">
 		      </div>
 
 		      <div class="grid gap-2">
@@ -40,7 +45,7 @@
 		        	<label>Create Password</label>
 					<div class="ml-auto inline-block text-xs text-gray-500">Unique, 8+ characters, 1 special</div>
 		        </div>
-		        <input type="password" name="create-password">
+		        <input type="password" name="create_password">
 		      </div>
 
 		      <div class="grid gap-2">
@@ -48,12 +53,14 @@
 		        	<label>Confirm Password</label>
 					<div class="ml-auto inline-block text-xs text-gray-500">Must match</div>
 				</div>
-		        <input type="password" name="confirm-password">
+		        <input type="password" name="confirm_password">
 		      </div>
 
 		    </div>
 		  </section>
+		  <div id="errors" class="px-8"></div>
 		  <footer class="flex flex-col items-center gap-2">
+
 		    <button type="submit" class="btn w-full">Create</button>
 		    <!-- <button type="button" class="btn-outline w-full">Login with Google</button> -->
 		    <p class="mt-4 text-center text-sm">Already have an account? <a href="#" class="underline-offset-4 hover:underline">Sign in</a></p>

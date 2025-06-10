@@ -61,9 +61,11 @@ Route::get('demos/pure-text/stream', [RipplesController::class, 'textStream']);
 Route::get('demos/htmx-structure', [StructureController::class, 'index']);
 
 // ======================> VALIDATION
-Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);
+Route::get('demos/htmx-validation',             [ValidationController::class, 'index']);
 Route::post('demos/htmx-validation/validate',   [ValidationController::class, 'validate']);
-Route::view('demos/htmx-validation',            [ValidationController::class, 'index']);
+Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);
+
+
 
 // ======================> BASECOAT
 Route::view('demos/basecoat', 'demos.basecoat.index');
