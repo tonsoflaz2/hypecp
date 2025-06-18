@@ -26,7 +26,7 @@
 						</div>
 					</div>
 			        <input hx-post="/demos/htmx-validation/validate"
-			        	   hx-trigger="keyup"
+			        	   hx-trigger="keydown"
 			        	   hx-swap="none"
 			        	   name="name" 
 			        	   type="text" 
@@ -46,7 +46,7 @@
 						</div>
 					</div>
 			        <input hx-post="/demos/htmx-validation/validate"
-			        	   hx-trigger="keyup"
+			        	   hx-trigger="keydown"
 			        	   hx-swap="none"
 			        	   required
 			        	   name="ssn" type="text" value="{{ request('ssn') }}">
@@ -63,7 +63,7 @@
 					</div>
 				</div>
 		        <input hx-post="/demos/htmx-validation/validate"
-		        	   hx-trigger="keyup"
+		        	   hx-trigger="keydown"
 		        	   hx-swap="none"
 		        	   required
 		        	   name="email" type="email" value="{{ request('email') }}">
@@ -79,7 +79,7 @@
 					</div>
 		        </div>
 		        <input hx-post="/demos/htmx-validation/validate"
-		        	   hx-trigger="keyup"
+		        	   hx-trigger="keydown"
 		        	   hx-swap="none"
 		        	   required
 		        	   type="password" name="create_password" value="{{ request('create_password') }}">
@@ -95,7 +95,7 @@
 					</div>
 				</div>
 		        <input hx-post="/demos/htmx-validation/validate"
-		        	   hx-trigger="keyup"
+		        	   hx-trigger="keydown"
 		        	   hx-swap="none"
 		        	   required
 		        	   type="password" name="confirm_password" value="{{ request('confirm_password') }}">
