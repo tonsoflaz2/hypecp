@@ -88,9 +88,9 @@ class ValidationController extends Controller
 
         foreach ($users as $user) {
             $matches = [];
-            if (Hash::check($raw_password, $user->password)) {
-                $matches[] = $user->email;
-            }
+            // if (Hash::check($raw_password, $user->password)) {
+            //     $matches[] = $user->email;
+            // }
             if (count($matches) > 0) {
                 $validation_errors['create_password']['unique'] = 'Password must be unique. Did you mean to use email '.implode(', ',$matches)."?";
             }
