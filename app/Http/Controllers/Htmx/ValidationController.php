@@ -38,9 +38,15 @@ class ValidationController extends Controller
         $ssn = str_replace('-', '', $raw_ssn);
         $email = request('email');
         $raw_password = request('create_password');
-        $password = Hash::make(request('create_password'));
+        $password = null;
+        if ($raw_password) {
+            $password = Hash::make(request('create_password'));
+        }
+        $confirm_password = null;
         $raw_confirm_password = request('confirm_password');
-        $confirm_password = Hash::make(request('confirm_password'));
+        if ($raw_confirm_password) {
+            $confirm_password = Hash::make(request('confirm_password'));
+        }
 
         $validation_errors = [];
 
@@ -88,8 +94,10 @@ class ValidationController extends Controller
 
         foreach ($users as $user) {
             $matches = [];
-            if (Hash::check($raw_password, $user->password)) {
-                $matches[] = $user->email;
+            if ($raw_password) {
+                if (Hash::check($raw_password, $user->password)) {
+                    $matches[] = $user->email;
+                }
             }
             if (count($matches) > 0) {
                 $validation_errors['create_password']['unique'] = 'Password must be unique. Did you mean to use email '.implode(', ',$matches)."?";
