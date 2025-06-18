@@ -89,7 +89,7 @@
       </header>
 
       <footer>
-        <button type="button" class="btn-outline" @click="open = false">Great point!</button>
+        <button class="btn-outline" @click="open = false">Great point!</button>
         <!-- <button class="btn-primary" @click="open = false">Got it</button> -->
       </footer>
     </article>

@@ -63,7 +63,6 @@ Route::get('demos/htmx-structure', [StructureController::class, 'index']);
 
 // ======================> VALIDATION
 Route::get('demos/html-validation',             [ValidationHtmlController::class, 'index']);
-Route::post('demos/html-validation/validate',   [ValidationHtmlController::class, 'validate']);
 Route::post('demos/html-validation',            [ValidationHtmlController::class, 'create']);
 
 Route::get('demos/htmx-validation',             [ValidationController::class, 'index']);

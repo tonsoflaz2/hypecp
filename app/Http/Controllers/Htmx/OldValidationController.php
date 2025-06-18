@@ -7,20 +7,26 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 
-class ValidationHtmlController extends Controller
+class ValidationController extends Controller
 {
     public function index()
     {
-        return view('demos.html-validation.index');
+        return view('demos.htmx-validation.index');
     }
-
-    public function create()
+    public function validate()
     {
         $errors = $this->requestIsValid();
+        return view('demos.htmx-validation.errors', compact('errors'));
+    }
+    public function create()
+    {
+        sleep(3);
+        $errors = $this->requestIsValid();
+        //dd($errors);
         if ($errors) {
-            return view('demos.html-validation.index', compact('errors'));
+            return view('demos.htmx-validation.form', compact('errors'));
         }
-        return view('demos.html-validation.success');
+        return view('demos.htmx-validation.success');
     }
 
     public function requestIsValid()
@@ -74,18 +80,10 @@ class ValidationHtmlController extends Controller
         if (!$raw_password) {
             $errors['create_password']['required'] = 'Create Password is required.';
         }
-        $users = User::all();
-        //dd(Hash::make('firefly!'));
-        //dd($users);
-
-        foreach ($users as $user) {
-            $matches = [];
-            if (Hash::check($raw_password, $user->password)) {
-                $matches[] = $user->email;
-            }
-            if (count($matches) > 0) {
-                $errors['create_password']['unique'] = 'Password must be unique. Did you mean to use email '.implode(', ',$matches)."?";
-            }
+        $user = User::where('password', $password)
+                    ->first();
+        if ($user) {
+            $errors['create_password']['unique'] = 'Password must be unique. Did you mean to use email '.$user->email."?";
         }
         if (strlen($raw_password) < 7) {
             $errors['create_password']['length'] = 'Password must be 7+ characters.';
