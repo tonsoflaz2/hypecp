@@ -28,6 +28,13 @@
 
 		@include('demos.htmx-validation.form')
 
+		<div class="text-center text-sm">
+			View the
+			<a class="text-blue-500 underline" href="https://youtu.be/bBEiTYrXAGs">
+				full video
+			</a>
+		</div>
+
 	</div>
 
 </body>
