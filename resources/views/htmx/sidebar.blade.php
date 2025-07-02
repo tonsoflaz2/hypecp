@@ -1,16 +1,14 @@
-
-<div id="htmx-sidebar" class="w-full">
-	<div style="margin: 15px; height: 320px; width: 320px;" class="flex border shadow bg-white rounded-lg items-center text-center" src="/images/logo.png">
+<div id="htmx-sidebar" class="fixed top-0 left-0 h-screen w-80 overflow-y-auto text-sm bg-gray-200 z-30">
+	<div style="margin: 20px; height: 120px; width: 120px;" class="flex border shadow-lg bg-white rounded-lg items-center text-center" src="/images/logo.png">
 		
-		<div class="mx-auto transform -rotate-12 text-blue-400 font-black text-8xl">
+		<div class="mx-auto transform -rotate-12 text-blue-400 font-black text-4xl">
 			hype<br>
 			<span class="text-gray-900">cp</span>
 		</div>
 	</div>
 
-
 	<div id="htmx-attributes" 
-		 class="p-8 text-gray-500">
+		 class="p-8 text-gray-500 text-xs">
 
 		<a href="#htmx-essentials" 
 		   class="block font-bold">
@@ -73,6 +71,21 @@
 			   class="block hover:text-black">hx-preserve</a>
 		</div>
 
+		<a href="/demos" 
+		   class="block font-bold mt-4">
+		   DEMOS
+		</a>
+
+		<div class="ml-8">
+			<a href="/demos" 
+			   class="block hover:text-black">All Demos</a>
+			<a href="/demos/infinite-scroll" 
+			   class="block hover:text-black">Infinite Scroll</a>
+			<a href="/demos/htmx-structure" 
+			   class="block hover:text-black">HTMX Structure</a>
+			<a href="/demos/datastar-signals" 
+			   class="block hover:text-black">Datastar Signals</a>
+		</div>
 
 	</div>
 

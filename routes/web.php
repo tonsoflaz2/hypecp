@@ -45,6 +45,7 @@ i run it with this on the command line:
 */
 
 // ======================> DEMOS
+Route::view('demos', 'demos.index');
 Route::view('demos/live-widget', 'demos.live-widget.index');
 Route::view('demos/live-dashboard', 'demos.live-dash-oob.index');
 Route::view('demos/live-datastar', 'demos.live-datastar.index');

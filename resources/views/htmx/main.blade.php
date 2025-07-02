@@ -1,4 +1,4 @@
-<div class="p-12 text-gray-500">
+<div class="p-6 md:p-12 text-gray-500 max-w-full bg-white min-h-screen">
 
 	@php
 		$htmxcdn = "<script src='https://unpkg.com/htmx.org@2.0.4'></script>";
@@ -19,8 +19,8 @@
 		Before you get started, be sure to include the htmx cdn at the top of your page:
 	</p>
 
-	<div class="lg:flex w-full">
-		<div class="w-full code-block relative">
+	<div class="lg:flex w-full overflow-hidden">
+		<div class="w-full code-block relative overflow-x-auto">
 		<pre><code class="hljs language-html rounded-xl">{!! htmlentities($htmxcdn) !!}</code></pre>
 		</div>
 	</div>
@@ -57,7 +57,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b>
+			hx-get
 		</x-slot>
 
 		<x-slot:code>
@@ -74,7 +74,9 @@
 				It assumes a default trigger action of "click", and a default target to place the html return from the get into whichever div was clicked.
 			</p>
 		</x-slot>
-
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -83,7 +85,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b>
+			hx-get
 		</x-slot>
 
 		<x-slot:code>
@@ -100,7 +102,9 @@
 				It assumes a default trigger action of "click", and a default target to place the html return from the get into whichever div was clicked.
 			</p>
 		</x-slot>
-
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -109,7 +113,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-trigger<br>
 			hx-target<br>
 			hx-swap
@@ -135,6 +139,9 @@
 				The next several examples will demonstrate what happens when you change these defaults.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	
@@ -145,7 +152,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-target
 		</x-slot>
 
@@ -165,6 +172,9 @@
 				In this case, we set a small div under the clickable div, so when you click it, the target is filled with the html from the <i>/htmx/time</i> route.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 
@@ -174,7 +184,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-trigger
 		</x-slot>
 
@@ -193,6 +203,9 @@
 				In this case, we are using <i>mouseenter</i> to let the user trigger the <b>hx-get</b> when they hover over the div.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -201,7 +214,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-swap
 		</x-slot>
 
@@ -220,6 +233,9 @@
 				This means that when we get our response, the html completely replaces the element (the div we clicked in this case) with the html from the server.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 
@@ -230,7 +246,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-target
 		</x-slot>
 
@@ -249,6 +265,9 @@
 				You can see when you click to load the server time, it is now placed in the notification target at the top right of the page.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -257,7 +276,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b>
+			hx-get
 		</x-slot>
 
 		<x-slot:code>
@@ -282,6 +301,9 @@
 				<div class="text-sm italic bg-blue-50 p-4 rounded-lg"> Check out the following examples for a few ways to fix this form example.</div>
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/form
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -290,7 +312,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-target
 		</x-slot>
 
@@ -313,6 +335,9 @@
 
 			<p>You can click the div again to *reload* the blank form from the server.</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/form
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -321,7 +346,7 @@
 		</x-slot>
 
 		<x-slot:attributes>
-			<b>hx-get</b><br>
+			hx-get<br>
 			hx-swap="outerHTML"
 		</x-slot>
 
@@ -342,6 +367,9 @@
 			</p>
 			<p><i>hx-swap="outerHTML"</i> will replace the entire target itself, rather than replace the content inside the div as the <i>innerHTML</i> default does.
 			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/form
 		</x-slot>
 	</x-htmx-example>
 
@@ -374,6 +402,9 @@
 				Put description here
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 
@@ -398,6 +429,9 @@
 			<p>
 				Loads when input changed
 			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/time
 		</x-slot>
 	</x-htmx-example>
 
@@ -429,6 +463,9 @@
 				Loads html when the select changes.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -452,6 +489,9 @@
 			<p>
 				Loads html when the select changes.
 			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/time
 		</x-slot>
 	</x-htmx-example>
 
@@ -478,6 +518,9 @@
 				Loads html when the select changes.
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<x-htmx-example>
@@ -501,6 +544,9 @@
 			<p>
 				Mouse leave
 			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/time
 		</x-slot>
 	</x-htmx-example>
 
@@ -528,6 +574,9 @@
 				When key pressed
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	 
@@ -550,6 +599,9 @@
 			</p>
 			<p>The "load" trigger option is triggered when the page loads. This pattern is commonly called <i>lazy loading</i>. Because it happens immediately on load, you will likely not see the original text in the div.
 			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/time
 		</x-slot>
 	</x-htmx-example>
 
@@ -575,6 +627,9 @@
 				Put description here
 			</p>
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot>
 	</x-htmx-example>
 
 	<div id="htmx-hx-target"
@@ -587,6 +642,11 @@
 			Put html into a target with an id on a click
 		</x-slot>
 
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target
+		</x-slot:attributes>
+
 		<x-slot:code>
 <button hx-get="/htmx/time"
 		hx-target="#time-target-click">
@@ -598,8 +658,10 @@
 		</x-slot>
 
 		<x-slot:description>
-			
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 
@@ -607,6 +669,11 @@
 		<x-slot:title>
 			Put html into a target with a class on a click
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -619,8 +686,10 @@
 		</x-slot>
 
 		<x-slot:description>
-			
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 
@@ -628,6 +697,11 @@
 		<x-slot:title>
 			Put html into a target with the 'closest' css selector
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target
+		</x-slot:attributes>
 
 		<x-slot:code>
 <div>
@@ -640,8 +714,10 @@
 		</x-slot>
 
 		<x-slot:description>
-			
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 
@@ -654,6 +730,12 @@
 		<x-slot:title>
 			Swap data to replace the innerHTML
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="innerHTML"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -668,6 +750,9 @@
 		<x-slot:description>
 			
 		</x-slot>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 
@@ -677,11 +762,17 @@
 			Swap data to replace the outerHTML
 		</x-slot>
 
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="outerHTML"
+		</x-slot:attributes>
+
 		<x-slot:code>
 <button hx-get="/htmx/time"
 		hx-target="#swap-target"
 		hx-swap="outerHTML">
-	Click to replace html			
+	Click to replace html		
 </button>
 <div id="swap-target">
 	This will be replaced
@@ -690,7 +781,10 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 
@@ -698,6 +792,12 @@
 		<x-slot:title>
 			Swap data to the target using beforebegin
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="beforebegin"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -714,7 +814,10 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 
@@ -722,6 +825,12 @@
 		<x-slot:title>
 			Swap data to the target using afterbegin
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="afterbegin"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -738,13 +847,22 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 	<x-htmx-example>
 		<x-slot:title>
 			Swap data to the target using beforeend
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="beforeend"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -761,13 +879,22 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 	<x-htmx-example>
 		<x-slot:title>
 			Swap data to the target using afterend
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="afterend"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -784,13 +911,22 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 	<x-htmx-example>
 		<x-slot:title>
 			Delete a targeted item after loading
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="delete"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -807,13 +943,22 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 	<x-htmx-example>
 		<x-slot:title>
 			Do nothing on the swap
 		</x-slot>
+
+		<x-slot:attributes>
+			hx-get<br>
+			hx-target<br>
+			hx-swap="none"
+		</x-slot:attributes>
 
 		<x-slot:code>
 <button hx-get="/htmx/time"
@@ -830,7 +975,10 @@
 
 		<x-slot:description>
 			Because we are using hx-swap outerHTML, the #swap-target no longer exists after it has loaded once.
-		</x-slot>
+		</x-slot:description>
+		<x-slot:route>
+			/htmx/time
+		</x-slot:route>
 	</x-htmx-example>
 
 	<div id="htmx-hx-essentials-examples"

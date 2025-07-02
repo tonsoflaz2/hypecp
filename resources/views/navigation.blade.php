@@ -2,8 +2,8 @@
     <a href="/">
         htmx
     </a>
-    <a href="/about">
-        about
+    <a href="/demos">
+        demos
     </a>
     <a href="/blog">
         blog
