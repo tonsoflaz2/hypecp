@@ -77,7 +77,8 @@ Route::post('demos/datastar-validation/validate', [DatastarValidation::class, 'v
 Route::post('demos/datastar-validation',          [DatastarValidation::class, 'create']);
 
 Route::get('demos/datastar-sse-validation',           [DatastarValidation::class, 'sse']);
-Route::get('demos/datastar-sse-validation/stream',    [DatastarValidation::class, 'stream']);
+Route::post('demos/datastar-sse-validation/validate',    [DatastarValidation::class, 'sseValidate']);
+Route::post('demos/datastar-sse-validation',          [DatastarValidation::class, 'sseCreate']);
 
 
 // ======================> BASECOAT
@@ -120,6 +121,6 @@ Route::get('wave/{code}', [WaveController::class, 'room']);
 
 // ======================> BASECOAT
 Route::get('demos/datastar-one', [OneController::class, 'show']);
-Route::get('demos/datastar-one/stream', [OneController::class, 'stream']);
+Route::get('demos/datastar-one/long-request', [OneController::class, 'long']);
 
 

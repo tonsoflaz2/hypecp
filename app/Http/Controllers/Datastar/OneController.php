@@ -14,25 +14,16 @@ class OneController extends Controller
         return view('demos.datastar-one');
     }
 
-    public function stream()
+    public function long()
     {
-        ignore_user_abort(false);
-        ini_set('max_execution_time', 36000);
 
-        $sse = new ServerSentEventGenerator();
+        return "Success! text/html sent back";
+        $sse = new \starfederation\datastar\ServerSentEventGenerator();
         $sse->sendHeaders();
 
-        while (true) {
-            $signals = ServerSentEventGenerator::readSignals();
-            $foo = $signals['foo'] ?? '';
+        sleep(3);
 
-            $html = '<div id="foo">Foo: ' . htmlspecialchars($foo) . '</div>';
-            $sse->patchElements($html);
-
-            // Patch the current time to verify sse running
-            $nowHtml = '<div id="now"> Now: ' . date('H:i:s') . '</div>';
-            $sse->patchElements($nowHtml);
-            usleep(250000);
-        }
+        $html = "<div></div>";
+        $sse->patchElements($html);
     }
 } 

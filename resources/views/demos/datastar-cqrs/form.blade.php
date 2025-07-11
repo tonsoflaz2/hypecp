@@ -1,4 +1,8 @@
-<div id="registration_form" class="mb-8">
+
+<div id="registration_form" class="mb-8" 
+     data-on-load="@get('/demos/datastar-sse-validation/stream')">
+
+    <div id="random"></div>
 
 	<input data-bind-csrf_token type="hidden" value="{{ csrf_token() }}" />
 
@@ -22,9 +26,7 @@
 						</div>
 					</div>
 			        <input type="text"
-			        	   autocomplete="off" 
 			        	   data-bind-name
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"			   
 			        	   value="{{ request('name') }}"
 			        	   name="name">
 			      </div>
@@ -40,7 +42,6 @@
 						</div>
 					</div>
 			        <input data-bind-ssn
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 			        	   required
 			        	   autocomplete="off"
 			        	   name="ssn" type="text" value="{{ request('ssn') }}">
@@ -57,7 +58,6 @@
 					</div>
 				</div>
 		        <input data-bind-email
-			           data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 		        	   required
 		        	   name="email" type="email" value="{{ request('email') }}">
 		      </div>
@@ -72,7 +72,6 @@
 					</div>
 		        </div>
 		        <input data-bind-create_password
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 		        	   required
 		        	   type="password" name="create_password" value="{{ request('create_password') }}">
 		      </div>
@@ -87,21 +86,18 @@
 					</div>
 				</div>
 		        <input data-bind-confirm_password
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 		        	   required
 		        	   type="password" name="confirm_password" value="{{ request('confirm_password') }}">
 		      </div>
 
 		    </div>
 		  </section>
-		  <div id="errors" 
-
-			   data-on-load="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
-		  	   class="px-8">
+		  <div id="errors" class="px-8">
+		  	<!-- Validation errors will be streamed here via SSE -->
 		  </div>
 		  <footer class="flex flex-col items-center gap-2">
 
-		    <button data-on-click="@post('/demos/datastar-sse-validation', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"
+		    <button data-on-click="@post('/demos/datastar-validation', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"
 		    		data-indicator-fetching	
 		    		data-attr-disabled="$fetching"
 			        id="zsubmit" type="submit" class="btn w-full">
@@ -115,4 +111,22 @@
 		  </footer>
 		
 	</div>
+
+    <!-- Debug: Show all signal values -->
+    <div class="mt-8 p-4 bg-gray-100 rounded">
+        <h4 class="font-bold mb-2">Signal Debug</h4>
+        <div>Name: <span data-text="$name"></span></div>
+        <div>SSN: <span data-text="$ssn"></span></div>
+        <div>Email: <span data-text="$email"></span></div>
+        <div>Create Password: <span data-text="$create_password"></span></div>
+        <div>Confirm Password: <span data-text="$confirm_password"></span></div>
+        <div>Fetching: <span data-text="$fetching"></span></div>
+    </div>
+
+    <!-- Debug: Signals array from controller -->
+    <div id="signal-array" class="mt-8"></div>
+
+    <script>
+
+    </script>
 </div>

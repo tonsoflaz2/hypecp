@@ -17,46 +17,28 @@ class ValidationController extends Controller
         return view('demos.datastar-sse-validation.index');
     }
 
-    public function stream()
+    public function sseValidate()
     {
-        ignore_user_abort(false);
-        ini_set('max_execution_time', 36000);
-
-        while (ob_get_level() > 0) ob_end_flush();
-        ob_implicit_flush(1);
 
         $sse = new \starfederation\datastar\ServerSentEventGenerator();
         $sse->sendHeaders();
 
-        $lastValidation = null;
-        while (true) {
-            $signals = \starfederation\datastar\ServerSentEventGenerator::readSignals();
-            $name = $signals['name'] ?? '';
-            $ssn = $signals['ssn'] ?? '';
-            $email = $signals['email'] ?? '';
-            $create_password = $signals['create_password'] ?? '';
-            $confirm_password = $signals['confirm_password'] ?? '';
+        $signals = \starfederation\datastar\ServerSentEventGenerator::readSignals();
 
-            $validation_errors = $this->requestIsValid($name, $ssn, $email, $create_password, $confirm_password);
+        $validation_errors = $this->requestIsValid($signals);
 
-            // Always patch a random number to #random
-            $random = rand(1000, 9999);
-            $randomHtml = '<div id="random">Random: ' . $random . '</div>';
-            $sse->patchElements($randomHtml);
+        $html = view('demos.datastar-sse-validation.errors', compact('validation_errors'))->render();
+        $sse->patchElements($html);
 
-            // Patch the signals array as <pre> for debugging
-            $signalsHtml = '<div id="signal-array"><pre>' . htmlspecialchars(print_r($signals, true)) . '</pre></div>';
-            $sse->patchElements($signalsHtml);
-
-            // Only patch errors if changed
-            if ($validation_errors !== $lastValidation) {
-                $html = view('demos.datastar-sse-validation.errors', compact('validation_errors'))->render();
-                $sse->patchElements($html);
-                $lastValidation = $validation_errors;
-            }
-
-            usleep(250000); // 250ms
+    }
+    public function sseCreate()
+    {
+        sleep(3);
+        $validation_errors = $this->requestIsValid();
+        if ($validation_errors) {
+            return view('demos.datastar-sse-validation.form', compact('validation_errors'));
         }
+        return view('demos.datastar-sse-validation.success');
     }
 
     public function index()
@@ -83,19 +65,22 @@ class ValidationController extends Controller
 
 
 
-    public function requestIsValid($name = null, $ssn = null, $email = null, $create_password = null, $confirm_password = null)
+    public function requestIsValid($input = null)
     {
+        if (!$input) {
+            $input = request()->input();
+        }
         // Use provided parameters or fall back to request() values
-        $name = $name ?? request('name');
-        $raw_ssn = $ssn ?? request('ssn');
+        $name = $input['name'] ?? '';
+        $raw_ssn = $input['ssn'] ?? '';
         $ssn = str_replace('-', '', $raw_ssn);
-        $email = $email ?? request('email');
-        $raw_password = $create_password ?? request('create_password');
+        $email = $input['email'] ?? '';
+        $raw_password = $input['create_password'] ?? '';
         $password = null;
         if ($raw_password) {
             $password = Hash::make($raw_password);
         }
-        $raw_confirm_password = $confirm_password ?? request('confirm_password');
+        $raw_confirm_password = $input['confirm_password'] ?? '';
         $confirm_password = null;
         if ($raw_confirm_password) {
             $confirm_password = Hash::make($raw_confirm_password);
@@ -166,7 +151,7 @@ class ValidationController extends Controller
         }
 
         // =======================> Confirm Password
-        if (!request('confirm_password')) {
+        if (!$raw_confirm_password) {
             $validation_errors['confirm_password']['required'] = 'Confirm Password is required.';
         }
         if ($raw_password != $raw_confirm_password) {

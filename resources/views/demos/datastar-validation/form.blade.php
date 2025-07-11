@@ -22,6 +22,7 @@
 						</div>
 					</div>
 			        <input type="text"
+			        	   autocomplete="off" 
 			        	   data-bind-name
 			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"			   
 			        	   value="{{ request('name') }}"
@@ -104,12 +105,12 @@
 		  <footer class="flex flex-col items-center gap-2">
 
 		    <button data-on-click="@post('/demos/datastar-validation', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"
-		    		data-indicator-fetching	
+		    		data-indicator="fetching"	
 		    		data-attr-disabled="$fetching"
 			        id="zsubmit" type="submit" class="btn w-full">
 		    	Create
 		    	<img class="w-5 -mr-5 opacity-0" 
-		    		 data-class-opacity-100="$fetching"
+		    		 data-class='{"opacity-100":$fetching}'
 		    		 src="/images/loading-gif.gif" />
 		    </button>
 		    <!-- <button type="button" class="btn-outline w-full">Login with Google</button> -->
