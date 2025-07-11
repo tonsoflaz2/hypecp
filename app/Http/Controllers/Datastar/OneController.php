@@ -17,13 +17,14 @@ class OneController extends Controller
     public function long()
     {
 
-        return "Success! text/html sent back";
-        $sse = new \starfederation\datastar\ServerSentEventGenerator();
-        $sse->sendHeaders();
-
         sleep(3);
+        return "<div id='response'>Response is back baby!</div>";
+        // $sse = new \starfederation\datastar\ServerSentEventGenerator();
+        // $sse->sendHeaders();
 
-        $html = "<div></div>";
-        $sse->patchElements($html);
+        
+
+        // $html = "<div></div>";
+        // $sse->patchElements($html);
     }
 } 

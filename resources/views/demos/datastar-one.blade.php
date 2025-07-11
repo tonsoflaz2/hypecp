@@ -47,6 +47,7 @@
             LOADING
         </div>
     </button> 
+    <div id="response"></div>
 </body>
 
 <h2>What should happen:</h2>
