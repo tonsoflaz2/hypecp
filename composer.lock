@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8258e56e69fae3ec1687356487b9ce7a",
+    "content-hash": "b8fa231c0c04e4c14ff775680ddf8f8d",
     "packages": [
         {
             "name": "brick/math",
@@ -3272,64 +3272,6 @@
             "time": "2024-11-29T06:14:30+00:00"
         },
         {
-            "name": "putyourlightson/laravel-datastar",
-            "version": "1.0.0-beta.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/putyourlightson/laravel-datastar.git",
-                "reference": "668c4ef4a8756a32fa5726e5d67ed125868d31f9"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/putyourlightson/laravel-datastar/zipball/668c4ef4a8756a32fa5726e5d67ed125868d31f9",
-                "reference": "668c4ef4a8756a32fa5726e5d67ed125868d31f9",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^11.0",
-                "php": "^8.2",
-                "starfederation/datastar-php": "1.0.0-beta.17"
-            },
-            "require-dev": {
-                "craftcms/ecs": "dev-main",
-                "craftcms/phpstan": "dev-main",
-                "pestphp/pest": "^3.0"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Putyourlightson\\Datastar\\DatastarServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/helpers.php"
-                ],
-                "psr-4": {
-                    "Putyourlightson\\Datastar\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "mit"
-            ],
-            "description": "A reactive hypermedia framework for Laravel.",
-            "support": {
-                "docs": "https://github.com/putyourlightson/laravel-datastar",
-                "issues": "https://github.com/putyourlightson/laravel-datastar/issues",
-                "source": "https://github.com/putyourlightson/laravel-datastar"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/bencroker",
-                    "type": "github"
-                }
-            ],
-            "time": "2025-04-09T16:00:52+00:00"
-        },
-        {
             "name": "ralouphie/getallheaders",
             "version": "3.0.3",
             "source": {
@@ -3543,16 +3485,16 @@
         },
         {
             "name": "starfederation/datastar-php",
-            "version": "1.0.0-beta.17",
+            "version": "v1.0.0-RC.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/starfederation/datastar-php.git",
-                "reference": "cfde72fc7e17c9fc2f12a6d97e3eb40711431d9f"
+                "reference": "bac4f94d1c091476d8fddd6c869aaa1f3a1cdfe6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/starfederation/datastar-php/zipball/cfde72fc7e17c9fc2f12a6d97e3eb40711431d9f",
-                "reference": "cfde72fc7e17c9fc2f12a6d97e3eb40711431d9f",
+                "url": "https://api.github.com/repos/starfederation/datastar-php/zipball/bac4f94d1c091476d8fddd6c869aaa1f3a1cdfe6",
+                "reference": "bac4f94d1c091476d8fddd6c869aaa1f3a1cdfe6",
                 "shasum": ""
             },
             "require": {
@@ -3586,7 +3528,7 @@
                 "issues": "https://github.com/starfederation/datastar-php/issues",
                 "source": "https://github.com/starfederation/datastar-php"
             },
-            "time": "2025-03-31T00:32:25+00:00"
+            "time": "2025-07-10T12:21:14+00:00"
         },
         {
             "name": "symfony/clock",
@@ -9188,8 +9130,7 @@
     "aliases": [],
     "minimum-stability": "beta",
     "stability-flags": {
-        "putyourlightson/laravel-datastar": 10,
-        "starfederation/datastar-php": 10
+        "starfederation/datastar-php": 5
     },
     "prefer-stable": true,
     "prefer-lowest": false,

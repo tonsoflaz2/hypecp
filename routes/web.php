@@ -5,7 +5,9 @@ use App\Http\Controllers\WaveController;
 use App\Http\Controllers\Datastar\RipplesController;
 use App\Http\Controllers\Htmx\StructureController;
 use App\Http\Controllers\Htmx\ValidationController;
+use App\Http\Controllers\Datastar\ValidationController as DatastarValidation;
 use App\Http\Controllers\Htmx\ValidationHtmlController;
+use App\Http\Controllers\Datastar\OneController;
 
 function asciiByWhitespace($value) {
     // Clamp input value between 0 and 50
@@ -70,6 +72,12 @@ Route::get('demos/htmx-validation',             [ValidationController::class, 'i
 Route::post('demos/htmx-validation/validate',   [ValidationController::class, 'validate']);
 Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);
 
+Route::get('demos/datastar-validation',           [DatastarValidation::class, 'index']);
+Route::post('demos/datastar-validation/validate', [DatastarValidation::class, 'validate']);
+Route::post('demos/datastar-validation',          [DatastarValidation::class, 'create']);
+
+Route::get('demos/datastar-sse-validation',           [DatastarValidation::class, 'sse']);
+Route::get('demos/datastar-sse-validation/stream',    [DatastarValidation::class, 'stream']);
 
 
 // ======================> BASECOAT
@@ -111,5 +119,7 @@ Route::post('wave/members', [WaveController::class, 'createMember']);
 Route::get('wave/{code}', [WaveController::class, 'room']);
 
 // ======================> BASECOAT
+Route::get('demos/datastar-one', [OneController::class, 'show']);
+Route::get('demos/datastar-one/stream', [OneController::class, 'stream']);
 
 

@@ -1,9 +1,11 @@
 <div id="htmx-sidebar" class="fixed top-0 left-0 h-screen w-80 overflow-y-auto text-sm bg-gray-200 z-30">
-	<div style="margin: 20px; height: 120px; width: 120px;" class="flex border shadow-lg bg-white rounded-lg items-center text-center" src="/images/logo.png">
-		
-		<div class="mx-auto transform -rotate-12 text-blue-400 font-black text-4xl">
-			hype<br>
-			<span class="text-gray-900">cp</span>
+	<div class="flex items-center gap-4" style="margin: 20px;">
+		<div style="height: 80px; width: 80px;" class="flex border rounded-lg items-center justify-center text-center">
+			<img src="/images/logo-4.png" alt="Hypecp Logo" class="w-16 h-16">
+		</div>
+		<div class="flex flex-col justify-center">
+			<span class="text-xl font-bold text-gray-800">hypecp</span>
+			<span class="text-sm font-bold text-orange-500">hypermedia<br>copy &amp; paste</span>
 		</div>
 	</div>
 
