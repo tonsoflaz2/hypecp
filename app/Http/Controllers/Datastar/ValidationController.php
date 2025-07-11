@@ -23,9 +23,7 @@ class ValidationController extends Controller
         $sse = new \starfederation\datastar\ServerSentEventGenerator();
         $sse->sendHeaders();
 
-        $signals = \starfederation\datastar\ServerSentEventGenerator::readSignals();
-
-        $validation_errors = $this->requestIsValid($signals);
+        $validation_errors = $this->requestIsValid();
 
         $html = view('demos.datastar-sse-validation.errors', compact('validation_errors'))->render();
         $sse->patchElements($html);
@@ -49,7 +47,6 @@ class ValidationController extends Controller
     public function validate()
     {
         $validation_errors = $this->requestIsValid();
-        //dd($validation_errors);
         return view('demos.datastar-validation.errors', compact('validation_errors'));
     }
 

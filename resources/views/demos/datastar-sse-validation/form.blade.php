@@ -24,7 +24,7 @@
 			        <input type="text"
 			        	   autocomplete="off" 
 			        	   data-bind-name
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"			   
+			        	   data-on-keyup="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"			   
 			        	   value="{{ request('name') }}"
 			        	   name="name">
 			      </div>
@@ -40,7 +40,7 @@
 						</div>
 					</div>
 			        <input data-bind-ssn
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
+			        	   data-on-keyup="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 			        	   required
 			        	   autocomplete="off"
 			        	   name="ssn" type="text" value="{{ request('ssn') }}">
@@ -57,7 +57,7 @@
 					</div>
 				</div>
 		        <input data-bind-email
-			           data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
+			           data-on-keyup="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 		        	   required
 		        	   name="email" type="email" value="{{ request('email') }}">
 		      </div>
@@ -72,23 +72,28 @@
 					</div>
 		        </div>
 		        <input data-bind-create_password
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
+			        	   data-on-keyup="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 		        	   required
 		        	   type="password" name="create_password" value="{{ request('create_password') }}">
 		      </div>
 
-		      <div class="grid gap-2">
+		      <div data-computed-matched="$confirm_password && $confirm_password == $create_password" class="grid gap-2">
 		        <div class="flex items-center gap-2">
 		        	<label>Confirm Password</label>
 					<div class="ml-auto inline-block text-xs text-gray-400">
 						<span id="validated_confirm_password" class="transition">
 							Must match
 						</span>
+						<span data-class='{"font-bold text-red-500":$confirm_password && !$matched}'>
+							<span data-show="$matched">✅ <s>Must match (local)</s></span>
+							<span data-show="!$matched">Must match (local)</span>
+						</span>
 					</div>
 				</div>
 		        <input data-bind-confirm_password
-			        	   data-on-keydown__debounce.200ms="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
+			        	   data-on-keyup="@post('/demos/datastar-sse-validation/validate', {headers: {'x-csrf-token':'{{ csrf_token() }}'}})"	
 		        	   required
+
 		        	   type="password" name="confirm_password" value="{{ request('confirm_password') }}">
 		      </div>
 
