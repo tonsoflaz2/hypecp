@@ -20,6 +20,9 @@
         It seems the data-indicator is never sent the "false" setting when the reponse is not event/stream
     </p>
 
+    <h2>datastar version</h2>
+    https://cdn.jsdelivr.net/gh/starfederation/datastar@main/bundles/datastar.js
+
 <h2>Code</h2>
 
     <pre>
