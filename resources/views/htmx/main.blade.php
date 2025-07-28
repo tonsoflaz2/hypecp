@@ -1053,5 +1053,182 @@
 		</x-slot>
 	</x-htmx-example>
 
+	<div id="htmx-extensions"
+		 class="mt-8 text-xl font-bold text-black">
+		EXTENSIONS
+	</div>
+
+	<p class="p-4">
+		HTMX extensions add additional functionality to the core library. Extensions are loaded via CDN or npm and enabled using the <i>hx-ext</i> attribute. They can enhance HTMX with features like head tag support, client-side templates, and more.
+	</p>
+
+	<div id="htmx-head-support"
+		 class="mt-8 text-xl font-bold text-black">
+		head-support
+	</div>
+
+	<p class="p-4">
+		To use the head-support extension, first include the script and enable it on your page:
+	</p>
+
+	<div class="lg:flex w-full overflow-hidden">
+		<div class="w-full code-block relative overflow-x-auto">
+		<pre><code class="hljs language-html rounded-xl">{!! htmlentities('<script src="https://cdn.jsdelivr.net/npm/htmx-ext-head-support@2.0.2"></script>
+
+<body hx-ext="head-support">') !!}</code></pre>
+		</div>
+	</div>
+
+	<p class="p-4">
+		The server responses contain complete HTML documents with updated titles:
+	</p>
+
+	<div class="lg:flex w-full gap-4">
+		<div class="w-1/2 code-block relative overflow-x-auto">
+			<pre><code class="hljs language-html rounded-xl">{!! htmlentities('<html>
+<head>
+    <title hx-head="re-eval">🟢 Active - hype cp | Hypermedia Copy & Paste</title>
+</head>
+</html>') !!}</code></pre>
+		</div>
+		<div class="w-1/2 code-block relative overflow-x-auto">
+			<pre><code class="hljs language-html rounded-xl">{!! htmlentities('<html>
+<head>
+    <title hx-head="re-eval">🔴 Inactive - hype cp | Hypermedia Copy & Paste</title>
+</head>
+</html>') !!}</code></pre>
+		</div>
+	</div>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Updating the page title
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-ext="head-support"<br>
+			hx-get<br>
+			hx-swap="none"<br>
+			hx-head="re-eval"
+		</x-slot:attributes>
+
+		<x-slot:code>
+<button hx-get="/htmx/head-support/title-active"
+        hx-swap="none">
+    Set Active Title
+</button>
+
+<button hx-get="/htmx/head-support/title-inactive"
+        hx-swap="none">
+    Set Inactive Title
+</button>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				The <b>head-support</b> extension allows HTMX to process &lt;head&gt; tags in responses, enabling dynamic updates to the page title, meta tags, CSS, and other head elements.
+			</p>
+			<p>
+				In this example, clicking the buttons sends requests that return only a &lt;head&gt; tag with a new &lt;title&gt;. The <i>hx-head="re-eval"</i> attribute on the title tag tells the extension to replace the existing title with the new one.
+			</p>
+			<p>
+				Using <i>hx-swap="none"</i> prevents any content changes while the head-support extension processes the &lt;head&gt; tag and updates only the page title.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/head-support/title-active<br>
+			/htmx/head-support/title-inactive
+		</x-slot:route>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Updating CSS styles
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-ext="head-support"<br>
+			hx-get<br>
+			hx-swap="none"<br>
+			hx-head="re-eval"
+		</x-slot:attributes>
+
+		<x-slot:code>
+<button hx-get="/htmx/head-support/css-blue"
+        hx-swap="none">
+    Blue Theme
+</button>
+
+<button hx-get="/htmx/head-support/css-red"
+        hx-swap="none">
+    Red Theme
+</button>
+
+<div id="css-demo" class="p-4 border rounded">
+    <h3>CSS Demo</h3>
+    <p>Click the buttons above to change the head tag for the CSS of this box.</p>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				This example demonstrates how to dynamically update CSS styles using the head-support extension.
+			</p>
+			<p>
+				The responses contain &lt;style&gt; tags with <i>hx-head="re-eval"</i> that replace existing styles with the same ID. The extension processes the &lt;head&gt; tag and updates the page's CSS.
+			</p>
+			<p>
+				Using <i>hx-swap="none"</i> prevents any content changes while only the styling gets updated.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/head-support/css-blue<br>
+			/htmx/head-support/css-red
+		</x-slot:route>
+	</x-htmx-example>
+
+	<p class="p-4">
+		The server responses contain style tags with the same ID for replacement:
+	</p>
+
+	<div class="lg:flex w-full gap-4">
+		<div class="w-1/2 code-block relative overflow-x-auto">
+			<pre><code class="hljs language-html rounded-xl">{!! htmlentities('<html>
+<head>
+    <style id="demo-styles" hx-head="re-eval">
+        #css-demo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: 3px solid #4c51bf;
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+        #css-demo h3 {
+            color: #e6fffa;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+</html>') !!}</code></pre>
+		</div>
+		<div class="w-1/2 code-block relative overflow-x-auto">
+			<pre><code class="hljs language-html rounded-xl">{!! htmlentities('<html>
+<head>
+    <style id="demo-styles" hx-head="re-eval">
+        #css-demo {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: 3px solid #e53e3e;
+            box-shadow: 0 10px 25px rgba(245, 87, 108, 0.3);
+        }
+        #css-demo h3 {
+            color: #fed7d7;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+</html>') !!}</code></pre>
+		</div>
+	</div>
+
 
 </div>

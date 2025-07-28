@@ -6,6 +6,7 @@ use App\Http\Controllers\Datastar\RipplesController;
 use App\Http\Controllers\Htmx\StructureController;
 use App\Http\Controllers\Htmx\ValidationController;
 use App\Http\Controllers\Datastar\ValidationController as DatastarValidation;
+use App\Http\Controllers\Datastar\ValidationVideoController;
 use App\Http\Controllers\Htmx\ValidationHtmlController;
 use App\Http\Controllers\Datastar\OneController;
 
@@ -72,13 +73,11 @@ Route::get('demos/htmx-validation',             [ValidationController::class, 'i
 Route::post('demos/htmx-validation/validate',   [ValidationController::class, 'validate']);
 Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);
 
-Route::get('demos/datastar-validation',           [DatastarValidation::class, 'index']);
-Route::post('demos/datastar-validation/validate', [DatastarValidation::class, 'validate']);
-Route::post('demos/datastar-validation',          [DatastarValidation::class, 'create']);
+Route::get('demos/datastar-video',             [ValidationVideoController::class, 'index']);
+Route::post('demos/datastar-video/validate',   [ValidationVideoController::class, 'validate']);
+Route::post('demos/datastar-video',            [ValidationVideoController::class, 'create']);
 
-Route::get('demos/datastar-sse-validation',           [DatastarValidation::class, 'sse']);
-Route::post('demos/datastar-sse-validation/validate',    [DatastarValidation::class, 'sseValidate']);
-Route::post('demos/datastar-sse-validation',          [DatastarValidation::class, 'sseCreate']);
+
 
 
 // ======================> BASECOAT
@@ -107,6 +106,12 @@ Route::post('demos/htmx-structure/emails/{id}/campaign-unlink', [StructureContro
 // ======================> RESPONSES
 Route::view('/htmx/time', 'htmx.responses.time');
 Route::view('/htmx/form', 'htmx.responses.form');
+
+// ======================> HTMX EXTENSIONS
+Route::view('/htmx/head-support/title-active', 'htmx.responses.title-active');
+Route::view('/htmx/head-support/title-inactive', 'htmx.responses.title-inactive');
+Route::view('/htmx/head-support/css-blue', 'htmx.responses.css-blue');
+Route::view('/htmx/head-support/css-red', 'htmx.responses.css-red');
 
 // ======================> RANDOM
 Route::view('big-html', 'random.big-html');

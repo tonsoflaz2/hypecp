@@ -89,6 +89,16 @@
 			   class="block hover:text-black">Datastar Signals</a>
 		</div>
 
+		<a href="#htmx-extensions" 
+		   class="block font-bold mt-4">
+		   EXTENSIONS
+		</a>
+
+		<div class="ml-8">
+			<a href="#htmx-head-support" 
+			   class="block hover:text-black">head-support</a>
+		</div>
+
 	</div>
 
 </div>

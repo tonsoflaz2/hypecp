@@ -28,4 +28,13 @@
 			{{ $route ?? '' }}
 		</div>
 	</div>
+
+	@if(isset($response))
+	<div class="mt-4">
+		<b class="block text-gray-400 uppercase text-xs border-b w-full pb-2 mb-2">Response</b>
+		<div class="code-block relative overflow-x-auto">
+			<pre><code class="hljs language-html rounded-xl">{!! htmlentities($response) !!}</code></pre>
+		</div>
+	</div>
+	@endif
 </div>
