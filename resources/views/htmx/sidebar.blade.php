@@ -85,8 +85,12 @@
 			   class="block hover:text-black">Infinite Scroll</a>
 			<a href="/demos/htmx-structure" 
 			   class="block hover:text-black">HTMX Structure</a>
+			<a href="/demos/htmx-validation" 
+			   class="block hover:text-black">HTMX Validation</a>
 			<a href="/demos/datastar-signals" 
 			   class="block hover:text-black">Datastar Signals</a>
+			<a href="/demos/datastar-validation" 
+			   class="block hover:text-black">Datastar Validation</a>
 		</div>
 
 		<a href="#htmx-extensions" 

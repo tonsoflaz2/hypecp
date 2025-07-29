@@ -33,7 +33,7 @@
 
 		<div class="text-center text-sm">
 			View the
-			<a class="text-blue-500 underline" href="https://youtu.be/bBEiTYrXAGs">
+			<a class="text-blue-500 underline" href="https://www.youtube.com/watch?v=pdbaGOibJkc">
 				full video
 			</a>
 		</div>

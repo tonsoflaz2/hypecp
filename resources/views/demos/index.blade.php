@@ -190,6 +190,21 @@
                             <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">signals</span>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="px-6 py-4 border-b">
+                            <a href="/demos/datastar-validation" class="text-blue-600 hover:text-blue-800 font-semibold">Datastar Validation</a>
+                            <div class="text-xs text-gray-500">Real-time form validation using Datastar signals with server-side validation and dynamic error updates.</div>
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Datastar</span>
+                                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Validation</span>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 border-b align-top">
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">data-bind-*</span>
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">data-on-*</span>
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">signals</span>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

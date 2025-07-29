@@ -73,9 +73,10 @@ Route::get('demos/htmx-validation',             [ValidationController::class, 'i
 Route::post('demos/htmx-validation/validate',   [ValidationController::class, 'validate']);
 Route::post('demos/htmx-validation',            [ValidationController::class, 'create']);
 
-Route::get('demos/datastar-video',             [ValidationVideoController::class, 'index']);
-Route::post('demos/datastar-video/validate',   [ValidationVideoController::class, 'validate']);
-Route::post('demos/datastar-video',            [ValidationVideoController::class, 'create']);
+Route::get('demos/datastar-validation',           [DatastarValidation::class, 'index']);
+Route::post('demos/datastar-validation/validate', [DatastarValidation::class, 'validate']);
+Route::post('demos/datastar-validation',          [DatastarValidation::class, 'create']);
+
 
 
 
