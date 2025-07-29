@@ -101,6 +101,8 @@
 		<div class="ml-8">
 			<a href="#htmx-head-support" 
 			   class="block hover:text-black">head-support</a>
+			<a href="#htmx-preload" 
+			   class="block hover:text-black">preload</a>
 		</div>
 
 	</div>

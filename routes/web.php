@@ -113,6 +113,19 @@ Route::view('/htmx/head-support/title-active', 'htmx.responses.title-active');
 Route::view('/htmx/head-support/title-inactive', 'htmx.responses.title-inactive');
 Route::view('/htmx/head-support/css-blue', 'htmx.responses.css-blue');
 Route::view('/htmx/head-support/css-red', 'htmx.responses.css-red');
+Route::get('/htmx/preload/content', function() {
+    return response()->view('htmx.responses.preload-content')
+        ->header('Cache-Control', 'public, max-age=60');
+});
+
+Route::get('/htmx/preload/form-response', function() {
+    $plan = request('plan', 'none');
+    $features = request('features', []);
+    $region = request('region', 'none');
+    
+    return response()->view('htmx.responses.preload-form', compact('plan', 'features', 'region'))
+        ->header('Cache-Control', 'public, max-age=60');
+});
 
 // ======================> RANDOM
 Route::view('big-html', 'random.big-html');

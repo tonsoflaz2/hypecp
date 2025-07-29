@@ -1230,5 +1230,118 @@
 		</div>
 	</div>
 
+	<div id="htmx-preload"
+		 class="mt-8 text-xl font-bold text-black">
+		preload
+	</div>
+
+	<p class="p-4">
+		The preload extension allows you to load HTML fragments into your browser's cache before they are requested by the user, making pages appear to load nearly instantaneously. It's enabled by default on this page.
+	</p>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Preloading content on mousedown
+		</x-slot>
+
+		<x-slot:attributes>
+			preload<br>
+			hx-get<br>
+			hx-target
+		</x-slot:attributes>
+
+		<x-slot:code>
+<button hx-get="/htmx/preload/content" 
+        hx-target="#preload-demo"
+        preload>
+    Hover and click me (content preloads on mousedown)
+</button>
+
+<div id="preload-demo" class="p-4 border rounded mt-4">
+    <p class="text-gray-500">Content will load here...</p>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				The <b>preload</b> extension begins loading content when the user starts clicking (mousedown event). This gives your server a 100-200ms head start, making the response appear nearly instantaneous.
+			</p>
+			<p>
+				Simply add the <i>preload</i> attribute to any <i>hx-get</i> element or <i>&lt;a href&gt;</i> link. The extension automatically handles the preloading in the background.
+			</p>
+			<p>
+				<strong>Note:</strong> Preloading only works with GET requests. POST, PUT, and DELETE requests cannot be preloaded for security reasons.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/preload/content
+		</x-slot:route>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Preloading form responses
+		</x-slot>
+
+		<x-slot:attributes>
+			preload<br>
+			hx-get<br>
+			hx-target<br>
+			form elements
+		</x-slot:attributes>
+
+		<x-slot:code>
+<form hx-get="/htmx/preload/form-response" 
+      hx-target="#form-demo"
+      preload>
+    
+    <div class="mb-4">
+        <label class="block text-sm font-medium mb-2">Select Plan:</label>
+        <input type="radio" name="plan" value="basic" class="mr-2"> Basic
+        <input type="radio" name="plan" value="pro" class="mr-2"> Pro
+        <input type="radio" name="plan" value="enterprise" class="mr-2"> Enterprise
+    </div>
+    
+    <div class="mb-4">
+        <label class="block text-sm font-medium mb-2">Features:</label>
+        <input type="checkbox" name="features[]" value="video" class="mr-2"> Video
+        <input type="checkbox" name="features[]" value="audio" class="mr-2"> Audio
+        <input type="checkbox" name="features[]" value="support" class="mr-2"> Support
+    </div>
+    
+    <div class="mb-4">
+        <label class="block text-sm font-medium mb-2">Region:</label>
+        <select name="region" class="border rounded px-3 py-2">
+            <option value="us">United States</option>
+            <option value="eu">Europe</option>
+            <option value="asia">Asia</option>
+        </select>
+    </div>
+    
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Submit Form (Content Preloaded!)
+    </button>
+</form>
+
+<div id="form-demo" class="p-4 border rounded mt-4">
+    <p class="text-gray-500">Form responses will appear here...</p>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				The <b>preload</b> extension can preload form responses when users interact with form elements like radio buttons, checkboxes, and select dropdowns.
+			</p>
+			<p>
+				When you hover over or interact with form elements, the extension preloads the server response as if the form was submitted with those values. This makes form interactions appear nearly instantaneous.
+			</p>
+			<p>
+				<strong>Try it:</strong> Hover over different radio buttons, checkboxes, or change the select dropdown to see responses preload in the background.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/preload/form-response
+		</x-slot:route>
+	</x-htmx-example>
 
 </div>
