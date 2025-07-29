@@ -127,6 +127,22 @@ Route::get('/htmx/preload/form-response', function() {
         ->header('Cache-Control', 'public, max-age=60');
 });
 
+Route::get('/htmx/idiomorph/simple', function() {
+    return response()->view('htmx.responses.idiomorph-simple');
+});
+
+Route::get('/htmx/idiomorph/content-1', function() {
+    return response()->view('htmx.responses.idiomorph-content-1');
+});
+
+Route::get('/htmx/idiomorph/content-2', function() {
+    return response()->view('htmx.responses.idiomorph-content-2');
+});
+
+Route::get('/htmx/idiomorph/content-3', function() {
+    return response()->view('htmx.responses.idiomorph-content-3');
+});
+
 // ======================> RANDOM
 Route::view('big-html', 'random.big-html');
 Route::view('big-html-row', 'random.big-html-row');

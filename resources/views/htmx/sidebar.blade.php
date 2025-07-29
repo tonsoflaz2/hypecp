@@ -103,6 +103,8 @@
 			   class="block hover:text-black">head-support</a>
 			<a href="#htmx-preload" 
 			   class="block hover:text-black">preload</a>
+			<a href="#htmx-idiomorph" 
+			   class="block hover:text-black">idiomorph</a>
 		</div>
 
 	</div>

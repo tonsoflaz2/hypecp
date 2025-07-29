@@ -1344,4 +1344,103 @@
 		</x-slot:route>
 	</x-htmx-example>
 
+	<div id="htmx-idiomorph"
+		 class="mt-8 text-xl font-bold text-black">
+		idiomorph
+	</div>
+
+	<p class="p-4">
+		The idiomorph extension provides DOM morphing capabilities, allowing HTMX to smoothly transition between different states by reusing existing DOM nodes when possible. This creates much smoother animations and preserves element state.
+	</p>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Simple morphing example
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-swap="morph"<br>
+			hx-get<br>
+			hx-target
+		</x-slot:attributes>
+
+		<x-slot:code>
+<button hx-get="/htmx/idiomorph/simple" 
+        hx-target="#simple-morph"
+        hx-swap="morph">
+    Load Simple Content
+</button>
+
+<div id="simple-morph">
+    <p>Click the button to see simple morphing in action!</p>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				This simple example demonstrates basic DOM morphing. The button loads new content using <i>hx-swap="morph"</i>, which smoothly transitions the entire element.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/idiomorph/simple
+		</x-slot:route>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			DOM morphing with smooth transitions
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-swap="morph:innerHTML"<br>
+			hx-get<br>
+			hx-target
+		</x-slot:attributes>
+
+		<x-slot:code>
+<button hx-get="/htmx/idiomorph/content-1" 
+        hx-target="#morph-demo"
+        hx-swap="morph:innerHTML">
+    Morph Swap 1
+</button>
+
+<button hx-get="/htmx/idiomorph/content-2" 
+        hx-target="#morph-demo"
+        hx-swap="innerHTML">
+    Regular Swap 2
+</button>
+
+<button hx-get="/htmx/idiomorph/content-3" 
+        hx-target="#morph-demo"
+        hx-swap="morph:innerHTML">
+    Morph Swap 3
+</button>
+
+<div id="morph-demo" class="p-6 border-2 border-purple-200 rounded-lg mt-4 bg-purple-50">
+    <h3 class="text-purple-800 font-semibold mb-2">Initial Content</h3>
+    <p class="text-purple-700">This is the starting content. Click the buttons above to see smooth DOM morphing in action!</p>
+    <div class="mt-3 p-2 bg-purple-100 rounded">
+        <span class="text-sm text-purple-600">Element with preserved state</span>
+    </div>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				The <b>idiomorph</b> extension uses DOM morphing to smoothly transition between different HTML states. Instead of completely replacing elements, it intelligently reuses existing DOM nodes when possible.
+			</p>
+			<p>
+				Using <i>hx-swap="morph:innerHTML"</i> tells HTMX to morph only the inner children of the target element, leaving the container itself untouched. Compare this with <i>hx-swap="innerHTML"</i> which completely replaces the content.
+			</p>
+			<p>
+				<strong>Try it:</strong> Click "Morph Swap" buttons to see smooth transitions, then click "Regular Swap 2" to see the difference with traditional swapping. Notice how morphing preserves element state while regular swapping creates a jarring replacement.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/idiomorph/content-1<br>
+			/htmx/idiomorph/content-2<br>
+			/htmx/idiomorph/content-3
+		</x-slot:route>
+	</x-htmx-example>
+
 </div>
