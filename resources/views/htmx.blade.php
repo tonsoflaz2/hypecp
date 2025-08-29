@@ -12,6 +12,7 @@
     <script src="https://unpkg.com/htmx.org@2.0.3"></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx-ext-head-support@2.0.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/htmx-ext-preload@2.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/htmx-ext-response-targets@2.0.2"></script>
     <script src="https://unpkg.com/idiomorph@0.7.3"></script>
     <script src="https://unpkg.com/idiomorph@0.7.3/dist/idiomorph-ext.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>

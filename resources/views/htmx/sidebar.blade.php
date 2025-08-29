@@ -105,6 +105,8 @@
 			   class="block hover:text-black">preload</a>
 			<a href="#htmx-idiomorph" 
 			   class="block hover:text-black">idiomorph</a>
+			<a href="#htmx-response-targets" 
+			   class="block hover:text-black">response-targets</a>
 		</div>
 
 	</div>

@@ -1443,4 +1443,176 @@
 		</x-slot:route>
 	</x-htmx-example>
 
+	<div id="htmx-response-targets"
+		 class="mt-8 text-xl font-bold text-black">
+		response-targets
+	</div>
+
+	<p class="p-4">
+		The response-targets extension allows you to specify different target elements for different HTTP response codes. This enables better error handling and user experience by routing responses to appropriate UI locations.
+	</p>
+
+	<p class="p-4">
+		To use the response-targets extension, first include the script and enable it on your page:
+	</p>
+
+	<div class="lg:flex w-full overflow-hidden">
+		<div class="w-full code-block relative overflow-x-auto">
+		<pre><code class="hljs language-html rounded-xl">{!! htmlentities('<script src="https://cdn.jsdelivr.net/npm/htmx-ext-response-targets@2.0.2"></script>
+
+<div hx-ext="response-targets">') !!}</code></pre>
+		</div>
+	</div>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Basic response targeting example
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-ext="response-targets"<br>
+			hx-get<br>
+			hx-target<br>
+			hx-target-5*<br>
+			hx-target-404
+		</x-slot:attributes>
+
+		<x-slot:code>
+<div hx-ext="response-targets">
+    <div id="response-div" class="p-4 border rounded bg-gray-50">
+        <p class="text-gray-600">Response will appear here...</p>
+    </div>
+    
+    <button hx-get="/htmx/response-targets/register"
+            hx-target="#response-div"
+            hx-target-5*="#serious-errors"
+            hx-target-404="#not-found"
+            class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        Register!
+    </button>
+    
+    <div id="serious-errors" class="p-4 border rounded bg-red-50 mt-4">
+        <p class="text-red-600">Server errors will appear here...</p>
+    </div>
+    
+    <div id="not-found" class="p-4 border rounded bg-yellow-50 mt-4">
+        <p class="text-red-600">404 errors will appear here...</p>
+    </div>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				The <b>response-targets</b> extension allows you to route different HTTP response codes to different UI elements. In this example:
+			</p>
+			<ul class="list-disc ml-6 mt-2">
+				<li><b>200 responses</b> go to <i>#response-div</i> (normal success)</li>
+				<li><b>5xx responses</b> go to <i>#serious-errors</i> (server errors)</li>
+				<li><b>404 responses</b> go to <i>#not-found</i> (not found errors)</li>
+			</ul>
+			<p>
+				<strong>Random Response Demo:</strong> The server randomly returns different status codes to demonstrate the extension in action:
+			</p>
+			<ul class="list-disc ml-6 mt-2 text-sm text-gray-600">
+				<li><b>50% chance</b> of 200 success (green success message)</li>
+				<li><b>30% chance</b> of 500 server error (red error message)</li>
+				<li><b>20% chance</b> of 404 not found (yellow 404 message)</li>
+			</ul>
+			<p>
+				Click the button multiple times to see how different responses automatically get routed to their appropriate targets.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/response-targets/register
+		</x-slot:route>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Using hx-target-error for all error codes
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-ext="response-targets"<br>
+			hx-get<br>
+			hx-target<br>
+			hx-target-error
+		</x-slot:attributes>
+
+		<x-slot:code>
+<div hx-ext="response-targets">
+    <div id="response-div-2" class="p-4 border rounded bg-gray-50">
+        <p class="text-gray-600">Response will appear here...</p>
+    </div>
+    
+    <button hx-get="/htmx/response-targets/register"
+            hx-target="#response-div-2"
+            hx-target-error="#any-errors"
+            class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+        Register (All Errors)
+    </button>
+    
+    <div id="any-errors" class="p-4 border rounded bg-red-50 mt-4">
+        <p class="text-red-600">All 4xx and 5xx errors will appear here...</p>
+    </div>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				Instead of handling different error codes separately, you can use <i>hx-target-error</i> to route all 4xx and 5xx responses to a single error target.
+			</p>
+			<p>
+				This is useful when you want to display all errors in a unified error area rather than having separate locations for different types of errors.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/response-targets/register
+		</x-slot:route>
+	</x-htmx-example>
+
+	<x-htmx-example>
+		<x-slot:title>
+			Testing 404 response targeting
+		</x-slot>
+
+		<x-slot:attributes>
+			hx-ext="response-targets"<br>
+			hx-get<br>
+			hx-target<br>
+			hx-target-404
+		</x-slot:attributes>
+
+		<x-slot:code>
+<div hx-ext="response-targets">
+    <div id="response-div-3" class="p-4 border rounded bg-gray-50">
+        <p class="text-gray-600">Response will appear here...</p>
+    </div>
+    
+    <button hx-get="/htmx/response-targets/not-found"
+            hx-target="#response-div-3"
+            hx-target-404="#not-found-2"
+            class="bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">
+        Test 404 Response
+    </button>
+    
+    <div id="not-found-2" class="p-4 border rounded bg-yellow-50 mt-4">
+        <p class="text-yellow-600">404 errors will appear here...</p>
+    </div>
+</div>
+		</x-slot>
+
+		<x-slot:description>
+			<p>
+				This example specifically tests 404 response targeting. The button makes a request to a route that returns a 404 status, demonstrating how the extension routes error responses to the appropriate target.
+			</p>
+			<p>
+				<strong>Note:</strong> The <i>hx-target-404</i> attribute will catch 404 responses and route them to the specified target, while successful responses (200) go to the default <i>hx-target</i>.
+			</p>
+		</x-slot>
+		<x-slot:route>
+			/htmx/response-targets/not-found
+		</x-slot:route>
+	</x-htmx-example>
+
 </div>

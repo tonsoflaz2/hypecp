@@ -140,7 +140,28 @@ Route::get('/htmx/idiomorph/content-2', function() {
 });
 
 Route::get('/htmx/idiomorph/content-3', function() {
-    return response()->view('htmx.responses.idiomorph-content-3');
+	return response()->view('htmx.responses.idiomorph-content-3');
+});
+
+// ======================> HTMX RESPONSE TARGETS
+Route::get('/htmx/response-targets/register', function() {
+	// Randomize responses to demonstrate different status codes
+	$random = rand(1, 10);
+	
+	if ($random <= 3) {
+		// 30% chance of 500 server error
+		return response()->view('htmx.responses.response-targets-error')->setStatusCode(500);
+	} elseif ($random <= 5) {
+		// 20% chance of 404 not found
+		return response()->view('htmx.responses.response-targets-404')->setStatusCode(404);
+	} else {
+		// 50% chance of 200 success
+		return response()->view('htmx.responses.response-targets-success');
+	}
+});
+
+Route::get('/htmx/response-targets/not-found', function() {
+	return response()->view('htmx.responses.response-targets-404')->setStatusCode(404);
 });
 
 // ======================> RANDOM
