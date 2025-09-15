@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\StreamedResponse;
 
 class RipplesController extends Controller
 {
-    use DatastarEventStream;
+    //use DatastarEventStream;
 
     protected $white_threshhold = 5;
     protected $white_max_percent = 10;
