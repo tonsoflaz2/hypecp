@@ -10,23 +10,25 @@ use App\Http\Controllers\Datastar\ValidationVideoController;
 use App\Http\Controllers\Htmx\ValidationHtmlController;
 use App\Http\Controllers\Datastar\OneController;
 
-function asciiByWhitespace($value) {
-    // Clamp input value between 0 and 50
-    $value = max(0, min(50, $value));
+if (!function_exists('asciiByWhitespace')) {
+    function asciiByWhitespace($value) {
+        // Clamp input value between 0 and 50
+        $value = max(0, min(50, $value));
 
-    // Ordered from most whitespace to most visually dense
-    $asciiScale = [
-        '.', '.', '`', ':', ',', '-', '~', '_', 'i', 'l',
-        '!', '|', '/', '\\', '(', ')', '[', ']', '{', '}',
-        '^', '<', '>', '=', '+', '*', '?', 't', 'r', 'c',
-        's', 'v', 'o', 'u', 'n', 'a', 'e', 'x', 'd', 'g',
-        'q', 'b', 'p', 'y', 'm', 'w', '#', '%', '&', '@',
-        'M', 'W'
-    ];
+        // Ordered from most whitespace to most visually dense
+        $asciiScale = [
+            '.', '.', '`', ':', ',', '-', '~', '_', 'i', 'l',
+            '!', '|', '/', '\\', '(', ')', '[', ']', '{', '}',
+            '^', '<', '>', '=', '+', '*', '?', 't', 'r', 'c',
+            's', 'v', 'o', 'u', 'n', 'a', 'e', 'x', 'd', 'g',
+            'q', 'b', 'p', 'y', 'm', 'w', '#', '%', '&', '@',
+            'M', 'W'
+        ];
 
-    // Map 0–50 to the index of the array
-    $index = (int) round($value * (count($asciiScale) - 1) / 50);
-    return $asciiScale[$index];
+        // Map 0–50 to the index of the array
+        $index = (int) round($value * (count($asciiScale) - 1) / 50);
+        return $asciiScale[$index];
+    }
 }
 
 Route::view('/', 'htmx');
