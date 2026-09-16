@@ -85,7 +85,7 @@ rocket('yt-clip', {
     <div class="pad">
       <h1>Not a Space Cult</h1>
       <p class="lede">Every word of 26 episodes. Search, then look up to the stars.
-        <a class="howmade" href="https://youtu.be/s0b5hsjgDQw">how it was made</a></p>
+        <a class="howmade" href="https://youtu.be/s0b5hsjgDQw">how it was made using Datastar, Rocket, and Stellar</a></p>
 
       {{-- DATASTAR: signals go up, rendered HTML comes back down over SSE --}}
       <input type="search" placeholder="Search the transcripts&hellip;"
