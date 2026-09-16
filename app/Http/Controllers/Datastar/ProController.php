@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
  * Star Federation archive — every word of every episode.
  *
  * Signals arrive as one query string, rendered HTML goes back as one SSE event.
- * No SDK, no JSON API. The corpus lives in database/pro.sqlite (see pro:build);
+ * No SDK, no JSON API. The corpus lives in storage/app/pro/pro.sqlite (see pro:build);
  * FTS5 does the searching so nothing is held in memory between requests.
  */
 class ProController extends Controller

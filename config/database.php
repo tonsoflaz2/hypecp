@@ -58,7 +58,7 @@ return [
         'pro' => [
             'driver' => 'sqlite',
             'url' => env('DB_URL'),
-            'database' => database_path('pro.sqlite'),
+            'database' => storage_path('app/pro/pro.sqlite'),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
             'busy_timeout' => null,

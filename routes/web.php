@@ -184,7 +184,7 @@ Route::get('demos/datastar-one/long-request', [OneController::class, 'long']);
 
 
 // ======================> STAR FEDERATION ARCHIVE (raw Datastar + Rocket + Stellar demo)
-// Serves the full-text version (ProController, database/pro.sqlite via `pro:build`).
+// Serves the full-text version (ProController, storage/app/pro/pro.sqlite via `pro:build`).
 // The original archive page survives only as the film stage routes below.
 Route::get('datastar/podcast', [\App\Http\Controllers\Datastar\ProController::class, 'index']);
 Route::get('datastar/podcast/search', [\App\Http\Controllers\Datastar\ProController::class, 'search']);

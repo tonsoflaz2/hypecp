@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
 /**
- * Builds database/pro.sqlite for the datastar/pro archive.
+ * Builds storage/app/pro/pro.sqlite for the datastar/pro archive.
  *
  * The toy Python server keeps all 31k segments in memory because its process is
  * long-lived. PHP-FPM shares nothing between requests, so the index lives in
@@ -17,7 +17,7 @@ class BuildProArchive extends Command
     protected $signature = 'pro:build
                             {--source= : dir holding transcripts/, episodes_meta.txt, episode_dates.json}';
 
-    protected $description = 'Index every transcript segment into database/pro.sqlite (FTS5)';
+    protected $description = 'Index every transcript segment into storage/app/pro/pro.sqlite (FTS5)';
 
     /** Offered as suggestion chips — counted for real against the corpus. */
     private const CANDIDATES = [
@@ -95,7 +95,7 @@ class BuildProArchive extends Command
             'Indexed %s segments from %d episodes -> %s',
             number_format($segments),
             count($files),
-            database_path('pro.sqlite')
+            storage_path('app/pro/pro.sqlite')
         ));
 
         return self::SUCCESS;
@@ -103,7 +103,7 @@ class BuildProArchive extends Command
 
     private function freshDatabase(): \PDO
     {
-        $path = database_path('pro.sqlite');
+        $path = storage_path('app/pro/pro.sqlite');
         if (is_file($path)) {
             unlink($path);
         }
