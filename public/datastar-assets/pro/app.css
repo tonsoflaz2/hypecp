@@ -88,7 +88,6 @@ body {
   opacity: 0.7;
   text-decoration: underline dotted;
   text-underline-offset: 0.2em;
-  white-space: nowrap;
 }
 .pad .howmade:hover { opacity: 1; }
 #results {
