@@ -11,13 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Star Federation Archive</title>
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2213%22 font-size=%2213%22>🚀</text></svg>">
-  <link rel="stylesheet" href="/datastar/podcast/stellar.css">
-  <link rel="stylesheet" href="/datastar/podcast/app.css">
+  <link rel="stylesheet" href="/datastar-assets/podcast/stellar.css">
+  <link rel="stylesheet" href="/datastar-assets/podcast/app.css">
 @verbatim
 <script type="module">
 // Rocket components — the only JavaScript on this page, and all of it
 // defines web components. Application behavior lives in data-* attributes.
-import { rocket } from '/datastar/podcast/datastar-pro.js'
+import { rocket } from '/datastar-assets/podcast/datastar-pro.js'
 
 // Inline YouTube player. Each instance has its own $$playing state; the
 // iframe lives in a data-if template, so it only mounts once clicked.

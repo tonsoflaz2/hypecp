@@ -11,14 +11,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Not a Space Cult — {{ $stage }}</title>
 @if($stage === 'stellar')
-<link rel="stylesheet" href="/datastar/podcast/stellar.css">
+<link rel="stylesheet" href="/datastar-assets/podcast/stellar.css">
 @endif
 @if($stage === 'raw')
-<script type="module" src="/datastar/podcast/datastar-pro.js"></script>
+<script type="module" src="/datastar-assets/podcast/datastar-pro.js"></script>
 @else
 @verbatim
 <script type="module">
-import { rocket } from '/datastar/podcast/datastar-pro.js'
+import { rocket } from '/datastar-assets/podcast/datastar-pro.js'
 
 rocket('yt-clip', {
   mode: 'light',
