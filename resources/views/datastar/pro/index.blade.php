@@ -89,7 +89,7 @@ rocket('yt-clip', {
       {{-- DATASTAR: signals go up, rendered HTML comes back down over SSE --}}
       <input type="search" placeholder="Search the transcripts&hellip;"
              data-bind:query
-             data-on:input__debounce.300ms="@@get('/datastar/pro/search')">
+             data-on:input__debounce.300ms="@@get('/datastar/podcast/search')">
     </div>
   </div>
 
@@ -97,21 +97,21 @@ rocket('yt-clip', {
   @php $half = intdiv(count($terms), 2); @endphp
   <nav class="chips">
     <div class="chip-side">
-      <button class="chip" data-on:click="$query = ''; @@get('/datastar/pro/search')">all</button>
+      <button class="chip" data-on:click="$query = ''; @@get('/datastar/podcast/search')">all</button>
       @foreach (array_slice($terms, 0, $half) as $term)
         <button class="chip" data-term="{{ $term->word }}"
-                data-on:click="$query = '{{ $term->word }}'; @@get('/datastar/pro/search')">{{ $term->word }} <small>{{ $term->hits }}</small></button>
+                data-on:click="$query = '{{ $term->word }}'; @@get('/datastar/podcast/search')">{{ $term->word }} <small>{{ $term->hits }}</small></button>
       @endforeach
     </div>
     <div class="chip-side">
       @foreach (array_slice($terms, $half) as $term)
         <button class="chip" data-term="{{ $term->word }}"
-                data-on:click="$query = '{{ $term->word }}'; @@get('/datastar/pro/search')">{{ $term->word }} <small>{{ $term->hits }}</small></button>
+                data-on:click="$query = '{{ $term->word }}'; @@get('/datastar/podcast/search')">{{ $term->word }} <small>{{ $term->hits }}</small></button>
       @endforeach
     </div>
   </nav>
 
-  <main id="results" data-init="@@get('/datastar/pro/search')">&hellip;</main>
+  <main id="results" data-init="@@get('/datastar/podcast/search')">&hellip;</main>
 
 </div>
 </body>
