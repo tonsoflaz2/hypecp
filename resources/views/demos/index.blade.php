@@ -205,6 +205,22 @@
                             <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">signals</span>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="px-6 py-4 border-b">
+                            <a href="/datastar/podcast" class="text-blue-600 hover:text-blue-800 font-semibold">Not a Space Cult</a>
+                            <div class="text-xs text-gray-500">Full-text search over every episode of the Datastar podcast: raw SSE (no SDK), Rocket web components, Stellar CSS and Datastar Pro attributes.</div>
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Datastar Pro</span>
+                                <a href="https://youtu.be/s0b5hsjgDQw" class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded hover:bg-blue-200">Video</a>
+                            </div>
+                        </td>
+                        <td class="px-6 py-4 border-b align-top">
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">data-query-string</span>
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">data-persist</span>
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">data-match-media</span>
+                            <span class="inline-block bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">SSE</span>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

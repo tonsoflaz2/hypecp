@@ -81,6 +81,16 @@ body {
   color: var(--primary-5-on);          /* the contrast pair for the surface it sits on */
 }
 .pad .lede { color: var(--primary-5-on); opacity: 0.8; }
+.pad .howmade {
+  margin-left: var(--size-3);
+  font-size: var(--font-size--1);
+  color: inherit;
+  opacity: 0.7;
+  text-decoration: underline dotted;
+  text-underline-offset: 0.2em;
+  white-space: nowrap;
+}
+.pad .howmade:hover { opacity: 1; }
 #results {
   flex: 0 0 auto;
   max-width: 64rem;

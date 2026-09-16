@@ -10,7 +10,7 @@
 
     <script src='https://unpkg.com/htmx.org@2.0.4'></script>
     
-  <link rel="icon" href="https://demo.tailadmin.com/favicon.ico"><style data-fullcalendar=""></style><link href="./live-widget_files/style.css" rel="stylesheet"><script defer="" referrerpolicy="origin" src="./live-widget_files/s.js"></script><script data-cfasync="false" nonce="3049973c-efb8-47ff-8650-907d03912175">try{(function(w,d){!function(j,k,l,m){if(j.zaraz)console.error("zaraz is loaded twice");else{j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz._v="5850";j.zaraz._n="3049973c-efb8-47ff-8650-907d03912175";j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const t of Object.entries(Object.entries(dataLayer).reduce(((u,v)=>({...u[1],...v[1]})),{})))zaraz.set(t[0],t[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const w=j.zaraz.q.shift();j[l].q.push(w)}r.defer=!0;for(const x of[localStorage,sessionStorage])Object.keys(x||{}).filter((z=>z.startsWith("_zaraz_"))).forEach((y=>{try{j[l]["z_"+y.slice(7)]=JSON.parse(x.getItem(y))}catch{j[l]["z_"+y.slice(7)]=x.getItem(y)}}));r.referrerPolicy="origin";r.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bs=>new Promise((bt=>{if(bs){bs.e&&bs.e.forEach((bu=>{try{const bv=d.querySelector("script[nonce]"),bw=bv?.nonce||bv?.getAttribute("nonce"),bx=d.createElement("script");bw&&(bx.nonce=bw);bx.innerHTML=bu;bx.onload=()=>{d.head.removeChild(bx)};d.head.appendChild(bx)}catch(by){console.error(`Error executing script: ${bu}\n`,by)}}));Promise.allSettled((bs.f||[]).map((bz=>fetch(bz[0],bz[1]))))}bt()}));zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><script>(function(w,d){})(window,document)</script>
+  <link rel="icon" href="https://demo.tailadmin.com/favicon.ico"><style data-fullcalendar=""></style><link href="/demo-assets/live-widget_files/style.css" rel="stylesheet"><script defer="" referrerpolicy="origin" src="/demo-assets/live-widget_files/s.js"></script><script data-cfasync="false" nonce="3049973c-efb8-47ff-8650-907d03912175">try{(function(w,d){!function(j,k,l,m){if(j.zaraz)console.error("zaraz is loaded twice");else{j[l]=j[l]||{};j[l].executed=[];j.zaraz={deferred:[],listeners:[]};j.zaraz._v="5850";j.zaraz._n="3049973c-efb8-47ff-8650-907d03912175";j.zaraz.q=[];j.zaraz._f=function(n){return async function(){var o=Array.prototype.slice.call(arguments);j.zaraz.q.push({m:n,a:o})}};for(const p of["track","set","debug"])j.zaraz[p]=j.zaraz._f(p);j.zaraz.init=()=>{var q=k.getElementsByTagName(m)[0],r=k.createElement(m),s=k.getElementsByTagName("title")[0];s&&(j[l].t=k.getElementsByTagName("title")[0].text);j[l].x=Math.random();j[l].w=j.screen.width;j[l].h=j.screen.height;j[l].j=j.innerHeight;j[l].e=j.innerWidth;j[l].l=j.location.href;j[l].r=k.referrer;j[l].k=j.screen.colorDepth;j[l].n=k.characterSet;j[l].o=(new Date).getTimezoneOffset();if(j.dataLayer)for(const t of Object.entries(Object.entries(dataLayer).reduce(((u,v)=>({...u[1],...v[1]})),{})))zaraz.set(t[0],t[1],{scope:"page"});j[l].q=[];for(;j.zaraz.q.length;){const w=j.zaraz.q.shift();j[l].q.push(w)}r.defer=!0;for(const x of[localStorage,sessionStorage])Object.keys(x||{}).filter((z=>z.startsWith("_zaraz_"))).forEach((y=>{try{j[l]["z_"+y.slice(7)]=JSON.parse(x.getItem(y))}catch{j[l]["z_"+y.slice(7)]=x.getItem(y)}}));r.referrerPolicy="origin";r.src="/cdn-cgi/zaraz/s.js?z="+btoa(encodeURIComponent(JSON.stringify(j[l])));q.parentNode.insertBefore(r,q)};["complete","interactive"].includes(k.readyState)?zaraz.init():j.addEventListener("DOMContentLoaded",zaraz.init)}}(w,d,"zarazData","script");window.zaraz._p=async bs=>new Promise((bt=>{if(bs){bs.e&&bs.e.forEach((bu=>{try{const bv=d.querySelector("script[nonce]"),bw=bv?.nonce||bv?.getAttribute("nonce"),bx=d.createElement("script");bw&&(bx.nonce=bw);bx.innerHTML=bu;bx.onload=()=>{d.head.removeChild(bx)};d.head.appendChild(bx)}catch(by){console.error(`Error executing script: ${bu}\n`,by)}}));Promise.allSettled((bs.f||[]).map((bz=>fetch(bz[0],bz[1]))))}bt()}));zaraz._p({"e":["(function(w,d){})(window,document)"]});})(window,document)}catch(e){throw fetch("/cdn-cgi/zaraz/t"),e;};</script><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style><script>(function(w,d){})(window,document)</script>
 
   
 
@@ -785,11 +785,11 @@ rect.legend-mouseover-inactive,
   <div :class="sidebarToggle ? &#39;justify-center&#39; : &#39;justify-between&#39;" class="sidebar-header flex items-center gap-2 pt-8 pb-7 justify-between">
     <a href="https://demo.tailadmin.com/index.html">
       <span class="logo" :class="sidebarToggle ? &#39;hidden&#39; : &#39;&#39;">
-        <img class="dark:hidden" src="./live-widget_files/logo.svg" alt="Logo">
-        <img class="hidden dark:block" src="./live-widget_files/logo-dark.svg" alt="Logo">
+        <img class="dark:hidden" src="/demo-assets/live-widget_files/logo.svg" alt="Logo">
+        <img class="hidden dark:block" src="/demo-assets/live-widget_files/logo-dark.svg" alt="Logo">
       </span>
 
-      <img class="logo-icon hidden" :class="sidebarToggle ? &#39;lg:block&#39; : &#39;hidden&#39;" src="./live-widget_files/logo-icon.svg" alt="Logo">
+      <img class="logo-icon hidden" :class="sidebarToggle ? &#39;lg:block&#39; : &#39;hidden&#39;" src="/demo-assets/live-widget_files/logo-icon.svg" alt="Logo">
     </a>
   </div>
   <!-- SIDEBAR HEADER -->
@@ -1681,8 +1681,8 @@ rect.legend-mouseover-inactive,
       <!-- Hamburger Toggle BTN -->
 
       <a href="https://demo.tailadmin.com/index.html" class="lg:hidden">
-        <img class="dark:hidden" src="./live-widget_files/logo.svg" alt="Logo">
-        <img class="hidden dark:block" src="./live-widget_files/logo-dark.svg" alt="Logo">
+        <img class="dark:hidden" src="/demo-assets/live-widget_files/logo.svg" alt="Logo">
+        <img class="hidden dark:block" src="/demo-assets/live-widget_files/logo-dark.svg" alt="Logo">
       </a>
 
       <!-- Application nav menu button -->
@@ -1754,7 +1754,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-02.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-02.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1777,7 +1777,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-03.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-03.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1800,7 +1800,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-04.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-04.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1823,7 +1823,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-05.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-05.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-error-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1846,7 +1846,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-02.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-02.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1869,7 +1869,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-03.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-03.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1892,7 +1892,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-04.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-04.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-success-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1915,7 +1915,7 @@ rect.legend-mouseover-inactive,
               <li>
                 <a class="flex gap-3 rounded-lg border-b border-gray-100 p-3 px-4.5 py-3 hover:bg-gray-100 dark:border-gray-800 dark:hover:bg-white/5" href="https://demo.tailadmin.com/#">
                   <span class="relative z-1 block h-10 w-full max-w-10 rounded-full">
-                    <img src="./live-widget_files/user-05.jpg" alt="User" class="overflow-hidden rounded-full">
+                    <img src="/demo-assets/live-widget_files/user-05.jpg" alt="User" class="overflow-hidden rounded-full">
                     <span class="absolute bottom-0 right-0 z-10 h-2.5 w-full max-w-2.5 rounded-full border-[1.5px] border-white bg-error-500 dark:border-gray-900"></span>
                   </span>
 
@@ -1949,7 +1949,7 @@ rect.legend-mouseover-inactive,
       <div class="relative" x-data="{ dropdownOpen: false }" @click.outside="dropdownOpen = false">
         <a class="flex items-center text-gray-700 dark:text-gray-400" href="https://demo.tailadmin.com/#" @click.prevent="dropdownOpen = ! dropdownOpen">
           <span class="mr-3 h-11 w-11 overflow-hidden rounded-full">
-            <img src="./live-widget_files/owner.jpg" alt="User">
+            <img src="/demo-assets/live-widget_files/owner.jpg" alt="User">
           </span>
 
           <span class="mr-1 block text-theme-sm font-medium"> Lazarus </span>
@@ -2302,7 +2302,7 @@ rect.legend-mouseover-inactive,
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-full max-w-8 items-center rounded-full">
-          <img src="./live-widget_files/country-01.svg" alt="usa">
+          <img src="/demo-assets/live-widget_files/country-01.svg" alt="usa">
         </div>
         <div>
           <p class="text-theme-sm font-semibold text-gray-800 dark:text-white/90">
@@ -2327,7 +2327,7 @@ rect.legend-mouseover-inactive,
     <div class="flex items-center justify-between">
       <div class="flex items-center gap-3">
         <div class="w-full max-w-8 items-center rounded-full">
-          <img src="./live-widget_files/country-02.svg" alt="france">
+          <img src="/demo-assets/live-widget_files/country-02.svg" alt="france">
         </div>
         <div>
           <p class="text-theme-sm font-semibold text-gray-800 dark:text-white/90">
@@ -2425,7 +2425,7 @@ rect.legend-mouseover-inactive,
             <div class="flex items-center">
               <div class="flex items-center gap-3">
                 <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
-                  <img src="./live-widget_files/product-01.jpg" alt="Product">
+                  <img src="/demo-assets/live-widget_files/product-01.jpg" alt="Product">
                 </div>
                 <div>
                   <p class="font-medium text-gray-800 text-theme-sm dark:text-white/90">
@@ -2465,7 +2465,7 @@ rect.legend-mouseover-inactive,
             <div class="flex items-center col-span-4">
               <div class="flex items-center gap-3">
                 <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
-                  <img src="./live-widget_files/product-02.jpg" alt="Product">
+                  <img src="/demo-assets/live-widget_files/product-02.jpg" alt="Product">
                 </div>
                 <div>
                   <p class="font-medium text-gray-800 text-theme-sm dark:text-white/90">
@@ -2505,7 +2505,7 @@ rect.legend-mouseover-inactive,
             <div class="flex items-center col-span-4">
               <div class="flex items-center gap-3">
                 <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
-                  <img src="./live-widget_files/product-03.jpg" alt="Product">
+                  <img src="/demo-assets/live-widget_files/product-03.jpg" alt="Product">
                 </div>
                 <div>
                   <p class="font-medium text-gray-800 text-theme-sm dark:text-white/90">
@@ -2545,7 +2545,7 @@ rect.legend-mouseover-inactive,
             <div class="flex items-center col-span-4">
               <div class="flex items-center gap-3">
                 <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
-                  <img src="./live-widget_files/product-04.jpg" alt="Product">
+                  <img src="/demo-assets/live-widget_files/product-04.jpg" alt="Product">
                 </div>
                 <div>
                   <p class="font-medium text-gray-800 text-theme-sm dark:text-white/90">
@@ -2585,7 +2585,7 @@ rect.legend-mouseover-inactive,
             <div class="flex items-center col-span-4">
               <div class="flex items-center gap-3">
                 <div class="h-[50px] w-[50px] overflow-hidden rounded-md">
-                  <img src="./live-widget_files/product-05.jpg" alt="Product">
+                  <img src="/demo-assets/live-widget_files/product-05.jpg" alt="Product">
                 </div>
                 <div>
                   <p class="font-medium text-gray-800 text-theme-sm dark:text-white/90">
