@@ -1,0 +1,2844 @@
+@import "https://fonts.bunny.net/css?family=inter:100,900|inconsolata:400,700&display=swap";
+
+/* stellar:fonts-import.css */
+
+/* stellar:general-normalize.css */
+
+/* stellar:colors-theme.css */
+:root {
+  --primary-1: #eaf1ff;
+  --primary-1: oklch(95.697% 0.0203 264.473);
+  --primary-1-on: #29303b;
+  --primary-1-on: oklch(30.722% 0.0222 259.373);
+  --primary-1-dim: #b1b9c6;
+  --primary-1-dim: oklch(78.351% 0.0205 260.167);
+  --primary-2: #e3edff;
+  --primary-2: oklch(94.396% 0.0266 262.344);
+  --primary-2-on: #202936;
+  --primary-2-on: oklch(27.837% 0.0273 257.526);
+  --primary-2-dim: #aab5c5;
+  --primary-2-dim: oklch(76.956% 0.026 257.657);
+  --primary-3: #cee1ff;
+  --primary-3: oklch(90.507% 0.046 259.51);
+  --primary-3-on: #14273e;
+  --primary-3-on: oklch(26.903% 0.0499 254.128);
+  --primary-3-dim: #94a7c3;
+  --primary-3-dim: oklch(72.321% 0.0461 257.973);
+  --primary-4: #b4cdf1;
+  --primary-4: oklch(84.169% 0.0574 257.454);
+  --primary-4-on: #0b2744;
+  --primary-4-on: oklch(26.875% 0.0637 252.064);
+  --primary-4-dim: #7890b2;
+  --primary-4-dim: oklch(64.724% 0.0581 257.097);
+  --primary-5: #98b0d3;
+  --primary-5: oklch(75.111% 0.0573 257.739);
+  --primary-5-on: #0c2744;
+  --primary-5-on: oklch(26.915% 0.0633 252.649);
+  --primary-5-dim: #576f8f;
+  --primary-5-dim: oklch(53.54% 0.058 255.773);
+  --primary-6: #758dae;
+  --primary-6: oklch(63.693% 0.057 256.429);
+  --primary-6-on: #ffffff;
+  --primary-6-on: oklch(100% 0 89.876);
+  --primary-6-dim: #afc8eb;
+  --primary-6-dim: oklch(82.583% 0.0564 256.813);
+  --primary-7: #4d6585;
+  --primary-7: oklch(50.075% 0.059 255.796);
+  --primary-7-on: #ffffff;
+  --primary-7-on: oklch(100% 0 89.876);
+  --primary-7-dim: #8ca5c8;
+  --primary-7-dim: oklch(71.526% 0.0585 256.827);
+  --primary-8: #2d4563;
+  --primary-8: oklch(38.499% 0.0596 254.552);
+  --primary-8-on: #fdfbff;
+  --primary-8-on: oklch(99.073% 0.0057 308.397);
+  --primary-8-dim: #738aac;
+  --primary-8-dim: oklch(62.811% 0.058 258.03);
+  --primary-9: #142e4b;
+  --primary-9: oklch(29.662% 0.062 252.82);
+  --primary-9-on: #e6eeff;
+  --primary-9-on: oklch(94.813% 0.0245 265.591);
+  --primary-9-dim: #617999;
+  --primary-9-dim: oklch(56.955% 0.0572 255.755);
+  --primary-10: #011e3a;
+  --primary-10: oklch(23.165% 0.0643 250.459);
+  --primary-10-on: #dfebff;
+  --primary-10-on: oklch(93.71% 0.03 260.712);
+  --primary-10-dim: #5d7495;
+  --primary-10-dim: oklch(55.367% 0.0584 257.381);
+  --primary-11: #00152c;
+  --primary-11: oklch(19.312% 0.0552 250.389);
+  --primary-11-on: #dfebff;
+  --primary-11-on: oklch(93.71% 0.03 260.712);
+  --primary-11-dim: #61748f;
+  --primary-11-dim: oklch(55.386% 0.0479 257.164);
+  --primary-12: #001126;
+  --primary-12: oklch(17.582% 0.0512 251.024);
+  --primary-12-on: #e0ebff;
+  --primary-12-on: oklch(93.782% 0.0296 262.539);
+  --primary-12-dim: #63748d;
+  --primary-12-dim: oklch(55.448% 0.044 257.923);
+}
+:root {
+  --secondary-1: #ffeedc;
+  --secondary-1: oklch(95.785% 0.0301 69.05);
+  --secondary-1-on: #382e22;
+  --secondary-1-on: oklch(30.85% 0.0251 71.773);
+  --secondary-1-dim: #c5b6a6;
+  --secondary-1-dim: oklch(78.444% 0.0281 69.202);
+  --secondary-2: #ffe9d0;
+  --secondary-2: oklch(94.528% 0.0408 70.856);
+  --secondary-2-on: #322616;
+  --secondary-2-on: oklch(27.801% 0.0323 73.827);
+  --secondary-2-dim: #c4b199;
+  --secondary-2-dim: oklch(77.018% 0.0397 73.612);
+  --secondary-3: #ffdaab;
+  --secondary-3: oklch(90.831% 0.0735 73.328);
+  --secondary-3-on: #362303;
+  --secondary-3-on: oklch(27.318% 0.0538 76.224);
+  --secondary-3-dim: #c1a175;
+  --secondary-3-dim: oklch(72.717% 0.0702 75.139);
+  --secondary-4: #fbc06e;
+  --secondary-4: oklch(84.484% 0.1204 74.002);
+  --secondary-4-on: #382200;
+  --secondary-4-on: oklch(27.339% 0.0581 73.517);
+  --secondary-4-dim: #b78439;
+  --secondary-4-dim: oklch(64.973% 0.1104 73.932);
+  --secondary-5: #dca455;
+  --secondary-5: oklch(75.597% 0.1168 73.817);
+  --secondary-5-on: #382200;
+  --secondary-5-on: oklch(27.339% 0.0581 73.517);
+  --secondary-5-dim: #93641a;
+  --secondary-5-dim: oklch(54.052% 0.1045 73.3);
+  --secondary-6: #b48135;
+  --secondary-6: oklch(63.998% 0.111 74.011);
+  --secondary-6-on: #ffffff;
+  --secondary-6-on: oklch(100% 0 89.876);
+  --secondary-6-dim: #f6bb69;
+  --secondary-6-dim: oklch(82.961% 0.1205 73.877);
+  --secondary-7: #875b0f;
+  --secondary-7: oklch(50.656% 0.1017 74.306);
+  --secondary-7-on: #ffffff;
+  --secondary-7-on: oklch(100% 0 89.876);
+  --secondary-7-dim: #cf9a4b;
+  --secondary-7-dim: oklch(72.144% 0.115 74.999);
+  --secondary-8: #5f3d00;
+  --secondary-8: oklch(39.012% 0.0827 73.841);
+  --secondary-8-on: #fffbff;
+  --secondary-8-on: oklch(99.227% 0.0067 325.627);
+  --secondary-8-dim: #ad8141;
+  --secondary-8-dim: oklch(63.335% 0.0978 74.634);
+  --secondary-9: #402800;
+  --secondary-9: oklch(29.928% 0.0633 74.439);
+  --secondary-9-on: #ffebd3;
+  --secondary-9-on: oklch(94.986% 0.0384 72.369);
+  --secondary-9-dim: #937141;
+  --secondary-9-dim: oklch(57.15% 0.0779 74.682);
+  --secondary-10: #2c1a00;
+  --secondary-10: oklch(23.578% 0.05 74.072);
+  --secondary-10-on: #ffe6ca;
+  --secondary-10-on: oklch(93.808% 0.046 70.382);
+  --secondary-10-dim: #8a6e48;
+  --secondary-10-dim: oklch(55.642% 0.0642 74.328);
+  --secondary-11: #201100;
+  --secondary-11: oklch(19.405% 0.0416 71.874);
+  --secondary-11-on: #ffe6cc;
+  --secondary-11-on: oklch(93.855% 0.0439 68.351);
+  --secondary-11-dim: #886e50;
+  --secondary-11-dim: oklch(55.581% 0.0544 70.34);
+  --secondary-12: #1b0e00;
+  --secondary-12: oklch(17.795% 0.0379 73.138);
+  --secondary-12-on: #ffe6cb;
+  --secondary-12-on: oklch(93.832% 0.0449 69.389);
+  --secondary-12-dim: #856f52;
+  --secondary-12-dim: oklch(55.52% 0.0504 74.137);
+}
+:root {
+  --tertiary-1: #f2efff;
+  --tertiary-1: oklch(95.91% 0.0215 294.596);
+  --tertiary-1-on: #2f2f3b;
+  --tertiary-1-on: oklch(31.023% 0.0214 285.086);
+  --tertiary-1-dim: #bab7c6;
+  --tertiary-1-dim: oklch(78.65% 0.0212 295.08);
+  --tertiary-2: #edeaff;
+  --tertiary-2: oklch(94.559% 0.0283 292.413);
+  --tertiary-2-on: #272736;
+  --tertiary-2-on: oklch(27.953% 0.0275 284.483);
+  --tertiary-2-dim: #b4b2c5;
+  --tertiary-2-dim: oklch(77.118% 0.0269 290.59);
+  --tertiary-3: #dfdcff;
+  --tertiary-3: oklch(90.773% 0.0476 289.346);
+  --tertiary-3-on: #24243e;
+  --tertiary-3-on: oklch(27.369% 0.0477 282.788);
+  --tertiary-3-dim: #a5a2c3;
+  --tertiary-3-dim: oklch(72.582% 0.0475 289.325);
+  --tertiary-4: #c9c7f0;
+  --tertiary-4: oklch(84.461% 0.0568 287.351);
+  --tertiary-4-on: #242343;
+  --tertiary-4-on: oklch(27.459% 0.0583 283.28);
+  --tertiary-4-dim: #8c8bb1;
+  --tertiary-4-dim: oklch(65.124% 0.0563 285.93);
+  --tertiary-5: #acabd3;
+  --tertiary-5: oklch(75.563% 0.0571 286.094);
+  --tertiary-5-on: #232344;
+  --tertiary-5-on: oklch(27.433% 0.0602 281.686);
+  --tertiary-5-dim: #6b6a8f;
+  --tertiary-5-dim: oklch(53.957% 0.0575 285.54);
+  --tertiary-6: #8887ae;
+  --tertiary-6: oklch(63.843% 0.0581 285.805);
+  --tertiary-6-on: #ffffff;
+  --tertiary-6-on: oklch(100% 0 89.876);
+  --tertiary-6-dim: #3f3f62;
+  --tertiary-6-dim: oklch(38.37% 0.0591 283.258);
+  --tertiary-7: #616084;
+  --tertiary-7: oklch(50.433% 0.0568 285.441);
+  --tertiary-7-on: #ffffff;
+  --tertiary-7-on: oklch(100% 0 89.876);
+  --tertiary-7-dim: #a19fc7;
+  --tertiary-7-dim: oklch(71.802% 0.0578 287.138);
+  --tertiary-8: #414163;
+  --tertiary-8: oklch(39.06% 0.0572 283.432);
+  --tertiary-8-on: #fffbff;
+  --tertiary-8-on: oklch(99.227% 0.0067 325.627);
+  --tertiary-8-dim: #8686ac;
+  --tertiary-8-dim: oklch(63.388% 0.0567 284.667);
+  --tertiary-9: #2a2a4a;
+  --tertiary-9: oklch(30.147% 0.0572 282.418);
+  --tertiary-9-on: #efecff;
+  --tertiary-9-on: oklch(95.1% 0.0256 293.16);
+  --tertiary-9-dim: #757498;
+  --tertiary-9-dim: oklch(57.339% 0.0551 285.796);
+  --tertiary-10: #1a1a3a;
+  --tertiary-10: oklch(23.707% 0.0601 280.79);
+  --tertiary-10-on: #eae8ff;
+  --tertiary-10-on: oklch(93.942% 0.0309 289.785);
+  --tertiary-10-dim: #706f95;
+  --tertiary-10-dim: oklch(55.72% 0.0585 285.538);
+  --tertiary-11: #111130;
+  --tertiary-11: oklch(19.872% 0.0602 279.415);
+  --tertiary-11-on: #eae8ff;
+  --tertiary-11-on: oklch(93.942% 0.0309 289.785);
+  --tertiary-11-dim: #706f94;
+  --tertiary-11-dim: oklch(55.676% 0.057 285.628);
+  --tertiary-12: #0d0d2d;
+  --tertiary-12: oklch(18.275% 0.0628 278.202);
+  --tertiary-12-on: #eae8ff;
+  --tertiary-12-on: oklch(93.942% 0.0309 289.785);
+  --tertiary-12-dim: #706f95;
+  --tertiary-12-dim: oklch(55.72% 0.0585 285.538);
+}
+:root {
+  --neutral-1: #edf1fa;
+  --neutral-1: oklch(95.771% 0.0128 266.7);
+  --neutral-1-on: #2c3037;
+  --neutral-1-on: oklch(30.811% 0.0138 261.711);
+  --neutral-1-dim: #b5b9c1;
+  --neutral-1-dim: oklch(78.502% 0.0122 264.497);
+  --neutral-2: #e9ecf5;
+  --neutral-2: oklch(94.341% 0.0125 271.282);
+  --neutral-2-on: #24282f;
+  --neutral-2-on: oklch(27.58% 0.0142 261.688);
+  --neutral-2-dim: #b0b3bc;
+  --neutral-2-dim: oklch(76.712% 0.0132 271.243);
+  --neutral-3: #dce0e9;
+  --neutral-3: oklch(90.626% 0.013 266.694);
+  --neutral-3-on: #22272e;
+  --neutral-3-on: oklch(27.076% 0.0149 256.796);
+  --neutral-3-dim: #a2a6ae;
+  --neutral-3-dim: oklch(72.441% 0.0124 264.49);
+  --neutral-4: #c7cbd4;
+  --neutral-4: oklch(84.169% 0.0132 266.685);
+  --neutral-4-on: #22272e;
+  --neutral-4-on: oklch(27.076% 0.0149 256.796);
+  --neutral-4-dim: #8a8e97;
+  --neutral-4-dim: oklch(64.631% 0.0142 266.646);
+  --neutral-5: #abaeb7;
+  --neutral-5: oklch(75.119% 0.0133 271.238);
+  --neutral-5-on: #23272d;
+  --neutral-5-on: oklch(27.125% 0.0126 258.372);
+  --neutral-5-dim: #6a6d76;
+  --neutral-5-dim: oklch(53.523% 0.0145 271.139);
+  --neutral-6: #878b93;
+  --neutral-6: oklch(63.601% 0.0128 264.477);
+  --neutral-6-on: #ffffff;
+  --neutral-6-on: oklch(100% 0 89.876);
+  --neutral-6-dim: #3e434a;
+  --neutral-6-dim: oklch(38.088% 0.0137 256.763);
+  --neutral-7: #60646b;
+  --neutral-7: oklch(50.213% 0.0122 261.767);
+  --neutral-7-on: #ffffff;
+  --neutral-7-on: oklch(100% 0 89.876);
+  --neutral-7-dim: #a0a3ab;
+  --neutral-7-dim: oklch(71.553% 0.012 269.505);
+  --neutral-8: #40444b;
+  --neutral-8: oklch(38.555% 0.013 261.744);
+  --neutral-8-on: #fdfcff;
+  --neutral-8-on: oklch(99.267% 0.0041 301.427);
+  --neutral-8-dim: #858991;
+  --neutral-8-dim: oklch(62.934% 0.0129 264.476);
+  --neutral-9: #292d34;
+  --neutral-9: oklch(29.61% 0.0139 261.704);
+  --neutral-9-on: #ebedf7;
+  --neutral-9-on: oklch(94.747% 0.0136 277.059);
+  --neutral-9-dim: #74777f;
+  --neutral-9-dim: oklch(56.936% 0.0128 269.455);
+  --neutral-10: #191e24;
+  --neutral-10: oklch(23.261% 0.0138 253.101);
+  --neutral-10-on: #e6eaf3;
+  --neutral-10-on: oklch(93.661% 0.0129 266.697);
+  --neutral-10-dim: #6e737b;
+  --neutral-10-dim: oklch(55.394% 0.0138 259.824);
+  --neutral-11: #10151b;
+  --neutral-11: oklch(19.337% 0.0144 253.182);
+  --neutral-11-on: #e6eaf3;
+  --neutral-11-on: oklch(93.661% 0.0129 266.697);
+  --neutral-11-dim: #6e737b;
+  --neutral-11-dim: oklch(55.394% 0.0138 259.824);
+  --neutral-12: #0d1117;
+  --neutral-12: oklch(17.628% 0.014 258.357);
+  --neutral-12-on: #e7eaf3;
+  --neutral-12-on: oklch(93.737% 0.0125 271.281);
+  --neutral-12-dim: #6f737a;
+  --neutral-12-dim: oklch(55.443% 0.0119 261.772);
+}
+:root {
+  --neutral-variant-1: #eaf1ff;
+  --neutral-variant-1: oklch(95.697% 0.0203 264.473);
+  --neutral-variant-1-on: #29303b;
+  --neutral-variant-1-on: oklch(30.722% 0.0222 259.373);
+  --neutral-variant-1-dim: #b1b9c6;
+  --neutral-variant-1-dim: oklch(78.351% 0.0205 260.167);
+  --neutral-variant-2: #e3edff;
+  --neutral-variant-2: oklch(94.396% 0.0266 262.344);
+  --neutral-variant-2-on: #202936;
+  --neutral-variant-2-on: oklch(27.837% 0.0273 257.526);
+  --neutral-variant-2-dim: #aab5c5;
+  --neutral-variant-2-dim: oklch(76.956% 0.026 257.657);
+  --neutral-variant-3: #d5e1f5;
+  --neutral-variant-3: oklch(90.678% 0.0303 260.71);
+  --neutral-variant-3-on: #1c2736;
+  --neutral-variant-3-on: oklch(26.97% 0.0321 256.291);
+  --neutral-variant-3-dim: #9ba7ba;
+  --neutral-variant-3-dim: oklch(72.511% 0.0308 259.581);
+  --neutral-variant-4: #c0cce0;
+  --neutral-variant-4: oklch(84.226% 0.0309 260.704);
+  --neutral-variant-4-on: #1c2736;
+  --neutral-variant-4-on: oklch(26.97% 0.0321 256.291);
+  --neutral-variant-4-dim: #848fa2;
+  --neutral-variant-4-dim: oklch(64.758% 0.0312 261.43);
+  --neutral-variant-5: #a3afc3;
+  --neutral-variant-5: oklch(75.108% 0.0318 260.693);
+  --neutral-variant-5-on: #1c2737;
+  --neutral-variant-5-on: oklch(27.026% 0.0338 257.671);
+  --neutral-variant-5-dim: #626e81;
+  --neutral-variant-5-dim: oklch(53.513% 0.0333 259.553);
+  --neutral-variant-6: #808c9e;
+  --neutral-variant-6: oklch(63.649% 0.0305 258.372);
+  --neutral-variant-6-on: #ffffff;
+  --neutral-variant-6-on: oklch(100% 0 89.876);
+  --neutral-variant-6-dim: #bac7da;
+  --neutral-variant-6-dim: oklch(82.565% 0.0303 257.772);
+  --neutral-variant-7: #596476;
+  --neutral-variant-7: oklch(50.057% 0.0318 260.253);
+  --neutral-variant-7-on: #ffffff;
+  --neutral-variant-7-on: oklch(100% 0 89.876);
+  --neutral-variant-7-dim: #98a4b7;
+  --neutral-variant-7-dim: oklch(71.544% 0.0309 259.58);
+  --neutral-variant-8: #394555;
+  --neutral-variant-8: oklch(38.638% 0.0315 255.712);
+  --neutral-variant-8-on: #fdfcff;
+  --neutral-variant-8-on: oklch(99.267% 0.0041 301.427);
+  --neutral-variant-8-dim: #7e8a9c;
+  --neutral-variant-8-dim: oklch(62.984% 0.0305 258.372);
+  --neutral-variant-9: #222e3d;
+  --neutral-variant-9: oklch(29.711% 0.032 254.309);
+  --neutral-variant-9-on: #e5efff;
+  --neutral-variant-9-on: oklch(94.937% 0.0241 259.824);
+  --neutral-variant-9-dim: #6c788a;
+  --neutral-variant-9-dim: oklch(56.914% 0.0313 258.372);
+  --neutral-variant-10: #121e2d;
+  --neutral-variant-10: oklch(23.172% 0.0339 254.501);
+  --neutral-variant-10-on: #dfebff;
+  --neutral-variant-10-on: oklch(93.71% 0.03 260.712);
+  --neutral-variant-10-dim: #687386;
+  --neutral-variant-10-dim: oklch(55.318% 0.0325 261.394);
+  --neutral-variant-11: #091523;
+  --neutral-variant-11: oklch(19.258% 0.0334 253.198);
+  --neutral-variant-11-on: #dfebff;
+  --neutral-variant-11-on: oklch(93.71% 0.03 260.712);
+  --neutral-variant-11-dim: #687385;
+  --neutral-variant-11-dim: oklch(55.278% 0.031 260.271);
+  --neutral-variant-12: #061120;
+  --neutral-variant-12: oklch(17.605% 0.0356 255.552);
+  --neutral-variant-12-on: #e1ebff;
+  --neutral-variant-12-on: oklch(93.855% 0.0292 264.425);
+  --neutral-variant-12-dim: #697386;
+  --neutral-variant-12-dim: oklch(55.396% 0.032 263.297);
+}
+:root {
+  --error-1: #ffedea;
+  --error-1: oklch(95.957% 0.02 28.903);
+  --error-1-on: #382e2c;
+  --error-1-on: oklch(31.149% 0.0151 31.215);
+  --error-1-dim: #c6b5b3;
+  --error-1-dim: oklch(78.681% 0.0197 25.654);
+  --error-2: #ffe7e4;
+  --error-2: oklch(94.651% 0.0267 26.177);
+  --error-2-on: #322523;
+  --error-2-on: oklch(27.907% 0.0202 28.478);
+  --error-2-dim: #c4afac;
+  --error-2-dim: oklch(77.11% 0.0247 27.401);
+  --error-3: #ffd7d2;
+  --error-3: oklch(91.159% 0.0455 26.388);
+  --error-3-on: #37211e;
+  --error-3-on: oklch(27.502% 0.0348 28.041);
+  --error-3-dim: #c19e99;
+  --error-3-dim: oklch(72.951% 0.0424 27.634);
+  --error-4: #ffbab2;
+  --error-4: oklch(85.059% 0.0813 26.357);
+  --error-4-on: #431a17;
+  --error-4-on: oklch(27.865% 0.0643 26.275);
+  --error-4-dim: #bb7f78;
+  --error-4-dim: oklch(65.562% 0.0759 26.687);
+  --error-5: #fa9187;
+  --error-5: oklch(76.549% 0.1286 26.249);
+  --error-5-on: #4f0d0c;
+  --error-5-on: oklch(28.202% 0.097 26.703);
+  --error-5-dim: #ab534b;
+  --error-5-dim: oklch(54.894% 0.1171 26.876);
+  --error-6: #d06f66;
+  --error-6: oklch(65.03% 0.1238 26.528);
+  --error-6-on: #ffffff;
+  --error-6-on: oklch(100% 0 89.876);
+  --error-6-dim: #762924;
+  --error-6-dim: oklch(39.461% 0.1093 26.954);
+  --error-7: #9f4942;
+  --error-7: oklch(51.383% 0.116 26.614);
+  --error-7-on: #ffffff;
+  --error-7-on: oklch(100% 0 89.876);
+  --error-7-dim: #ed867d;
+  --error-7-dim: oklch(72.952% 0.1276 25.915);
+  --error-8: #772b25;
+  --error-8: oklch(39.932% 0.108 27.5);
+  --error-8-on: #fffbff;
+  --error-8-on: oklch(99.227% 0.0067 325.627);
+  --error-8-dim: #ce6d64;
+  --error-8-dim: oklch(64.402% 0.1241 26.573);
+  --error-9: #581411;
+  --error-9: oklch(30.87% 0.0998 27.26);
+  --error-9-on: #ffe9e7;
+  --error-9-on: oklch(95.112% 0.0243 23.845);
+  --error-9-dim: #b85c54;
+  --error-9-dim: oklch(58.353% 0.1205 26.517);
+  --error-10: #420404;
+  --error-10: oklch(24.345% 0.0923 27.622);
+  --error-10-on: #ffe4e1;
+  --error-10-on: oklch(94.001% 0.0301 25.281);
+  --error-10-dim: #b2584e;
+  --error-10-dim: oklch(56.75% 0.1191 27.929);
+  --error-11: #330001;
+  --error-11: oklch(20.187% 0.0824 27.594);
+  --error-11-on: #ffe4e1;
+  --error-11-on: oklch(94.001% 0.0301 25.281);
+  --error-11-dim: #af5a51;
+  --error-11-dim: oklch(56.703% 0.1125 27.424);
+  --error-12: #2d0001;
+  --error-12: oklch(18.689% 0.0762 27.177);
+  --error-12-on: #ffe4e1;
+  --error-12-on: oklch(94.001% 0.0301 25.281);
+  --error-12-dim: #ab5c54;
+  --error-12-dim: oklch(56.538% 0.1046 26.911);
+}
+:root.dark {
+  --primary-1: #001126;
+  --primary-1: oklch(17.582% 0.0512 251.024);
+  --primary-1-on: #e0ebff;
+  --primary-1-on: oklch(93.782% 0.0296 262.539);
+  --primary-1-dim: #63748d;
+  --primary-1-dim: oklch(55.448% 0.044 257.923);
+  --primary-2: #00152c;
+  --primary-2: oklch(19.312% 0.0552 250.389);
+  --primary-2-on: #dfebff;
+  --primary-2-on: oklch(93.71% 0.03 260.712);
+  --primary-2-dim: #61748f;
+  --primary-2-dim: oklch(55.386% 0.0479 257.164);
+  --primary-3: #011e3a;
+  --primary-3: oklch(23.165% 0.0643 250.459);
+  --primary-3-on: #dfebff;
+  --primary-3-on: oklch(93.71% 0.03 260.712);
+  --primary-3-dim: #5d7495;
+  --primary-3-dim: oklch(55.367% 0.0584 257.381);
+  --primary-4: #142e4b;
+  --primary-4: oklch(29.662% 0.062 252.82);
+  --primary-4-on: #e6eeff;
+  --primary-4-on: oklch(94.813% 0.0245 265.591);
+  --primary-4-dim: #617999;
+  --primary-4-dim: oklch(56.955% 0.0572 255.755);
+  --primary-5: #2d4563;
+  --primary-5: oklch(38.499% 0.0596 254.552);
+  --primary-5-on: #fdfbff;
+  --primary-5-on: oklch(99.073% 0.0057 308.397);
+  --primary-5-dim: #738aac;
+  --primary-5-dim: oklch(62.811% 0.058 258.03);
+  --primary-6: #4d6585;
+  --primary-6: oklch(50.075% 0.059 255.796);
+  --primary-6-on: #ffffff;
+  --primary-6-on: oklch(100% 0 89.876);
+  --primary-6-dim: #8ca5c8;
+  --primary-6-dim: oklch(71.526% 0.0585 256.827);
+  --primary-7: #758dae;
+  --primary-7: oklch(63.693% 0.057 256.429);
+  --primary-7-on: #ffffff;
+  --primary-7-on: oklch(100% 0 89.876);
+  --primary-7-dim: #afc8eb;
+  --primary-7-dim: oklch(82.583% 0.0564 256.813);
+  --primary-8: #98b0d3;
+  --primary-8: oklch(75.111% 0.0573 257.739);
+  --primary-8-on: #0c2744;
+  --primary-8-on: oklch(26.915% 0.0633 252.649);
+  --primary-8-dim: #576f8f;
+  --primary-8-dim: oklch(53.54% 0.058 255.773);
+  --primary-9: #b4cdf1;
+  --primary-9: oklch(84.169% 0.0574 257.454);
+  --primary-9-on: #0b2744;
+  --primary-9-on: oklch(26.875% 0.0637 252.064);
+  --primary-9-dim: #7890b2;
+  --primary-9-dim: oklch(64.724% 0.0581 257.097);
+  --primary-10: #cee1ff;
+  --primary-10: oklch(90.507% 0.046 259.51);
+  --primary-10-on: #14273e;
+  --primary-10-on: oklch(26.903% 0.0499 254.128);
+  --primary-10-dim: #94a7c3;
+  --primary-10-dim: oklch(72.321% 0.0461 257.973);
+  --primary-11: #e3edff;
+  --primary-11: oklch(94.396% 0.0266 262.344);
+  --primary-11-on: #202936;
+  --primary-11-on: oklch(27.837% 0.0273 257.526);
+  --primary-11-dim: #aab5c5;
+  --primary-11-dim: oklch(76.956% 0.026 257.657);
+  --primary-12: #eaf1ff;
+  --primary-12: oklch(95.697% 0.0203 264.473);
+  --primary-12-on: #29303b;
+  --primary-12-on: oklch(30.722% 0.0222 259.373);
+  --primary-12-dim: #b1b9c6;
+  --primary-12-dim: oklch(78.351% 0.0205 260.167);
+}
+:root.dark {
+  --secondary-1: #1b0e00;
+  --secondary-1: oklch(17.795% 0.0379 73.138);
+  --secondary-1-on: #ffe6cb;
+  --secondary-1-on: oklch(93.832% 0.0449 69.389);
+  --secondary-1-dim: #856f52;
+  --secondary-1-dim: oklch(55.52% 0.0504 74.137);
+  --secondary-2: #201100;
+  --secondary-2: oklch(19.405% 0.0416 71.874);
+  --secondary-2-on: #ffe6cc;
+  --secondary-2-on: oklch(93.855% 0.0439 68.351);
+  --secondary-2-dim: #886e50;
+  --secondary-2-dim: oklch(55.581% 0.0544 70.34);
+  --secondary-3: #2c1a00;
+  --secondary-3: oklch(23.578% 0.05 74.072);
+  --secondary-3-on: #ffe6ca;
+  --secondary-3-on: oklch(93.808% 0.046 70.382);
+  --secondary-3-dim: #8a6e48;
+  --secondary-3-dim: oklch(55.642% 0.0642 74.328);
+  --secondary-4: #402800;
+  --secondary-4: oklch(29.928% 0.0633 74.439);
+  --secondary-4-on: #ffebd3;
+  --secondary-4-on: oklch(94.986% 0.0384 72.369);
+  --secondary-4-dim: #937141;
+  --secondary-4-dim: oklch(57.15% 0.0779 74.682);
+  --secondary-5: #5f3d00;
+  --secondary-5: oklch(39.012% 0.0827 73.841);
+  --secondary-5-on: #fffbff;
+  --secondary-5-on: oklch(99.227% 0.0067 325.627);
+  --secondary-5-dim: #ad8141;
+  --secondary-5-dim: oklch(63.335% 0.0978 74.634);
+  --secondary-6: #875b0f;
+  --secondary-6: oklch(50.656% 0.1017 74.306);
+  --secondary-6-on: #ffffff;
+  --secondary-6-on: oklch(100% 0 89.876);
+  --secondary-6-dim: #cf9a4b;
+  --secondary-6-dim: oklch(72.144% 0.115 74.999);
+  --secondary-7: #b48135;
+  --secondary-7: oklch(63.998% 0.111 74.011);
+  --secondary-7-on: #ffffff;
+  --secondary-7-on: oklch(100% 0 89.876);
+  --secondary-7-dim: #f6bb69;
+  --secondary-7-dim: oklch(82.961% 0.1205 73.877);
+  --secondary-8: #dca455;
+  --secondary-8: oklch(75.597% 0.1168 73.817);
+  --secondary-8-on: #382200;
+  --secondary-8-on: oklch(27.339% 0.0581 73.517);
+  --secondary-8-dim: #93641a;
+  --secondary-8-dim: oklch(54.052% 0.1045 73.3);
+  --secondary-9: #fbc06e;
+  --secondary-9: oklch(84.484% 0.1204 74.002);
+  --secondary-9-on: #382200;
+  --secondary-9-on: oklch(27.339% 0.0581 73.517);
+  --secondary-9-dim: #b78439;
+  --secondary-9-dim: oklch(64.973% 0.1104 73.932);
+  --secondary-10: #ffdaab;
+  --secondary-10: oklch(90.831% 0.0735 73.328);
+  --secondary-10-on: #362303;
+  --secondary-10-on: oklch(27.318% 0.0538 76.224);
+  --secondary-10-dim: #c1a175;
+  --secondary-10-dim: oklch(72.717% 0.0702 75.139);
+  --secondary-11: #ffe9d0;
+  --secondary-11: oklch(94.528% 0.0408 70.856);
+  --secondary-11-on: #322616;
+  --secondary-11-on: oklch(27.801% 0.0323 73.827);
+  --secondary-11-dim: #c4b199;
+  --secondary-11-dim: oklch(77.018% 0.0397 73.612);
+  --secondary-12: #ffeedc;
+  --secondary-12: oklch(95.785% 0.0301 69.05);
+  --secondary-12-on: #382e22;
+  --secondary-12-on: oklch(30.85% 0.0251 71.773);
+  --secondary-12-dim: #c5b6a6;
+  --secondary-12-dim: oklch(78.444% 0.0281 69.202);
+}
+:root.dark {
+  --tertiary-1: #0d0d2d;
+  --tertiary-1: oklch(18.275% 0.0628 278.202);
+  --tertiary-1-on: #eae8ff;
+  --tertiary-1-on: oklch(93.942% 0.0309 289.785);
+  --tertiary-1-dim: #706f95;
+  --tertiary-1-dim: oklch(55.72% 0.0585 285.538);
+  --tertiary-2: #111130;
+  --tertiary-2: oklch(19.872% 0.0602 279.415);
+  --tertiary-2-on: #eae8ff;
+  --tertiary-2-on: oklch(93.942% 0.0309 289.785);
+  --tertiary-2-dim: #706f94;
+  --tertiary-2-dim: oklch(55.676% 0.057 285.628);
+  --tertiary-3: #1a1a3a;
+  --tertiary-3: oklch(23.707% 0.0601 280.79);
+  --tertiary-3-on: #eae8ff;
+  --tertiary-3-on: oklch(93.942% 0.0309 289.785);
+  --tertiary-3-dim: #706f95;
+  --tertiary-3-dim: oklch(55.72% 0.0585 285.538);
+  --tertiary-4: #2a2a4a;
+  --tertiary-4: oklch(30.147% 0.0572 282.418);
+  --tertiary-4-on: #efecff;
+  --tertiary-4-on: oklch(95.1% 0.0256 293.16);
+  --tertiary-4-dim: #757498;
+  --tertiary-4-dim: oklch(57.339% 0.0551 285.796);
+  --tertiary-5: #414163;
+  --tertiary-5: oklch(39.06% 0.0572 283.432);
+  --tertiary-5-on: #fffbff;
+  --tertiary-5-on: oklch(99.227% 0.0067 325.627);
+  --tertiary-5-dim: #8686ac;
+  --tertiary-5-dim: oklch(63.388% 0.0567 284.667);
+  --tertiary-6: #616084;
+  --tertiary-6: oklch(50.433% 0.0568 285.441);
+  --tertiary-6-on: #ffffff;
+  --tertiary-6-on: oklch(100% 0 89.876);
+  --tertiary-6-dim: #a19fc7;
+  --tertiary-6-dim: oklch(71.802% 0.0578 287.138);
+  --tertiary-7: #8887ae;
+  --tertiary-7: oklch(63.843% 0.0581 285.805);
+  --tertiary-7-on: #ffffff;
+  --tertiary-7-on: oklch(100% 0 89.876);
+  --tertiary-7-dim: #3f3f62;
+  --tertiary-7-dim: oklch(38.37% 0.0591 283.258);
+  --tertiary-8: #acabd3;
+  --tertiary-8: oklch(75.563% 0.0571 286.094);
+  --tertiary-8-on: #232344;
+  --tertiary-8-on: oklch(27.433% 0.0602 281.686);
+  --tertiary-8-dim: #6b6a8f;
+  --tertiary-8-dim: oklch(53.957% 0.0575 285.54);
+  --tertiary-9: #c9c7f0;
+  --tertiary-9: oklch(84.461% 0.0568 287.351);
+  --tertiary-9-on: #242343;
+  --tertiary-9-on: oklch(27.459% 0.0583 283.28);
+  --tertiary-9-dim: #8c8bb1;
+  --tertiary-9-dim: oklch(65.124% 0.0563 285.93);
+  --tertiary-10: #dfdcff;
+  --tertiary-10: oklch(90.773% 0.0476 289.346);
+  --tertiary-10-on: #24243e;
+  --tertiary-10-on: oklch(27.369% 0.0477 282.788);
+  --tertiary-10-dim: #a5a2c3;
+  --tertiary-10-dim: oklch(72.582% 0.0475 289.325);
+  --tertiary-11: #edeaff;
+  --tertiary-11: oklch(94.559% 0.0283 292.413);
+  --tertiary-11-on: #272736;
+  --tertiary-11-on: oklch(27.953% 0.0275 284.483);
+  --tertiary-11-dim: #b4b2c5;
+  --tertiary-11-dim: oklch(77.118% 0.0269 290.59);
+  --tertiary-12: #f2efff;
+  --tertiary-12: oklch(95.91% 0.0215 294.596);
+  --tertiary-12-on: #2f2f3b;
+  --tertiary-12-on: oklch(31.023% 0.0214 285.086);
+  --tertiary-12-dim: #bab7c6;
+  --tertiary-12-dim: oklch(78.65% 0.0212 295.08);
+}
+:root.dark {
+  --neutral-1: #0d1117;
+  --neutral-1: oklch(17.628% 0.014 258.357);
+  --neutral-1-on: #e7eaf3;
+  --neutral-1-on: oklch(93.737% 0.0125 271.281);
+  --neutral-1-dim: #6f737a;
+  --neutral-1-dim: oklch(55.443% 0.0119 261.772);
+  --neutral-2: #10151b;
+  --neutral-2: oklch(19.337% 0.0144 253.182);
+  --neutral-2-on: #e6eaf3;
+  --neutral-2-on: oklch(93.661% 0.0129 266.697);
+  --neutral-2-dim: #6e737b;
+  --neutral-2-dim: oklch(55.394% 0.0138 259.824);
+  --neutral-3: #191e24;
+  --neutral-3: oklch(23.261% 0.0138 253.101);
+  --neutral-3-on: #e6eaf3;
+  --neutral-3-on: oklch(93.661% 0.0129 266.697);
+  --neutral-3-dim: #6e737b;
+  --neutral-3-dim: oklch(55.394% 0.0138 259.824);
+  --neutral-4: #292d34;
+  --neutral-4: oklch(29.61% 0.0139 261.704);
+  --neutral-4-on: #ebedf7;
+  --neutral-4-on: oklch(94.747% 0.0136 277.059);
+  --neutral-4-dim: #74777f;
+  --neutral-4-dim: oklch(56.936% 0.0128 269.455);
+  --neutral-5: #40444b;
+  --neutral-5: oklch(38.555% 0.013 261.744);
+  --neutral-5-on: #fdfcff;
+  --neutral-5-on: oklch(99.267% 0.0041 301.427);
+  --neutral-5-dim: #858991;
+  --neutral-5-dim: oklch(62.934% 0.0129 264.476);
+  --neutral-6: #60646b;
+  --neutral-6: oklch(50.213% 0.0122 261.767);
+  --neutral-6-on: #ffffff;
+  --neutral-6-on: oklch(100% 0 89.876);
+  --neutral-6-dim: #a0a3ab;
+  --neutral-6-dim: oklch(71.553% 0.012 269.505);
+  --neutral-7: #878b93;
+  --neutral-7: oklch(63.601% 0.0128 264.477);
+  --neutral-7-on: #ffffff;
+  --neutral-7-on: oklch(100% 0 89.876);
+  --neutral-7-dim: #3e434a;
+  --neutral-7-dim: oklch(38.088% 0.0137 256.763);
+  --neutral-8: #abaeb7;
+  --neutral-8: oklch(75.119% 0.0133 271.238);
+  --neutral-8-on: #23272d;
+  --neutral-8-on: oklch(27.125% 0.0126 258.372);
+  --neutral-8-dim: #6a6d76;
+  --neutral-8-dim: oklch(53.523% 0.0145 271.139);
+  --neutral-9: #c7cbd4;
+  --neutral-9: oklch(84.169% 0.0132 266.685);
+  --neutral-9-on: #22272e;
+  --neutral-9-on: oklch(27.076% 0.0149 256.796);
+  --neutral-9-dim: #8a8e97;
+  --neutral-9-dim: oklch(64.631% 0.0142 266.646);
+  --neutral-10: #dce0e9;
+  --neutral-10: oklch(90.626% 0.013 266.694);
+  --neutral-10-on: #22272e;
+  --neutral-10-on: oklch(27.076% 0.0149 256.796);
+  --neutral-10-dim: #a2a6ae;
+  --neutral-10-dim: oklch(72.441% 0.0124 264.49);
+  --neutral-11: #e9ecf5;
+  --neutral-11: oklch(94.341% 0.0125 271.282);
+  --neutral-11-on: #24282f;
+  --neutral-11-on: oklch(27.58% 0.0142 261.688);
+  --neutral-11-dim: #b0b3bc;
+  --neutral-11-dim: oklch(76.712% 0.0132 271.243);
+  --neutral-12: #edf1fa;
+  --neutral-12: oklch(95.771% 0.0128 266.7);
+  --neutral-12-on: #2c3037;
+  --neutral-12-on: oklch(30.811% 0.0138 261.711);
+  --neutral-12-dim: #b5b9c1;
+  --neutral-12-dim: oklch(78.502% 0.0122 264.497);
+}
+:root.dark {
+  --neutral-variant-1: #061120;
+  --neutral-variant-1: oklch(17.605% 0.0356 255.552);
+  --neutral-variant-1-on: #e1ebff;
+  --neutral-variant-1-on: oklch(93.855% 0.0292 264.425);
+  --neutral-variant-1-dim: #697386;
+  --neutral-variant-1-dim: oklch(55.396% 0.032 263.297);
+  --neutral-variant-2: #091523;
+  --neutral-variant-2: oklch(19.258% 0.0334 253.198);
+  --neutral-variant-2-on: #dfebff;
+  --neutral-variant-2-on: oklch(93.71% 0.03 260.712);
+  --neutral-variant-2-dim: #687385;
+  --neutral-variant-2-dim: oklch(55.278% 0.031 260.271);
+  --neutral-variant-3: #121e2d;
+  --neutral-variant-3: oklch(23.172% 0.0339 254.501);
+  --neutral-variant-3-on: #dfebff;
+  --neutral-variant-3-on: oklch(93.71% 0.03 260.712);
+  --neutral-variant-3-dim: #687386;
+  --neutral-variant-3-dim: oklch(55.318% 0.0325 261.394);
+  --neutral-variant-4: #222e3d;
+  --neutral-variant-4: oklch(29.711% 0.032 254.309);
+  --neutral-variant-4-on: #e5efff;
+  --neutral-variant-4-on: oklch(94.937% 0.0241 259.824);
+  --neutral-variant-4-dim: #6c788a;
+  --neutral-variant-4-dim: oklch(56.914% 0.0313 258.372);
+  --neutral-variant-5: #394555;
+  --neutral-variant-5: oklch(38.638% 0.0315 255.712);
+  --neutral-variant-5-on: #fdfcff;
+  --neutral-variant-5-on: oklch(99.267% 0.0041 301.427);
+  --neutral-variant-5-dim: #7e8a9c;
+  --neutral-variant-5-dim: oklch(62.984% 0.0305 258.372);
+  --neutral-variant-6: #596476;
+  --neutral-variant-6: oklch(50.057% 0.0318 260.253);
+  --neutral-variant-6-on: #ffffff;
+  --neutral-variant-6-on: oklch(100% 0 89.876);
+  --neutral-variant-6-dim: #98a4b7;
+  --neutral-variant-6-dim: oklch(71.544% 0.0309 259.58);
+  --neutral-variant-7: #808c9e;
+  --neutral-variant-7: oklch(63.649% 0.0305 258.372);
+  --neutral-variant-7-on: #ffffff;
+  --neutral-variant-7-on: oklch(100% 0 89.876);
+  --neutral-variant-7-dim: #bac7da;
+  --neutral-variant-7-dim: oklch(82.565% 0.0303 257.772);
+  --neutral-variant-8: #a3afc3;
+  --neutral-variant-8: oklch(75.108% 0.0318 260.693);
+  --neutral-variant-8-on: #1c2737;
+  --neutral-variant-8-on: oklch(27.026% 0.0338 257.671);
+  --neutral-variant-8-dim: #626e81;
+  --neutral-variant-8-dim: oklch(53.513% 0.0333 259.553);
+  --neutral-variant-9: #c0cce0;
+  --neutral-variant-9: oklch(84.226% 0.0309 260.704);
+  --neutral-variant-9-on: #1c2736;
+  --neutral-variant-9-on: oklch(26.97% 0.0321 256.291);
+  --neutral-variant-9-dim: #848fa2;
+  --neutral-variant-9-dim: oklch(64.758% 0.0312 261.43);
+  --neutral-variant-10: #d5e1f5;
+  --neutral-variant-10: oklch(90.678% 0.0303 260.71);
+  --neutral-variant-10-on: #1c2736;
+  --neutral-variant-10-on: oklch(26.97% 0.0321 256.291);
+  --neutral-variant-10-dim: #9ba7ba;
+  --neutral-variant-10-dim: oklch(72.511% 0.0308 259.581);
+  --neutral-variant-11: #e3edff;
+  --neutral-variant-11: oklch(94.396% 0.0266 262.344);
+  --neutral-variant-11-on: #202936;
+  --neutral-variant-11-on: oklch(27.837% 0.0273 257.526);
+  --neutral-variant-11-dim: #aab5c5;
+  --neutral-variant-11-dim: oklch(76.956% 0.026 257.657);
+  --neutral-variant-12: #eaf1ff;
+  --neutral-variant-12: oklch(95.697% 0.0203 264.473);
+  --neutral-variant-12-on: #29303b;
+  --neutral-variant-12-on: oklch(30.722% 0.0222 259.373);
+  --neutral-variant-12-dim: #b1b9c6;
+  --neutral-variant-12-dim: oklch(78.351% 0.0205 260.167);
+}
+:root.dark {
+  --error-1: #2d0001;
+  --error-1: oklch(18.689% 0.0762 27.177);
+  --error-1-on: #ffe4e1;
+  --error-1-on: oklch(94.001% 0.0301 25.281);
+  --error-1-dim: #ab5c54;
+  --error-1-dim: oklch(56.538% 0.1046 26.911);
+  --error-2: #330001;
+  --error-2: oklch(20.187% 0.0824 27.594);
+  --error-2-on: #ffe4e1;
+  --error-2-on: oklch(94.001% 0.0301 25.281);
+  --error-2-dim: #af5a51;
+  --error-2-dim: oklch(56.703% 0.1125 27.424);
+  --error-3: #420404;
+  --error-3: oklch(24.345% 0.0923 27.622);
+  --error-3-on: #ffe4e1;
+  --error-3-on: oklch(94.001% 0.0301 25.281);
+  --error-3-dim: #b2584e;
+  --error-3-dim: oklch(56.75% 0.1191 27.929);
+  --error-4: #581411;
+  --error-4: oklch(30.87% 0.0998 27.26);
+  --error-4-on: #ffe9e7;
+  --error-4-on: oklch(95.112% 0.0243 23.845);
+  --error-4-dim: #b85c54;
+  --error-4-dim: oklch(58.353% 0.1205 26.517);
+  --error-5: #772b25;
+  --error-5: oklch(39.932% 0.108 27.5);
+  --error-5-on: #fffbff;
+  --error-5-on: oklch(99.227% 0.0067 325.627);
+  --error-5-dim: #ce6d64;
+  --error-5-dim: oklch(64.402% 0.1241 26.573);
+  --error-6: #9f4942;
+  --error-6: oklch(51.383% 0.116 26.614);
+  --error-6-on: #ffffff;
+  --error-6-on: oklch(100% 0 89.876);
+  --error-6-dim: #ed867d;
+  --error-6-dim: oklch(72.952% 0.1276 25.915);
+  --error-7: #d06f66;
+  --error-7: oklch(65.03% 0.1238 26.528);
+  --error-7-on: #ffffff;
+  --error-7-on: oklch(100% 0 89.876);
+  --error-7-dim: #762924;
+  --error-7-dim: oklch(39.461% 0.1093 26.954);
+  --error-8: #fa9187;
+  --error-8: oklch(76.549% 0.1286 26.249);
+  --error-8-on: #4f0d0c;
+  --error-8-on: oklch(28.202% 0.097 26.703);
+  --error-8-dim: #ab534b;
+  --error-8-dim: oklch(54.894% 0.1171 26.876);
+  --error-9: #ffbab2;
+  --error-9: oklch(85.059% 0.0813 26.357);
+  --error-9-on: #431a17;
+  --error-9-on: oklch(27.865% 0.0643 26.275);
+  --error-9-dim: #bb7f78;
+  --error-9-dim: oklch(65.562% 0.0759 26.687);
+  --error-10: #ffd7d2;
+  --error-10: oklch(91.159% 0.0455 26.388);
+  --error-10-on: #37211e;
+  --error-10-on: oklch(27.502% 0.0348 28.041);
+  --error-10-dim: #c19e99;
+  --error-10-dim: oklch(72.951% 0.0424 27.634);
+  --error-11: #ffe7e4;
+  --error-11: oklch(94.651% 0.0267 26.177);
+  --error-11-on: #322523;
+  --error-11-on: oklch(27.907% 0.0202 28.478);
+  --error-11-dim: #c4afac;
+  --error-11-dim: oklch(77.11% 0.0247 27.401);
+  --error-12: #ffedea;
+  --error-12: oklch(95.957% 0.02 28.903);
+  --error-12-on: #382e2c;
+  --error-12-on: oklch(31.149% 0.0151 31.215);
+  --error-12-dim: #c6b5b3;
+  --error-12-dim: oklch(78.681% 0.0197 25.654);
+}
+
+/* stellar:colors-named.css */
+:root {
+  --term-rocket--2: #E35449;
+  --term-rocket--2: oklch(63.511% 0.1801 27.709);
+  --term-rocket--2-on: #FFFFFF;
+  --term-rocket--2-on: oklch(100% 0 89.876);
+  --term-rocket--2-dim: #FFAAA0;
+  --term-rocket--2-dim: oklch(81.839% 0.102 26.877);
+  --term-rocket--1: #F25F40;
+  --term-rocket--1: oklch(67.065% 0.1872 33.609);
+  --term-rocket--1-on: #FFFFFF;
+  --term-rocket--1-on: oklch(100% 0 89.876);
+  --term-rocket--1-dim: #8E1800;
+  --term-rocket--1-dim: oklch(41.822% 0.1556 32.684);
+  --term-rocket-0: #FF6B35;
+  --term-rocket-0: oklch(70.452% 0.1926 39.231);
+  --term-rocket-0-on: #FFFFFF;
+  --term-rocket-0-on: oklch(100% 0 89.876);
+  --term-rocket-0-dim: #9B2F00;
+  --term-rocket-0-dim: oklch(46.463% 0.1509 38.35);
+  --term-rocket-1: #FF8040;
+  --term-rocket-1: oklch(73.49% 0.1726 45.092);
+  --term-rocket-1-on: #471800;
+  --term-rocket-1-on: oklch(27.907% 0.08 44.861);
+  --term-rocket-1-dim: #A74100;
+  --term-rocket-1-dim: oklch(50.811% 0.148 43.935);
+  --term-rocket-2: #FF934F;
+  --term-rocket-2: oklch(76.613% 0.1539 50.752);
+  --term-rocket-2-on: #431A00;
+  --term-rocket-2-on: oklch(27.51% 0.0734 49.328);
+  --term-rocket-2-dim: #AE5513;
+  --term-rocket-2-dim: oklch(54.982% 0.1363 50.458);
+  --term-stellar--2: #1DAB91;
+  --term-stellar--2: oklch(66.496% 0.1188 176.081);
+  --term-stellar--2-on: #FFFFFF;
+  --term-stellar--2-on: oklch(100% 0 89.876);
+  --term-stellar--2-dim: #005E4F;
+  --term-stellar--2-dim: oklch(43.082% 0.08 176.854);
+  --term-stellar--1: #10B7A4;
+  --term-stellar--1: oklch(70.026% 0.1236 181.842);
+  --term-stellar--1-on: #002C27;
+  --term-stellar--1-on: oklch(26.324% 0.0468 183.281);
+  --term-stellar--1-dim: #006D61;
+  --term-stellar--1-dim: oklch(47.975% 0.086 181.845);
+  --term-stellar-0: #00C2B8;
+  --term-stellar-0: oklch(73.363% 0.1275 188.251);
+  --term-stellar-0-on: #002C2A;
+  --term-stellar-0-on: oklch(26.451% 0.0457 190.074);
+  --term-stellar-0-dim: #007A73;
+  --term-stellar-0-dim: oklch(52.209% 0.0909 187.8);
+  --term-stellar-1: #00CDCD;
+  --term-stellar-1: oklch(76.807% 0.1311 194.769);
+  --term-stellar-1-on: #002C2C;
+  --term-stellar-1-on: oklch(26.54% 0.0453 194.769);
+  --term-stellar-1-dim: #A3FFFE;
+  --term-stellar-1-dim: oklch(94.232% 0.0878 194.882);
+  --term-stellar-2: #00D8E2;
+  --term-stellar-2: oklch(80.232% 0.1364 200.746);
+  --term-stellar-2-on: #002C2E;
+  --term-stellar-2-on: oklch(26.633% 0.0453 199.51);
+  --term-stellar-2-dim: #00949C;
+  --term-stellar-2-dim: oklch(60.655% 0.1032 201.555);
+  --term-cult--2: #C78517;
+  --term-cult--2: oklch(66.811% 0.1368 72.623);
+  --term-cult--2-on: #FFFFFF;
+  --term-cult--2-on: oklch(100% 0 89.876);
+  --term-cult--2-dim: #6B4400;
+  --term-cult--2-dim: oklch(42.147% 0.0901 72.386);
+  --term-cult--1: #CE9315;
+  --term-cult--1: oklch(70.292% 0.1416 78.945);
+  --term-cult--1-on: #FFFFFF;
+  --term-cult--1-on: oklch(100% 0 89.876);
+  --term-cult--1-dim: #785300;
+  --term-cult--1-dim: oklch(47.023% 0.0977 78.844);
+  --term-cult-0: #D4A017;
+  --term-cult-0: oklch(73.497% 0.1462 84.267);
+  --term-cult-0-on: #342400;
+  --term-cult-0-on: oklch(27.239% 0.056 83.477);
+  --term-cult-0-dim: #FFDC99;
+  --term-cult-0-dim: oklch(90.882% 0.0929 83.158);
+  --term-cult-1: #D9AE1D;
+  --term-cult-1: oklch(76.821% 0.151 89.942);
+  --term-cult-1-on: #312500;
+  --term-cult-1-on: oklch(27.082% 0.0553 90.277);
+  --term-cult-1-dim: #8E6F00;
+  --term-cult-1-dim: oklch(55.648% 0.1137 89.227);
+  --term-cult-2: #DCBC27;
+  --term-cult-2: oklch(79.989% 0.1555 95.76);
+  --term-cult-2-on: #2F2600;
+  --term-cult-2-on: oklch(27.083% 0.0557 95.47);
+  --term-cult-2-dim: #FFF4D4;
+  --term-cult-2-dim: oklch(96.759% 0.0433 91.264);
+  --term-stardust--2: #7B43BC;
+  --term-stardust--2: oklch(51.209% 0.1828 301.492);
+  --term-stardust--2-on: #FFFFFF;
+  --term-stardust--2-on: oklch(100% 0 89.876);
+  --term-stardust--2-dim: #BE87FF;
+  --term-stardust--2-dim: oklch(72.61% 0.1751 303.495);
+  --term-stardust--1: #8F49C2;
+  --term-stardust--1: oklch(54.732% 0.186 308.063);
+  --term-stardust--1-on: #FFFFFF;
+  --term-stardust--1-on: oklch(100% 0 89.876);
+  --term-stardust--1-dim: #D08DFF;
+  --term-stardust--1-dim: oklch(75.351% 0.1709 309.962);
+  --term-stardust-0: #A34FC7;
+  --term-stardust-0: oklch(58.242% 0.1895 314.41);
+  --term-stardust-0-on: #FFFFFF;
+  --term-stardust-0-on: oklch(100% 0 89.876);
+  --term-stardust-0-dim: #E194FF;
+  --term-stardust-0-dim: oklch(78.195% 0.1664 316.025);
+  --term-stardust-1: #B755CA;
+  --term-stardust-1: oklch(61.678% 0.1925 320.874);
+  --term-stardust-1-on: #FFFFFF;
+  --term-stardust-1-on: oklch(100% 0 89.876);
+  --term-stardust-1-dim: #59006C;
+  --term-stardust-1-dim: oklch(34.015% 0.1643 318.695);
+  --term-stardust-2: #CC5CCC;
+  --term-stardust-2: oklch(65.353% 0.1951 327.522);
+  --term-stardust-2-on: #FFFFFF;
+  --term-stardust-2-on: oklch(100% 0 89.876);
+  --term-stardust-2-dim: #FFA5F9;
+  --term-stardust-2-dim: oklch(83.765% 0.149 329.16);
+}
+
+/* stellar:colors-charts.css */
+:root {
+  --chart-qualitative-1: #534a5b;
+  --chart-qualitative-1: oklch(42.441% 0.0299 308.923);
+  --chart-qualitative-1-on: #ffffff;
+  --chart-qualitative-1-on: oklch(100% 0 89.876);
+  --chart-qualitative-1-dim: #988da0;
+  --chart-qualitative-1-dim: oklch(65.92% 0.0304 311.178);
+  --chart-qualitative-2: #a45a29;
+  --chart-qualitative-2: oklch(54.545% 0.1153 51.297);
+  --chart-qualitative-2-on: #ffffff;
+  --chart-qualitative-2-on: oklch(100% 0 89.876);
+  --chart-qualitative-2-dim: #ef9660;
+  --chart-qualitative-2-dim: oklch(75.354% 0.128 51.026);
+  --chart-qualitative-3: #70684f;
+  --chart-qualitative-3: oklch(51.776% 0.0386 92.429);
+  --chart-qualitative-3-on: #ffffff;
+  --chart-qualitative-3-on: oklch(100% 0 89.876);
+  --chart-qualitative-3-dim: #b0a78a;
+  --chart-qualitative-3-dim: oklch(72.823% 0.0415 92.82);
+  --chart-qualitative-4: #6c513f;
+  --chart-qualitative-4: oklch(45.844% 0.0458 54.965);
+  --chart-qualitative-4-on: #ffffff;
+  --chart-qualitative-4-on: oklch(100% 0 89.876);
+  --chart-qualitative-4-dim: #b2927d;
+  --chart-qualitative-4-dim: oklch(68.378% 0.0489 55.002);
+  --chart-qualitative-5: #917a62;
+  --chart-qualitative-5: oklch(59.465% 0.045 67.981);
+  --chart-qualitative-5-on: #ffffff;
+  --chart-qualitative-5-on: oklch(100% 0 89.876);
+  --chart-qualitative-5-dim: #402f1c;
+  --chart-qualitative-5-dim: oklch(31.955% 0.0395 68.741);
+  --chart-qualitative-6: #879f88;
+  --chart-qualitative-6: oklch(67.729% 0.0429 146.198);
+  --chart-qualitative-6-on: #ffffff;
+  --chart-qualitative-6-on: oklch(100% 0 89.876);
+  --chart-qualitative-6-dim: #c0d9bf;
+  --chart-qualitative-6-dim: oklch(85.962% 0.0444 144.14);
+  --chart-qualitative-7: #91384f;
+  --chart-qualitative-7: oklch(47.051% 0.1218 7.056);
+  --chart-qualitative-7-on: #ffffff;
+  --chart-qualitative-7-on: oklch(100% 0 89.876);
+  --chart-qualitative-7-dim: #e1788f;
+  --chart-qualitative-7-dim: oklch(69.663% 0.1318 7.142);
+  --chart-qualitative-8: #798991;
+  --chart-qualitative-8: oklch(61.988% 0.0222 229.27);
+  --chart-qualitative-8-on: #ffffff;
+  --chart-qualitative-8-on: oklch(100% 0 89.876);
+  --chart-qualitative-8-dim: #303f47;
+  --chart-qualitative-8-dim: oklch(35.777% 0.0239 231.54);
+  --chart-qualitative-9: #8c757d;
+  --chart-qualitative-9: oklch(58.659% 0.0308 355.168);
+  --chart-qualitative-9-on: #ffffff;
+  --chart-qualitative-9-on: oklch(100% 0 89.876);
+  --chart-qualitative-9-dim: #cbb1b9;
+  --chart-qualitative-9-dim: oklch(78.51% 0.0318 357.313);
+  --chart-qualitative-10: #555531;
+  --chart-qualitative-10: oklch(44.009% 0.0539 108.425);
+  --chart-qualitative-10-on: #ffffff;
+  --chart-qualitative-10-on: oklch(100% 0 89.876);
+  --chart-qualitative-10-dim: #98986e;
+  --chart-qualitative-10-dim: oklch(66.886% 0.0585 107.883);
+  --chart-qualitative-11: #44537d;
+  --chart-qualitative-11: oklch(44.853% 0.0718 268.439);
+  --chart-qualitative-11-on: #ffffff;
+  --chart-qualitative-11-on: oklch(100% 0 89.876);
+  --chart-qualitative-11-dim: #8695c4;
+  --chart-qualitative-11-dim: oklch(67.546% 0.0719 270.685);
+  --chart-qualitative-12: #c2a681;
+  --chart-qualitative-12: oklch(74.065% 0.0601 74.382);
+  --chart-qualitative-12-on: #342308;
+  --chart-qualitative-12-on: oklch(27.094% 0.0477 75.59);
+  --chart-qualitative-12-dim: #7c6545;
+  --chart-qualitative-12-dim: oklch(52.124% 0.055 75.251);
+}
+:root {
+  --chart-diverging-1-step-1: #44537d;
+  --chart-diverging-1-step-1: oklch(44.853% 0.0718 268.439);
+  --chart-diverging-1-step-1-on: #ffffff;
+  --chart-diverging-1-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-1-dim: #8695c4;
+  --chart-diverging-1-step-1-dim: oklch(67.546% 0.0719 270.685);
+  --chart-diverging-1-step-2: #48547e;
+  --chart-diverging-1-step-2: oklch(45.431% 0.0706 271.207);
+  --chart-diverging-1-step-2-on: #ffffff;
+  --chart-diverging-1-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-2-dim: #8996c4;
+  --chart-diverging-1-step-2-dim: oklch(67.975% 0.0698 272.204);
+  --chart-diverging-1-step-3: #525682;
+  --chart-diverging-1-step-3: oklch(46.879% 0.0713 279.28);
+  --chart-diverging-1-step-3-on: #ffffff;
+  --chart-diverging-1-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-3-dim: #9497c7;
+  --chart-diverging-1-step-3-dim: oklch(69.143% 0.0704 281.599);
+  --chart-diverging-1-step-4: #635a86;
+  --chart-diverging-1-step-4: oklch(49.426% 0.0699 293.05);
+  --chart-diverging-1-step-4-on: #ffffff;
+  --chart-diverging-1-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-4-dim: #a49aca;
+  --chart-diverging-1-step-4-dim: oklch(71.167% 0.0699 294.105);
+  --chart-diverging-1-step-5: #796188;
+  --chart-diverging-1-step-5: oklch(53.089% 0.0661 312.078);
+  --chart-diverging-1-step-5-on: #ffffff;
+  --chart-diverging-1-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-5-dim: #ba9fca;
+  --chart-diverging-1-step-5-dim: oklch(74.062% 0.0676 312.824);
+  --chart-diverging-1-step-6: #926a87;
+  --chart-diverging-1-step-6: oklch(57.453% 0.0653 336.765);
+  --chart-diverging-1-step-6-on: #ffffff;
+  --chart-diverging-1-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-6-dim: #3c1d36;
+  --chart-diverging-1-step-6-dim: oklch(28.399% 0.0618 334.694);
+  --chart-diverging-1-step-7: #aa7880;
+  --chart-diverging-1-step-7: oklch(62.539% 0.0635 8.481);
+  --chart-diverging-1-step-7-on: #ffffff;
+  --chart-diverging-1-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-7-dim: #ebb2bb;
+  --chart-diverging-1-step-7-dim: oklch(81.816% 0.0673 8.124);
+  --chart-diverging-1-step-8: #b9877b;
+  --chart-diverging-1-step-8: oklch(66.909% 0.0644 33.922);
+  --chart-diverging-1-step-8-on: #ffffff;
+  --chart-diverging-1-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-8-dim: #f8c0b3;
+  --chart-diverging-1-step-8-dim: oklch(85.459% 0.0673 33.361);
+  --chart-diverging-1-step-9: #bf947a;
+  --chart-diverging-1-step-9: oklch(70.036% 0.0636 52.536);
+  --chart-diverging-1-step-9-on: #ffffff;
+  --chart-diverging-1-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-9-dim: #fdccb0;
+  --chart-diverging-1-step-9-dim: oklch(88.099% 0.0673 51.271);
+  --chart-diverging-1-step-10: #c19e7c;
+  --chart-diverging-1-step-10: oklch(72.257% 0.0625 65.743);
+  --chart-diverging-1-step-10-on: #372209;
+  --chart-diverging-1-step-10-on: oklch(27.303% 0.0493 67.54);
+  --chart-diverging-1-step-10-dim: #fdd6b0;
+  --chart-diverging-1-step-10-dim: oklch(89.987% 0.0663 66.078);
+  --chart-diverging-1-step-11: #c2a480;
+  --chart-diverging-1-step-11: oklch(73.641% 0.0605 71.757);
+  --chart-diverging-1-step-11-on: #352309;
+  --chart-diverging-1-step-11-on: oklch(27.249% 0.0475 73.145);
+  --chart-diverging-1-step-11-dim: #7b6343;
+  --chart-diverging-1-step-11-dim: oklch(51.54% 0.0558 74.047);
+  --chart-diverging-1-step-12: #c2a681;
+  --chart-diverging-1-step-12: oklch(74.065% 0.0601 74.382);
+  --chart-diverging-1-step-12-on: #342308;
+  --chart-diverging-1-step-12-on: oklch(27.094% 0.0477 75.59);
+  --chart-diverging-1-step-12-dim: #7c6545;
+  --chart-diverging-1-step-12-dim: oklch(52.124% 0.055 75.251);
+}
+:root {
+  --chart-diverging-2-step-1: #798991;
+  --chart-diverging-2-step-1: oklch(61.988% 0.0222 229.27);
+  --chart-diverging-2-step-1-on: #ffffff;
+  --chart-diverging-2-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-1-dim: #303f47;
+  --chart-diverging-2-step-1-dim: oklch(35.777% 0.0239 231.54);
+  --chart-diverging-2-step-2: #788890;
+  --chart-diverging-2-step-2: oklch(61.654% 0.0222 229.274);
+  --chart-diverging-2-step-2-on: #ffffff;
+  --chart-diverging-2-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-2-dim: #2f3e46;
+  --chart-diverging-2-step-2-dim: oklch(35.395% 0.024 231.559);
+  --chart-diverging-2-step-3: #74868c;
+  --chart-diverging-2-step-3: oklch(60.764% 0.0228 219.862);
+  --chart-diverging-2-step-3-on: #ffffff;
+  --chart-diverging-2-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-3-dim: #afc2c8;
+  --chart-diverging-2-step-3-dim: oklch(80.144% 0.0225 218.664);
+  --chart-diverging-2-step-4: #6e8286;
+  --chart-diverging-2-step-4: oklch(59.199% 0.0241 211.096);
+  --chart-diverging-2-step-4-on: #ffffff;
+  --chart-diverging-2-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-4-dim: #233639;
+  --chart-diverging-2-step-4-dim: oklch(31.788% 0.025 208.273);
+  --chart-diverging-2-step-5: #667d7c;
+  --chart-diverging-2-step-5: oklch(57.114% 0.0268 193.168);
+  --chart-diverging-2-step-5-on: #ffffff;
+  --chart-diverging-2-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-5-dim: #182f2e;
+  --chart-diverging-2-step-5-dim: oklch(28.593% 0.0292 192.067);
+  --chart-diverging-2-step-6: #5d766e;
+  --chart-diverging-2-step-6: oklch(54.344% 0.0318 173.577);
+  --chart-diverging-2-step-6-on: #ffffff;
+  --chart-diverging-2-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-6-dim: #9ab4ab;
+  --chart-diverging-2-step-6-dim: oklch(74.758% 0.0313 172.529);
+  --chart-diverging-2-step-7: #566d5d;
+  --chart-diverging-2-step-7: oklch(51.119% 0.0371 154.563);
+  --chart-diverging-2-step-7-on: #ffffff;
+  --chart-diverging-2-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-7-dim: #94ad9a;
+  --chart-diverging-2-step-7-dim: oklch(72.303% 0.0388 152.567);
+  --chart-diverging-2-step-8: #54654d;
+  --chart-diverging-2-step-8: oklch(48.537% 0.0428 136.637);
+  --chart-diverging-2-step-8-on: #ffffff;
+  --chart-diverging-2-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-8-dim: #93a68a;
+  --chart-diverging-2-step-8-dim: oklch(70.246% 0.0453 135.56);
+  --chart-diverging-2-step-9: #545e40;
+  --chart-diverging-2-step-9: oklch(46.47% 0.0478 123.226);
+  --chart-diverging-2-step-9-on: #ffffff;
+  --chart-diverging-2-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-9-dim: #95a07d;
+  --chart-diverging-2-step-9-dim: oklch(68.745% 0.051 121.917);
+  --chart-diverging-2-step-10: #545938;
+  --chart-diverging-2-step-10: oklch(45.047% 0.0506 115.49);
+  --chart-diverging-2-step-10-on: #ffffff;
+  --chart-diverging-2-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-10-dim: #969b75;
+  --chart-diverging-2-step-10-dim: oklch(67.532% 0.0537 113.943);
+  --chart-diverging-2-step-11: #555633;
+  --chart-diverging-2-step-11: oklch(44.294% 0.0527 109.775);
+  --chart-diverging-2-step-11-on: #ffffff;
+  --chart-diverging-2-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-11-dim: #989870;
+  --chart-diverging-2-step-11-dim: oklch(66.929% 0.0559 107.82);
+  --chart-diverging-2-step-12: #555531;
+  --chart-diverging-2-step-12: oklch(44.009% 0.0539 108.425);
+  --chart-diverging-2-step-12-on: #ffffff;
+  --chart-diverging-2-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-12-dim: #98986e;
+  --chart-diverging-2-step-12-dim: oklch(66.886% 0.0585 107.883);
+}
+:root {
+  --chart-diverging-3-step-1: #879f88;
+  --chart-diverging-3-step-1: oklch(67.729% 0.0429 146.198);
+  --chart-diverging-3-step-1-on: #ffffff;
+  --chart-diverging-3-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-1-dim: #c0d9bf;
+  --chart-diverging-3-step-1-dim: oklch(85.962% 0.0444 144.14);
+  --chart-diverging-3-step-2: #869e85;
+  --chart-diverging-3-step-2: oklch(67.349% 0.0452 143.997);
+  --chart-diverging-3-step-2-on: #ffffff;
+  --chart-diverging-3-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-2-dim: #425842;
+  --chart-diverging-3-step-2-dim: oklch(43.544% 0.0447 144.759);
+  --chart-diverging-3-step-3: #859a7c;
+  --chart-diverging-3-step-3: oklch(66.131% 0.0495 136.314);
+  --chart-diverging-3-step-3-on: #ffffff;
+  --chart-diverging-3-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-3-dim: #40533a;
+  --chart-diverging-3-step-3-dim: oklch(41.868% 0.0468 138.289);
+  --chart-diverging-3-step-4: #84946c;
+  --chart-diverging-3-step-4: oklch(64.3% 0.0601 125.75);
+  --chart-diverging-3-step-4-on: #ffffff;
+  --chart-diverging-3-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-4-dim: #becfa3;
+  --chart-diverging-3-step-4-dim: oklch(83.017% 0.0622 124.907);
+  --chart-diverging-3-step-5: #888a54;
+  --chart-diverging-3-step-5: oklch(61.858% 0.0747 110.219);
+  --chart-diverging-3-step-5-on: #ffffff;
+  --chart-diverging-3-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-5-dim: #3d4011;
+  --chart-diverging-3-step-5-dim: oklch(35.791% 0.0669 112.812);
+  --chart-diverging-3-step-6: #917b39;
+  --chart-diverging-3-step-6: oklch(58.959% 0.0895 91.028);
+  --chart-diverging-3-step-6-on: #ffffff;
+  --chart-diverging-3-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-6-dim: #d1b76f;
+  --chart-diverging-3-step-6-dim: oklch(78.608% 0.0963 90.233);
+  --chart-diverging-3-step-7: #9a6627;
+  --chart-diverging-3-step-7: oklch(55.427% 0.1023 67.616);
+  --chart-diverging-3-step-7-on: #ffffff;
+  --chart-diverging-3-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-7-dim: #e0a35e;
+  --chart-diverging-3-step-7-dim: oklch(75.955% 0.1125 68.12);
+  --chart-diverging-3-step-8: #9d542c;
+  --chart-diverging-3-step-8: oklch(52.546% 0.1107 47.533);
+  --chart-diverging-3-step-8-on: #ffffff;
+  --chart-diverging-3-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-8-dim: #e89164;
+  --chart-diverging-3-step-8-dim: oklch(73.706% 0.1216 47.558);
+  --chart-diverging-3-step-9: #9a4739;
+  --chart-diverging-3-step-9: oklch(50.147% 0.1143 31.252);
+  --chart-diverging-3-step-9-on: #ffffff;
+  --chart-diverging-3-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-9-dim: #e88573;
+  --chart-diverging-3-step-9-dim: oklch(71.955% 0.1252 31.281);
+  --chart-diverging-3-step-10: #963e45;
+  --chart-diverging-3-step-10: oklch(48.42% 0.1185 17.833);
+  --chart-diverging-3-step-10-on: #ffffff;
+  --chart-diverging-3-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-10-dim: #e67d82;
+  --chart-diverging-3-step-10-dim: oklch(70.748% 0.1297 17.909);
+  --chart-diverging-3-step-11: #923a4c;
+  --chart-diverging-3-step-11: oklch(47.4% 0.1196 10.279);
+  --chart-diverging-3-step-11-on: #ffffff;
+  --chart-diverging-3-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-11-dim: #e27a8c;
+  --chart-diverging-3-step-11-dim: oklch(70.017% 0.1296 9.975);
+  --chart-diverging-3-step-12: #91384f;
+  --chart-diverging-3-step-12: oklch(47.051% 0.1218 7.056);
+  --chart-diverging-3-step-12-on: #ffffff;
+  --chart-diverging-3-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-12-dim: #e1788f;
+  --chart-diverging-3-step-12-dim: oklch(69.663% 0.1318 7.142);
+}
+:root {
+  --chart-diverging-4-step-1: #534a5b;
+  --chart-diverging-4-step-1: oklch(42.441% 0.0299 308.923);
+  --chart-diverging-4-step-1-on: #ffffff;
+  --chart-diverging-4-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-1-dim: #988da0;
+  --chart-diverging-4-step-1-dim: oklch(65.92% 0.0304 311.178);
+  --chart-diverging-4-step-2: #544a5b;
+  --chart-diverging-4-step-2: oklch(42.542% 0.0304 311.35);
+  --chart-diverging-4-step-2-on: #ffffff;
+  --chart-diverging-4-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-2-dim: #998ca0;
+  --chart-diverging-4-step-2-dim: oklch(65.803% 0.0328 313.946);
+  --chart-diverging-4-step-3: #574b5b;
+  --chart-diverging-4-step-3: oklch(43.073% 0.0301 317.648);
+  --chart-diverging-4-step-3-on: #ffffff;
+  --chart-diverging-4-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-3-dim: #9c8da0;
+  --chart-diverging-4-step-3-dim: oklch(66.277% 0.0326 319.089);
+  --chart-diverging-4-step-4: #5d4c5b;
+  --chart-diverging-4-step-4: oklch(43.924% 0.0326 330.002);
+  --chart-diverging-4-step-4-on: #ffffff;
+  --chart-diverging-4-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-4-dim: #a28e9e;
+  --chart-diverging-4-step-4-dim: oklch(66.962% 0.0329 332.716);
+  --chart-diverging-4-step-5: #644e59;
+  --chart-diverging-4-step-5: oklch(45.046% 0.0338 347.007);
+  --chart-diverging-4-step-5-on: #ffffff;
+  --chart-diverging-4-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-5-dim: #aa8f9c;
+  --chart-diverging-4-step-5-dim: oklch(67.853% 0.037 347.512);
+  --chart-diverging-4-step-6: #6c5255;
+  --chart-diverging-4-step-6: oklch(46.661% 0.035 10.773);
+  --chart-diverging-4-step-6-on: #ffffff;
+  --chart-diverging-4-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-6-dim: #b29296;
+  --chart-diverging-4-step-6-dim: oklch(69.041% 0.0388 9.675);
+  --chart-diverging-4-step-7: #72574f;
+  --chart-diverging-4-step-7: oklch(48.227% 0.0382 37.135);
+  --chart-diverging-4-step-7-on: #ffffff;
+  --chart-diverging-4-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-7-dim: #b7978d;
+  --chart-diverging-4-step-7-dim: oklch(70.272% 0.0412 38.067);
+  --chart-diverging-4-step-8: #745c4b;
+  --chart-diverging-4-step-8: oklch(49.422% 0.0409 56.912);
+  --chart-diverging-4-step-8-on: #ffffff;
+  --chart-diverging-4-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-8-dim: #b89b88;
+  --chart-diverging-4-step-8-dim: oklch(71.043% 0.0439 55.1);
+  --chart-diverging-4-step-9: #73614b;
+  --chart-diverging-4-step-9: oklch(50.409% 0.0404 72.295);
+  --chart-diverging-4-step-9-on: #ffffff;
+  --chart-diverging-4-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-9-dim: #b6a087;
+  --chart-diverging-4-step-9-dim: oklch(71.843% 0.0435 70.619);
+  --chart-diverging-4-step-10: #72654d;
+  --chart-diverging-4-step-10: oklch(51.247% 0.0395 82.672);
+  --chart-diverging-4-step-10-on: #ffffff;
+  --chart-diverging-4-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-10-dim: #b3a489;
+  --chart-diverging-4-step-10-dim: oklch(72.439% 0.0414 82.266);
+  --chart-diverging-4-step-11: #70674e;
+  --chart-diverging-4-step-11: oklch(51.524% 0.039 90.593);
+  --chart-diverging-4-step-11-on: #ffffff;
+  --chart-diverging-4-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-11-dim: #b1a689;
+  --chart-diverging-4-step-11-dim: oklch(72.678% 0.0422 89.723);
+  --chart-diverging-4-step-12: #70684f;
+  --chart-diverging-4-step-12: oklch(51.776% 0.0386 92.429);
+  --chart-diverging-4-step-12-on: #ffffff;
+  --chart-diverging-4-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-12-dim: #b0a78a;
+  --chart-diverging-4-step-12-dim: oklch(72.823% 0.0415 92.82);
+}
+:root {
+  --chart-diverging-5-step-1: #798991;
+  --chart-diverging-5-step-1: oklch(61.988% 0.0222 229.27);
+  --chart-diverging-5-step-1-on: #ffffff;
+  --chart-diverging-5-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-1-dim: #303f47;
+  --chart-diverging-5-step-1-dim: oklch(35.777% 0.0239 231.54);
+  --chart-diverging-5-step-2: #798991;
+  --chart-diverging-5-step-2: oklch(61.988% 0.0222 229.27);
+  --chart-diverging-5-step-2-on: #ffffff;
+  --chart-diverging-5-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-2-dim: #303f47;
+  --chart-diverging-5-step-2-dim: oklch(35.777% 0.0239 231.54);
+  --chart-diverging-5-step-3: #7a8892;
+  --chart-diverging-5-step-3: oklch(61.875% 0.0223 238.892);
+  --chart-diverging-5-step-3-on: #ffffff;
+  --chart-diverging-5-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-3-dim: #313e47;
+  --chart-diverging-5-step-3-dim: oklch(35.594% 0.0232 238.524);
+  --chart-diverging-5-step-4: #7b8692;
+  --chart-diverging-5-step-4: oklch(61.508% 0.0223 250.508);
+  --chart-diverging-5-step-4-on: #ffffff;
+  --chart-diverging-5-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-4-dim: #323c47;
+  --chart-diverging-5-step-4-dim: oklch(35.157% 0.0234 250.958);
+  --chart-diverging-5-step-5: #7d8492;
+  --chart-diverging-5-step-5: oklch(61.225% 0.0227 264.393);
+  --chart-diverging-5-step-5-on: #ffffff;
+  --chart-diverging-5-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-5-dim: #333a46;
+  --chart-diverging-5-step-5-dim: oklch(34.686% 0.0231 261.211);
+  --chart-diverging-5-step-6: #808191;
+  --chart-diverging-5-step-6: oklch(60.781% 0.0241 282.813);
+  --chart-diverging-5-step-6-on: #ffffff;
+  --chart-diverging-5-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-6-dim: #353744;
+  --chart-diverging-5-step-6-dim: oklch(34.02% 0.0229 278.234);
+  --chart-diverging-5-step-7: #847d8e;
+  --chart-diverging-5-step-7: oklch(60.16% 0.0267 304.221);
+  --chart-diverging-5-step-7-on: #ffffff;
+  --chart-diverging-5-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-7-dim: #383241;
+  --chart-diverging-5-step-7-dim: oklch(32.96% 0.0272 303.156);
+  --chart-diverging-5-step-8: #877a89;
+  --chart-diverging-5-step-8: oklch(59.621% 0.0272 321.718);
+  --chart-diverging-5-step-8-on: #ffffff;
+  --chart-diverging-5-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-8-dim: #392f3c;
+  --chart-diverging-5-step-8-dim: oklch(32.13% 0.0265 318.341);
+  --chart-diverging-5-step-9: #8a7884;
+  --chart-diverging-5-step-9: oklch(59.315% 0.0282 338.195);
+  --chart-diverging-5-step-9-on: #ffffff;
+  --chart-diverging-5-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-9-dim: #3a2d37;
+  --chart-diverging-5-step-9-dim: oklch(31.562% 0.0253 334.378);
+  --chart-diverging-5-step-10: #8b7680;
+  --chart-diverging-5-step-10: oklch(58.864% 0.0297 347.7);
+  --chart-diverging-5-step-10-on: #ffffff;
+  --chart-diverging-5-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-10-dim: #cab2bc;
+  --chart-diverging-5-step-10-dim: oklch(78.705% 0.0306 350.733);
+  --chart-diverging-5-step-11: #8c757e;
+  --chart-diverging-5-step-11: oklch(58.692% 0.0314 352.592);
+  --chart-diverging-5-step-11-on: #ffffff;
+  --chart-diverging-5-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-11-dim: #cbb1ba;
+  --chart-diverging-5-step-11-dim: oklch(78.54% 0.0322 354.958);
+  --chart-diverging-5-step-12: #8c757d;
+  --chart-diverging-5-step-12: oklch(58.659% 0.0308 355.168);
+  --chart-diverging-5-step-12-on: #ffffff;
+  --chart-diverging-5-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-12-dim: #cbb1b9;
+  --chart-diverging-5-step-12-dim: oklch(78.51% 0.0318 357.313);
+}
+:root {
+  --chart-diverging-6-step-1: #534a5b;
+  --chart-diverging-6-step-1: oklch(42.441% 0.0299 308.923);
+  --chart-diverging-6-step-1-on: #ffffff;
+  --chart-diverging-6-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-1-dim: #988da0;
+  --chart-diverging-6-step-1-dim: oklch(65.92% 0.0304 311.178);
+  --chart-diverging-6-step-2: #534b5d;
+  --chart-diverging-6-step-2: oklch(42.75% 0.031 305.261);
+  --chart-diverging-6-step-2-on: #ffffff;
+  --chart-diverging-6-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-2-dim: #978ea2;
+  --chart-diverging-6-step-2-dim: oklch(66.108% 0.0309 305.832);
+  --chart-diverging-6-step-3: #554f61;
+  --chart-diverging-6-step-3: oklch(44.017% 0.0301 300.388);
+  --chart-diverging-6-step-3-on: #ffffff;
+  --chart-diverging-6-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-3-dim: #9991a5;
+  --chart-diverging-6-step-3-dim: oklch(67.008% 0.0305 303.694);
+  --chart-diverging-6-step-4: #575669;
+  --chart-diverging-6-step-4: oklch(46.127% 0.0306 287.545);
+  --chart-diverging-6-step-4-on: #ffffff;
+  --chart-diverging-6-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-4-dim: #9997ad;
+  --chart-diverging-6-step-4-dim: oklch(68.536% 0.0321 289.696);
+  --chart-diverging-6-step-5: #5a6072;
+  --chart-diverging-6-step-5: oklch(49.05% 0.0298 270.744);
+  --chart-diverging-6-step-5-on: #ffffff;
+  --chart-diverging-6-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-5-dim: #9aa0b4;
+  --chart-diverging-6-step-5-dim: oklch(70.747% 0.0299 272.356);
+  --chart-diverging-6-step-6: #5e6d7c;
+  --chart-diverging-6-step-6: oklch(52.776% 0.0298 248.392);
+  --chart-diverging-6-step-6-on: #ffffff;
+  --chart-diverging-6-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-6-dim: #9cacbc;
+  --chart-diverging-6-step-6-dim: oklch(73.714% 0.0293 248.225);
+  --chart-diverging-6-step-7: #647d84;
+  --chart-diverging-6-step-7: oklch(57.249% 0.0309 216.653);
+  --chart-diverging-6-step-7-on: #ffffff;
+  --chart-diverging-6-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-7-dim: #162f35;
+  --chart-diverging-6-step-7-dim: oklch(28.787% 0.0328 215.111);
+  --chart-diverging-6-step-8: #6d8a88;
+  --chart-diverging-6-step-8: oklch(61.05% 0.033 191.116);
+  --chart-diverging-6-step-8-on: #ffffff;
+  --chart-diverging-6-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-8-dim: #a8c6c3;
+  --chart-diverging-6-step-8-dim: oklch(80.349% 0.0326 189.136);
+  --chart-diverging-6-step-9: #769389;
+  --chart-diverging-6-step-9: oklch(63.795% 0.0359 172.131);
+  --chart-diverging-6-step-9-on: #ffffff;
+  --chart-diverging-6-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-9-dim: #b0cec3;
+  --chart-diverging-6-step-9-dim: oklch(82.613% 0.0356 171.265);
+  --chart-diverging-6-step-10: #7f9a89;
+  --chart-diverging-6-step-10: oklch(66.04% 0.0393 157.514);
+  --chart-diverging-6-step-10-on: #ffffff;
+  --chart-diverging-6-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-10-dim: #3a5345;
+  --chart-diverging-6-step-10-dim: oklch(41.734% 0.0384 159.641);
+  --chart-diverging-6-step-11: #859e88;
+  --chart-diverging-6-step-11: oklch(67.357% 0.0426 148.461);
+  --chart-diverging-6-step-11-on: #ffffff;
+  --chart-diverging-6-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-11-dim: #415845;
+  --chart-diverging-6-step-11-dim: oklch(43.553% 0.0418 149.634);
+  --chart-diverging-6-step-12: #879f88;
+  --chart-diverging-6-step-12: oklch(67.729% 0.0429 146.198);
+  --chart-diverging-6-step-12-on: #ffffff;
+  --chart-diverging-6-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-12-dim: #c0d9bf;
+  --chart-diverging-6-step-12-dim: oklch(85.962% 0.0444 144.14);
+}
+:root.dark {
+  --chart-qualitative-1: #c2a681;
+  --chart-qualitative-1: oklch(74.065% 0.0601 74.382);
+  --chart-qualitative-1-on: #342308;
+  --chart-qualitative-1-on: oklch(27.094% 0.0477 75.59);
+  --chart-qualitative-1-dim: #7c6545;
+  --chart-qualitative-1-dim: oklch(52.124% 0.055 75.251);
+  --chart-qualitative-2: #44537d;
+  --chart-qualitative-2: oklch(44.853% 0.0718 268.439);
+  --chart-qualitative-2-on: #ffffff;
+  --chart-qualitative-2-on: oklch(100% 0 89.876);
+  --chart-qualitative-2-dim: #8695c4;
+  --chart-qualitative-2-dim: oklch(67.546% 0.0719 270.685);
+  --chart-qualitative-3: #555531;
+  --chart-qualitative-3: oklch(44.009% 0.0539 108.425);
+  --chart-qualitative-3-on: #ffffff;
+  --chart-qualitative-3-on: oklch(100% 0 89.876);
+  --chart-qualitative-3-dim: #98986e;
+  --chart-qualitative-3-dim: oklch(66.886% 0.0585 107.883);
+  --chart-qualitative-4: #8c757d;
+  --chart-qualitative-4: oklch(58.659% 0.0308 355.168);
+  --chart-qualitative-4-on: #ffffff;
+  --chart-qualitative-4-on: oklch(100% 0 89.876);
+  --chart-qualitative-4-dim: #cbb1b9;
+  --chart-qualitative-4-dim: oklch(78.51% 0.0318 357.313);
+  --chart-qualitative-5: #798991;
+  --chart-qualitative-5: oklch(61.988% 0.0222 229.27);
+  --chart-qualitative-5-on: #ffffff;
+  --chart-qualitative-5-on: oklch(100% 0 89.876);
+  --chart-qualitative-5-dim: #303f47;
+  --chart-qualitative-5-dim: oklch(35.777% 0.0239 231.54);
+  --chart-qualitative-6: #91384f;
+  --chart-qualitative-6: oklch(47.051% 0.1218 7.056);
+  --chart-qualitative-6-on: #ffffff;
+  --chart-qualitative-6-on: oklch(100% 0 89.876);
+  --chart-qualitative-6-dim: #e1788f;
+  --chart-qualitative-6-dim: oklch(69.663% 0.1318 7.142);
+  --chart-qualitative-7: #879f88;
+  --chart-qualitative-7: oklch(67.729% 0.0429 146.198);
+  --chart-qualitative-7-on: #ffffff;
+  --chart-qualitative-7-on: oklch(100% 0 89.876);
+  --chart-qualitative-7-dim: #c0d9bf;
+  --chart-qualitative-7-dim: oklch(85.962% 0.0444 144.14);
+  --chart-qualitative-8: #917a62;
+  --chart-qualitative-8: oklch(59.465% 0.045 67.981);
+  --chart-qualitative-8-on: #ffffff;
+  --chart-qualitative-8-on: oklch(100% 0 89.876);
+  --chart-qualitative-8-dim: #402f1c;
+  --chart-qualitative-8-dim: oklch(31.955% 0.0395 68.741);
+  --chart-qualitative-9: #6c513f;
+  --chart-qualitative-9: oklch(45.844% 0.0458 54.965);
+  --chart-qualitative-9-on: #ffffff;
+  --chart-qualitative-9-on: oklch(100% 0 89.876);
+  --chart-qualitative-9-dim: #b2927d;
+  --chart-qualitative-9-dim: oklch(68.378% 0.0489 55.002);
+  --chart-qualitative-10: #70684f;
+  --chart-qualitative-10: oklch(51.776% 0.0386 92.429);
+  --chart-qualitative-10-on: #ffffff;
+  --chart-qualitative-10-on: oklch(100% 0 89.876);
+  --chart-qualitative-10-dim: #b0a78a;
+  --chart-qualitative-10-dim: oklch(72.823% 0.0415 92.82);
+  --chart-qualitative-11: #a45a29;
+  --chart-qualitative-11: oklch(54.545% 0.1153 51.297);
+  --chart-qualitative-11-on: #ffffff;
+  --chart-qualitative-11-on: oklch(100% 0 89.876);
+  --chart-qualitative-11-dim: #ef9660;
+  --chart-qualitative-11-dim: oklch(75.354% 0.128 51.026);
+  --chart-qualitative-12: #534a5b;
+  --chart-qualitative-12: oklch(42.441% 0.0299 308.923);
+  --chart-qualitative-12-on: #ffffff;
+  --chart-qualitative-12-on: oklch(100% 0 89.876);
+  --chart-qualitative-12-dim: #988da0;
+  --chart-qualitative-12-dim: oklch(65.92% 0.0304 311.178);
+}
+:root.dark {
+  --chart-diverging-1-step-1: #c2a681;
+  --chart-diverging-1-step-1: oklch(74.065% 0.0601 74.382);
+  --chart-diverging-1-step-1-on: #342308;
+  --chart-diverging-1-step-1-on: oklch(27.094% 0.0477 75.59);
+  --chart-diverging-1-step-1-dim: #7c6545;
+  --chart-diverging-1-step-1-dim: oklch(52.124% 0.055 75.251);
+  --chart-diverging-1-step-2: #c2a480;
+  --chart-diverging-1-step-2: oklch(73.641% 0.0605 71.757);
+  --chart-diverging-1-step-2-on: #352309;
+  --chart-diverging-1-step-2-on: oklch(27.249% 0.0475 73.145);
+  --chart-diverging-1-step-2-dim: #7b6343;
+  --chart-diverging-1-step-2-dim: oklch(51.54% 0.0558 74.047);
+  --chart-diverging-1-step-3: #c19e7c;
+  --chart-diverging-1-step-3: oklch(72.257% 0.0625 65.743);
+  --chart-diverging-1-step-3-on: #372209;
+  --chart-diverging-1-step-3-on: oklch(27.303% 0.0493 67.54);
+  --chart-diverging-1-step-3-dim: #fdd6b0;
+  --chart-diverging-1-step-3-dim: oklch(89.987% 0.0663 66.078);
+  --chart-diverging-1-step-4: #bf947a;
+  --chart-diverging-1-step-4: oklch(70.036% 0.0636 52.536);
+  --chart-diverging-1-step-4-on: #ffffff;
+  --chart-diverging-1-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-4-dim: #fdccb0;
+  --chart-diverging-1-step-4-dim: oklch(88.099% 0.0673 51.271);
+  --chart-diverging-1-step-5: #b9877b;
+  --chart-diverging-1-step-5: oklch(66.909% 0.0644 33.922);
+  --chart-diverging-1-step-5-on: #ffffff;
+  --chart-diverging-1-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-5-dim: #f8c0b3;
+  --chart-diverging-1-step-5-dim: oklch(85.459% 0.0673 33.361);
+  --chart-diverging-1-step-6: #aa7880;
+  --chart-diverging-1-step-6: oklch(62.539% 0.0635 8.481);
+  --chart-diverging-1-step-6-on: #ffffff;
+  --chart-diverging-1-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-6-dim: #ebb2bb;
+  --chart-diverging-1-step-6-dim: oklch(81.816% 0.0673 8.124);
+  --chart-diverging-1-step-7: #926a87;
+  --chart-diverging-1-step-7: oklch(57.453% 0.0653 336.765);
+  --chart-diverging-1-step-7-on: #ffffff;
+  --chart-diverging-1-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-7-dim: #3c1d36;
+  --chart-diverging-1-step-7-dim: oklch(28.399% 0.0618 334.694);
+  --chart-diverging-1-step-8: #796188;
+  --chart-diverging-1-step-8: oklch(53.089% 0.0661 312.078);
+  --chart-diverging-1-step-8-on: #ffffff;
+  --chart-diverging-1-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-8-dim: #ba9fca;
+  --chart-diverging-1-step-8-dim: oklch(74.062% 0.0676 312.824);
+  --chart-diverging-1-step-9: #635a86;
+  --chart-diverging-1-step-9: oklch(49.426% 0.0699 293.05);
+  --chart-diverging-1-step-9-on: #ffffff;
+  --chart-diverging-1-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-9-dim: #a49aca;
+  --chart-diverging-1-step-9-dim: oklch(71.167% 0.0699 294.105);
+  --chart-diverging-1-step-10: #525682;
+  --chart-diverging-1-step-10: oklch(46.879% 0.0713 279.28);
+  --chart-diverging-1-step-10-on: #ffffff;
+  --chart-diverging-1-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-10-dim: #9497c7;
+  --chart-diverging-1-step-10-dim: oklch(69.143% 0.0704 281.599);
+  --chart-diverging-1-step-11: #48547e;
+  --chart-diverging-1-step-11: oklch(45.431% 0.0706 271.207);
+  --chart-diverging-1-step-11-on: #ffffff;
+  --chart-diverging-1-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-11-dim: #8996c4;
+  --chart-diverging-1-step-11-dim: oklch(67.975% 0.0698 272.204);
+  --chart-diverging-1-step-12: #44537d;
+  --chart-diverging-1-step-12: oklch(44.853% 0.0718 268.439);
+  --chart-diverging-1-step-12-on: #ffffff;
+  --chart-diverging-1-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-1-step-12-dim: #8695c4;
+  --chart-diverging-1-step-12-dim: oklch(67.546% 0.0719 270.685);
+}
+:root.dark {
+  --chart-diverging-2-step-1: #555531;
+  --chart-diverging-2-step-1: oklch(44.009% 0.0539 108.425);
+  --chart-diverging-2-step-1-on: #ffffff;
+  --chart-diverging-2-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-1-dim: #98986e;
+  --chart-diverging-2-step-1-dim: oklch(66.886% 0.0585 107.883);
+  --chart-diverging-2-step-2: #555633;
+  --chart-diverging-2-step-2: oklch(44.294% 0.0527 109.775);
+  --chart-diverging-2-step-2-on: #ffffff;
+  --chart-diverging-2-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-2-dim: #989870;
+  --chart-diverging-2-step-2-dim: oklch(66.929% 0.0559 107.82);
+  --chart-diverging-2-step-3: #545938;
+  --chart-diverging-2-step-3: oklch(45.047% 0.0506 115.49);
+  --chart-diverging-2-step-3-on: #ffffff;
+  --chart-diverging-2-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-3-dim: #969b75;
+  --chart-diverging-2-step-3-dim: oklch(67.532% 0.0537 113.943);
+  --chart-diverging-2-step-4: #545e40;
+  --chart-diverging-2-step-4: oklch(46.47% 0.0478 123.226);
+  --chart-diverging-2-step-4-on: #ffffff;
+  --chart-diverging-2-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-4-dim: #95a07d;
+  --chart-diverging-2-step-4-dim: oklch(68.745% 0.051 121.917);
+  --chart-diverging-2-step-5: #54654d;
+  --chart-diverging-2-step-5: oklch(48.537% 0.0428 136.637);
+  --chart-diverging-2-step-5-on: #ffffff;
+  --chart-diverging-2-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-5-dim: #93a68a;
+  --chart-diverging-2-step-5-dim: oklch(70.246% 0.0453 135.56);
+  --chart-diverging-2-step-6: #566d5d;
+  --chart-diverging-2-step-6: oklch(51.119% 0.0371 154.563);
+  --chart-diverging-2-step-6-on: #ffffff;
+  --chart-diverging-2-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-6-dim: #94ad9a;
+  --chart-diverging-2-step-6-dim: oklch(72.303% 0.0388 152.567);
+  --chart-diverging-2-step-7: #5d766e;
+  --chart-diverging-2-step-7: oklch(54.344% 0.0318 173.577);
+  --chart-diverging-2-step-7-on: #ffffff;
+  --chart-diverging-2-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-7-dim: #9ab4ab;
+  --chart-diverging-2-step-7-dim: oklch(74.758% 0.0313 172.529);
+  --chart-diverging-2-step-8: #667d7c;
+  --chart-diverging-2-step-8: oklch(57.114% 0.0268 193.168);
+  --chart-diverging-2-step-8-on: #ffffff;
+  --chart-diverging-2-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-8-dim: #182f2e;
+  --chart-diverging-2-step-8-dim: oklch(28.593% 0.0292 192.067);
+  --chart-diverging-2-step-9: #6e8286;
+  --chart-diverging-2-step-9: oklch(59.199% 0.0241 211.096);
+  --chart-diverging-2-step-9-on: #ffffff;
+  --chart-diverging-2-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-9-dim: #233639;
+  --chart-diverging-2-step-9-dim: oklch(31.788% 0.025 208.273);
+  --chart-diverging-2-step-10: #74868c;
+  --chart-diverging-2-step-10: oklch(60.764% 0.0228 219.862);
+  --chart-diverging-2-step-10-on: #ffffff;
+  --chart-diverging-2-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-10-dim: #afc2c8;
+  --chart-diverging-2-step-10-dim: oklch(80.144% 0.0225 218.664);
+  --chart-diverging-2-step-11: #788890;
+  --chart-diverging-2-step-11: oklch(61.654% 0.0222 229.274);
+  --chart-diverging-2-step-11-on: #ffffff;
+  --chart-diverging-2-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-11-dim: #2f3e46;
+  --chart-diverging-2-step-11-dim: oklch(35.395% 0.024 231.559);
+  --chart-diverging-2-step-12: #798991;
+  --chart-diverging-2-step-12: oklch(61.988% 0.0222 229.27);
+  --chart-diverging-2-step-12-on: #ffffff;
+  --chart-diverging-2-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-2-step-12-dim: #303f47;
+  --chart-diverging-2-step-12-dim: oklch(35.777% 0.0239 231.54);
+}
+:root.dark {
+  --chart-diverging-3-step-1: #91384f;
+  --chart-diverging-3-step-1: oklch(47.051% 0.1218 7.056);
+  --chart-diverging-3-step-1-on: #ffffff;
+  --chart-diverging-3-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-1-dim: #e1788f;
+  --chart-diverging-3-step-1-dim: oklch(69.663% 0.1318 7.142);
+  --chart-diverging-3-step-2: #923a4c;
+  --chart-diverging-3-step-2: oklch(47.4% 0.1196 10.279);
+  --chart-diverging-3-step-2-on: #ffffff;
+  --chart-diverging-3-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-2-dim: #e27a8c;
+  --chart-diverging-3-step-2-dim: oklch(70.017% 0.1296 9.975);
+  --chart-diverging-3-step-3: #963e45;
+  --chart-diverging-3-step-3: oklch(48.42% 0.1185 17.833);
+  --chart-diverging-3-step-3-on: #ffffff;
+  --chart-diverging-3-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-3-dim: #e67d82;
+  --chart-diverging-3-step-3-dim: oklch(70.748% 0.1297 17.909);
+  --chart-diverging-3-step-4: #9a4739;
+  --chart-diverging-3-step-4: oklch(50.147% 0.1143 31.252);
+  --chart-diverging-3-step-4-on: #ffffff;
+  --chart-diverging-3-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-4-dim: #e88573;
+  --chart-diverging-3-step-4-dim: oklch(71.955% 0.1252 31.281);
+  --chart-diverging-3-step-5: #9d542c;
+  --chart-diverging-3-step-5: oklch(52.546% 0.1107 47.533);
+  --chart-diverging-3-step-5-on: #ffffff;
+  --chart-diverging-3-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-5-dim: #e89164;
+  --chart-diverging-3-step-5-dim: oklch(73.706% 0.1216 47.558);
+  --chart-diverging-3-step-6: #9a6627;
+  --chart-diverging-3-step-6: oklch(55.427% 0.1023 67.616);
+  --chart-diverging-3-step-6-on: #ffffff;
+  --chart-diverging-3-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-6-dim: #e0a35e;
+  --chart-diverging-3-step-6-dim: oklch(75.955% 0.1125 68.12);
+  --chart-diverging-3-step-7: #917b39;
+  --chart-diverging-3-step-7: oklch(58.959% 0.0895 91.028);
+  --chart-diverging-3-step-7-on: #ffffff;
+  --chart-diverging-3-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-7-dim: #d1b76f;
+  --chart-diverging-3-step-7-dim: oklch(78.608% 0.0963 90.233);
+  --chart-diverging-3-step-8: #888a54;
+  --chart-diverging-3-step-8: oklch(61.858% 0.0747 110.219);
+  --chart-diverging-3-step-8-on: #ffffff;
+  --chart-diverging-3-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-8-dim: #3d4011;
+  --chart-diverging-3-step-8-dim: oklch(35.791% 0.0669 112.812);
+  --chart-diverging-3-step-9: #84946c;
+  --chart-diverging-3-step-9: oklch(64.3% 0.0601 125.75);
+  --chart-diverging-3-step-9-on: #ffffff;
+  --chart-diverging-3-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-9-dim: #becfa3;
+  --chart-diverging-3-step-9-dim: oklch(83.017% 0.0622 124.907);
+  --chart-diverging-3-step-10: #859a7c;
+  --chart-diverging-3-step-10: oklch(66.131% 0.0495 136.314);
+  --chart-diverging-3-step-10-on: #ffffff;
+  --chart-diverging-3-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-10-dim: #40533a;
+  --chart-diverging-3-step-10-dim: oklch(41.868% 0.0468 138.289);
+  --chart-diverging-3-step-11: #869e85;
+  --chart-diverging-3-step-11: oklch(67.349% 0.0452 143.997);
+  --chart-diverging-3-step-11-on: #ffffff;
+  --chart-diverging-3-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-11-dim: #425842;
+  --chart-diverging-3-step-11-dim: oklch(43.544% 0.0447 144.759);
+  --chart-diverging-3-step-12: #879f88;
+  --chart-diverging-3-step-12: oklch(67.729% 0.0429 146.198);
+  --chart-diverging-3-step-12-on: #ffffff;
+  --chart-diverging-3-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-3-step-12-dim: #c0d9bf;
+  --chart-diverging-3-step-12-dim: oklch(85.962% 0.0444 144.14);
+}
+:root.dark {
+  --chart-diverging-4-step-1: #70684f;
+  --chart-diverging-4-step-1: oklch(51.776% 0.0386 92.429);
+  --chart-diverging-4-step-1-on: #ffffff;
+  --chart-diverging-4-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-1-dim: #b0a78a;
+  --chart-diverging-4-step-1-dim: oklch(72.823% 0.0415 92.82);
+  --chart-diverging-4-step-2: #70674e;
+  --chart-diverging-4-step-2: oklch(51.524% 0.039 90.593);
+  --chart-diverging-4-step-2-on: #ffffff;
+  --chart-diverging-4-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-2-dim: #b1a689;
+  --chart-diverging-4-step-2-dim: oklch(72.678% 0.0422 89.723);
+  --chart-diverging-4-step-3: #72654d;
+  --chart-diverging-4-step-3: oklch(51.247% 0.0395 82.672);
+  --chart-diverging-4-step-3-on: #ffffff;
+  --chart-diverging-4-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-3-dim: #b3a489;
+  --chart-diverging-4-step-3-dim: oklch(72.439% 0.0414 82.266);
+  --chart-diverging-4-step-4: #73614b;
+  --chart-diverging-4-step-4: oklch(50.409% 0.0404 72.295);
+  --chart-diverging-4-step-4-on: #ffffff;
+  --chart-diverging-4-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-4-dim: #b6a087;
+  --chart-diverging-4-step-4-dim: oklch(71.843% 0.0435 70.619);
+  --chart-diverging-4-step-5: #745c4b;
+  --chart-diverging-4-step-5: oklch(49.422% 0.0409 56.912);
+  --chart-diverging-4-step-5-on: #ffffff;
+  --chart-diverging-4-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-5-dim: #b89b88;
+  --chart-diverging-4-step-5-dim: oklch(71.043% 0.0439 55.1);
+  --chart-diverging-4-step-6: #72574f;
+  --chart-diverging-4-step-6: oklch(48.227% 0.0382 37.135);
+  --chart-diverging-4-step-6-on: #ffffff;
+  --chart-diverging-4-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-6-dim: #b7978d;
+  --chart-diverging-4-step-6-dim: oklch(70.272% 0.0412 38.067);
+  --chart-diverging-4-step-7: #6c5255;
+  --chart-diverging-4-step-7: oklch(46.661% 0.035 10.773);
+  --chart-diverging-4-step-7-on: #ffffff;
+  --chart-diverging-4-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-7-dim: #b29296;
+  --chart-diverging-4-step-7-dim: oklch(69.041% 0.0388 9.675);
+  --chart-diverging-4-step-8: #644e59;
+  --chart-diverging-4-step-8: oklch(45.046% 0.0338 347.007);
+  --chart-diverging-4-step-8-on: #ffffff;
+  --chart-diverging-4-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-8-dim: #aa8f9c;
+  --chart-diverging-4-step-8-dim: oklch(67.853% 0.037 347.512);
+  --chart-diverging-4-step-9: #5d4c5b;
+  --chart-diverging-4-step-9: oklch(43.924% 0.0326 330.002);
+  --chart-diverging-4-step-9-on: #ffffff;
+  --chart-diverging-4-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-9-dim: #a28e9e;
+  --chart-diverging-4-step-9-dim: oklch(66.962% 0.0329 332.716);
+  --chart-diverging-4-step-10: #574b5b;
+  --chart-diverging-4-step-10: oklch(43.073% 0.0301 317.648);
+  --chart-diverging-4-step-10-on: #ffffff;
+  --chart-diverging-4-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-10-dim: #9c8da0;
+  --chart-diverging-4-step-10-dim: oklch(66.277% 0.0326 319.089);
+  --chart-diverging-4-step-11: #544a5b;
+  --chart-diverging-4-step-11: oklch(42.542% 0.0304 311.35);
+  --chart-diverging-4-step-11-on: #ffffff;
+  --chart-diverging-4-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-11-dim: #998ca0;
+  --chart-diverging-4-step-11-dim: oklch(65.803% 0.0328 313.946);
+  --chart-diverging-4-step-12: #534a5b;
+  --chart-diverging-4-step-12: oklch(42.441% 0.0299 308.923);
+  --chart-diverging-4-step-12-on: #ffffff;
+  --chart-diverging-4-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-4-step-12-dim: #988da0;
+  --chart-diverging-4-step-12-dim: oklch(65.92% 0.0304 311.178);
+}
+:root.dark {
+  --chart-diverging-5-step-1: #8c757d;
+  --chart-diverging-5-step-1: oklch(58.659% 0.0308 355.168);
+  --chart-diverging-5-step-1-on: #ffffff;
+  --chart-diverging-5-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-1-dim: #cbb1b9;
+  --chart-diverging-5-step-1-dim: oklch(78.51% 0.0318 357.313);
+  --chart-diverging-5-step-2: #8c757e;
+  --chart-diverging-5-step-2: oklch(58.692% 0.0314 352.592);
+  --chart-diverging-5-step-2-on: #ffffff;
+  --chart-diverging-5-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-2-dim: #cbb1ba;
+  --chart-diverging-5-step-2-dim: oklch(78.54% 0.0322 354.958);
+  --chart-diverging-5-step-3: #8b7680;
+  --chart-diverging-5-step-3: oklch(58.864% 0.0297 347.7);
+  --chart-diverging-5-step-3-on: #ffffff;
+  --chart-diverging-5-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-3-dim: #cab2bc;
+  --chart-diverging-5-step-3-dim: oklch(78.705% 0.0306 350.733);
+  --chart-diverging-5-step-4: #8a7884;
+  --chart-diverging-5-step-4: oklch(59.315% 0.0282 338.195);
+  --chart-diverging-5-step-4-on: #ffffff;
+  --chart-diverging-5-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-4-dim: #3a2d37;
+  --chart-diverging-5-step-4-dim: oklch(31.562% 0.0253 334.378);
+  --chart-diverging-5-step-5: #877a89;
+  --chart-diverging-5-step-5: oklch(59.621% 0.0272 321.718);
+  --chart-diverging-5-step-5-on: #ffffff;
+  --chart-diverging-5-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-5-dim: #392f3c;
+  --chart-diverging-5-step-5-dim: oklch(32.13% 0.0265 318.341);
+  --chart-diverging-5-step-6: #847d8e;
+  --chart-diverging-5-step-6: oklch(60.16% 0.0267 304.221);
+  --chart-diverging-5-step-6-on: #ffffff;
+  --chart-diverging-5-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-6-dim: #383241;
+  --chart-diverging-5-step-6-dim: oklch(32.96% 0.0272 303.156);
+  --chart-diverging-5-step-7: #808191;
+  --chart-diverging-5-step-7: oklch(60.781% 0.0241 282.813);
+  --chart-diverging-5-step-7-on: #ffffff;
+  --chart-diverging-5-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-7-dim: #353744;
+  --chart-diverging-5-step-7-dim: oklch(34.02% 0.0229 278.234);
+  --chart-diverging-5-step-8: #7d8492;
+  --chart-diverging-5-step-8: oklch(61.225% 0.0227 264.393);
+  --chart-diverging-5-step-8-on: #ffffff;
+  --chart-diverging-5-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-8-dim: #333a46;
+  --chart-diverging-5-step-8-dim: oklch(34.686% 0.0231 261.211);
+  --chart-diverging-5-step-9: #7b8692;
+  --chart-diverging-5-step-9: oklch(61.508% 0.0223 250.508);
+  --chart-diverging-5-step-9-on: #ffffff;
+  --chart-diverging-5-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-9-dim: #323c47;
+  --chart-diverging-5-step-9-dim: oklch(35.157% 0.0234 250.958);
+  --chart-diverging-5-step-10: #7a8892;
+  --chart-diverging-5-step-10: oklch(61.875% 0.0223 238.892);
+  --chart-diverging-5-step-10-on: #ffffff;
+  --chart-diverging-5-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-10-dim: #313e47;
+  --chart-diverging-5-step-10-dim: oklch(35.594% 0.0232 238.524);
+  --chart-diverging-5-step-11: #798991;
+  --chart-diverging-5-step-11: oklch(61.988% 0.0222 229.27);
+  --chart-diverging-5-step-11-on: #ffffff;
+  --chart-diverging-5-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-11-dim: #303f47;
+  --chart-diverging-5-step-11-dim: oklch(35.777% 0.0239 231.54);
+  --chart-diverging-5-step-12: #798991;
+  --chart-diverging-5-step-12: oklch(61.988% 0.0222 229.27);
+  --chart-diverging-5-step-12-on: #ffffff;
+  --chart-diverging-5-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-5-step-12-dim: #303f47;
+  --chart-diverging-5-step-12-dim: oklch(35.777% 0.0239 231.54);
+}
+:root.dark {
+  --chart-diverging-6-step-1: #879f88;
+  --chart-diverging-6-step-1: oklch(67.729% 0.0429 146.198);
+  --chart-diverging-6-step-1-on: #ffffff;
+  --chart-diverging-6-step-1-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-1-dim: #c0d9bf;
+  --chart-diverging-6-step-1-dim: oklch(85.962% 0.0444 144.14);
+  --chart-diverging-6-step-2: #859e88;
+  --chart-diverging-6-step-2: oklch(67.357% 0.0426 148.461);
+  --chart-diverging-6-step-2-on: #ffffff;
+  --chart-diverging-6-step-2-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-2-dim: #415845;
+  --chart-diverging-6-step-2-dim: oklch(43.553% 0.0418 149.634);
+  --chart-diverging-6-step-3: #7f9a89;
+  --chart-diverging-6-step-3: oklch(66.04% 0.0393 157.514);
+  --chart-diverging-6-step-3-on: #ffffff;
+  --chart-diverging-6-step-3-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-3-dim: #3a5345;
+  --chart-diverging-6-step-3-dim: oklch(41.734% 0.0384 159.641);
+  --chart-diverging-6-step-4: #769389;
+  --chart-diverging-6-step-4: oklch(63.795% 0.0359 172.131);
+  --chart-diverging-6-step-4-on: #ffffff;
+  --chart-diverging-6-step-4-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-4-dim: #b0cec3;
+  --chart-diverging-6-step-4-dim: oklch(82.613% 0.0356 171.265);
+  --chart-diverging-6-step-5: #6d8a88;
+  --chart-diverging-6-step-5: oklch(61.05% 0.033 191.116);
+  --chart-diverging-6-step-5-on: #ffffff;
+  --chart-diverging-6-step-5-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-5-dim: #a8c6c3;
+  --chart-diverging-6-step-5-dim: oklch(80.349% 0.0326 189.136);
+  --chart-diverging-6-step-6: #647d84;
+  --chart-diverging-6-step-6: oklch(57.249% 0.0309 216.653);
+  --chart-diverging-6-step-6-on: #ffffff;
+  --chart-diverging-6-step-6-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-6-dim: #162f35;
+  --chart-diverging-6-step-6-dim: oklch(28.787% 0.0328 215.111);
+  --chart-diverging-6-step-7: #5e6d7c;
+  --chart-diverging-6-step-7: oklch(52.776% 0.0298 248.392);
+  --chart-diverging-6-step-7-on: #ffffff;
+  --chart-diverging-6-step-7-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-7-dim: #9cacbc;
+  --chart-diverging-6-step-7-dim: oklch(73.714% 0.0293 248.225);
+  --chart-diverging-6-step-8: #5a6072;
+  --chart-diverging-6-step-8: oklch(49.05% 0.0298 270.744);
+  --chart-diverging-6-step-8-on: #ffffff;
+  --chart-diverging-6-step-8-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-8-dim: #9aa0b4;
+  --chart-diverging-6-step-8-dim: oklch(70.747% 0.0299 272.356);
+  --chart-diverging-6-step-9: #575669;
+  --chart-diverging-6-step-9: oklch(46.127% 0.0306 287.545);
+  --chart-diverging-6-step-9-on: #ffffff;
+  --chart-diverging-6-step-9-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-9-dim: #9997ad;
+  --chart-diverging-6-step-9-dim: oklch(68.536% 0.0321 289.696);
+  --chart-diverging-6-step-10: #554f61;
+  --chart-diverging-6-step-10: oklch(44.017% 0.0301 300.388);
+  --chart-diverging-6-step-10-on: #ffffff;
+  --chart-diverging-6-step-10-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-10-dim: #9991a5;
+  --chart-diverging-6-step-10-dim: oklch(67.008% 0.0305 303.694);
+  --chart-diverging-6-step-11: #534b5d;
+  --chart-diverging-6-step-11: oklch(42.75% 0.031 305.261);
+  --chart-diverging-6-step-11-on: #ffffff;
+  --chart-diverging-6-step-11-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-11-dim: #978ea2;
+  --chart-diverging-6-step-11-dim: oklch(66.108% 0.0309 305.832);
+  --chart-diverging-6-step-12: #534a5b;
+  --chart-diverging-6-step-12: oklch(42.441% 0.0299 308.923);
+  --chart-diverging-6-step-12-on: #ffffff;
+  --chart-diverging-6-step-12-on: oklch(100% 0 89.876);
+  --chart-diverging-6-step-12-dim: #988da0;
+  --chart-diverging-6-step-12-dim: oklch(65.92% 0.0304 311.178);
+}
+
+/* stellar:colors-code.css */
+:root {
+  --code-bg: #141105;
+  --code-bg: oklch(17.733% 0.0241 96.689);
+  --code-inner-bg: #1e1f10;
+  --code-inner-bg: oklch(23.346% 0.0267 111.543);
+  --code-border: #2d1c03;
+  --code-border: oklch(24.273% 0.0469 73.968);
+  --code-border-subtle: #2d1c038c;
+  --code-border-subtle: oklch(24.273% 0.0469 73.968 / 0.549);
+  --code-fg: #e8ebf5;
+  --code-fg: oklch(94.069% 0.0138 272.687);
+  --code-ln: #e8ebf5;
+  --code-ln: oklch(94.069% 0.0138 272.687);
+  --code-ln-current: #e8ebf5;
+  --code-ln-current: oklch(94.069% 0.0138 272.687);
+  --code-highlight-line: #6e727b3d;
+  --code-highlight-line: oklch(55.169% 0.0147 266.614 / 0.239);
+  --code-selection: #6e727b52;
+  --code-selection: oklch(55.169% 0.0147 266.614 / 0.322);
+  --code-comment: #667385;
+  --code-comment: oklch(55.123% 0.0322 256.544);
+  --code-comment-special: #667385;
+  --code-comment-special: oklch(55.123% 0.0322 256.544);
+  --code-keyword: #adb1b9;
+  --code-keyword: oklch(75.965% 0.0123 264.494);
+  --code-keyword-const: #adb1b8;
+  --code-keyword-const: oklch(75.933% 0.0109 261.784);
+  --code-keyword-decl: #b4b388;
+  --code-keyword-decl: oklch(75.66% 0.0585 106.607);
+  --code-keyword-namespace: #c3ac9d;
+  --code-keyword-namespace: oklch(76.018% 0.0341 55.211);
+  --code-type: #adb1b8;
+  --code-type: oklch(75.933% 0.0109 261.784);
+  --code-operator: #adb1b8;
+  --code-operator: oklch(75.933% 0.0109 261.784);
+  --code-name: #acb1bb;
+  --code-name: oklch(75.95% 0.0153 264.477);
+  --code-name-class: #acb1bb;
+  --code-name-class: oklch(75.95% 0.0153 264.477);
+  --code-name-constant: #acb1bb;
+  --code-name-constant: oklch(75.95% 0.0153 264.477);
+  --code-name-decorator: #acb1bb;
+  --code-name-decorator: oklch(75.95% 0.0153 264.477);
+  --code-name-entity: #acb1bb;
+  --code-name-entity: oklch(75.95% 0.0153 264.477);
+  --code-name-exception: #acb1bb;
+  --code-name-exception: oklch(75.95% 0.0153 264.477);
+  --code-name-function: #acb1bb;
+  --code-name-function: oklch(75.95% 0.0153 264.477);
+  --code-name-label: #acb1bb;
+  --code-name-label: oklch(75.95% 0.0153 264.477);
+  --code-name-namespace: #acb1bb;
+  --code-name-namespace: oklch(75.95% 0.0153 264.477);
+  --code-name-property: #acb1bb;
+  --code-name-property: oklch(75.95% 0.0153 264.477);
+  --code-name-tag: #c3ac9d;
+  --code-name-tag: oklch(76.018% 0.0341 55.211);
+  --code-name-variable: #acb1bb;
+  --code-name-variable: oklch(75.95% 0.0153 264.477);
+  --code-name-attribute: #acb1bb;
+  --code-name-attribute: oklch(75.95% 0.0153 264.477);
+  --code-name-builtin: #adb1b8;
+  --code-name-builtin: oklch(75.933% 0.0109 261.784);
+  --code-string: #ff8fa7;
+  --code-string: oklch(77.622% 0.1369 7.051);
+  --code-string-affix: #b7b19a;
+  --code-string-affix: oklch(75.908% 0.0326 94.985);
+  --code-string-delim: #ea9f77;
+  --code-string-delim: oklch(76.721% 0.1048 48.739);
+  --code-string-escape: #dca761;
+  --code-string-escape: oklch(76.328% 0.1076 72.693);
+  --code-string-regex: #f49b64;
+  --code-string-regex: oklch(76.872% 0.1281 51.547);
+  --code-string-doc: #667385;
+  --code-string-doc: oklch(55.123% 0.0322 256.544);
+  --code-number: #e9a06f;
+  --code-number: oklch(76.652% 0.1084 54.26);
+  --code-error: #e8ebf5;
+  --code-error: oklch(94.069% 0.0138 272.687);
+  --code-inserted: #9eb2d1;
+  --code-inserted: oklch(75.875% 0.0499 259.087);
+  --code-deleted: #e8ebf5;
+  --code-deleted: oklch(94.069% 0.0138 272.687);
+  --code-strong: #e8ebf5;
+  --code-strong: oklch(94.069% 0.0138 272.687);
+  --code-emph: #e8ebf5;
+  --code-emph: oklch(94.069% 0.0138 272.687);
+}
+:root.dark {
+  --code-bg: #f8f0d8;
+  --code-bg: oklch(95.509% 0.0327 91.67);
+  --code-inner-bg: #e0e0c8;
+  --code-inner-bg: oklch(90.03% 0.032 107.025);
+  --code-border: #f8d8b0;
+  --code-border: oklch(89.917% 0.0634 73.069);
+  --code-border-subtle: #f8d8b08c;
+  --code-border-subtle: oklch(89.917% 0.0634 73.069 / 0.549);
+  --code-fg: #2b2f37;
+  --code-fg: oklch(30.456% 0.0155 264.313);
+  --code-ln: #2b2f37;
+  --code-ln: oklch(30.456% 0.0155 264.313);
+  --code-ln-current: #2b2f37;
+  --code-ln-current: oklch(30.456% 0.0155 264.313);
+  --code-highlight-line: #b4b8c23d;
+  --code-highlight-line: oklch(78.249% 0.0148 268.459 / 0.239);
+  --code-selection: #b4b8c252;
+  --code-selection: oklch(78.249% 0.0148 268.459 / 0.322);
+  --code-comment: #acb9cd;
+  --code-comment: oklch(78.207% 0.032 258.943);
+  --code-comment-special: #acb9cd;
+  --code-comment-special: oklch(78.207% 0.032 258.943);
+  --code-keyword: #767a82;
+  --code-keyword: oklch(57.876% 0.0131 264.466);
+  --code-keyword-const: #767a81;
+  --code-keyword-const: oklch(57.842% 0.0117 261.774);
+  --code-keyword-decl: #7c7c55;
+  --code-keyword-decl: oklch(57.612% 0.056 108.035);
+  --code-keyword-namespace: #8a7668;
+  --code-keyword-namespace: oklch(58.056% 0.0326 57.005);
+  --code-type: #767a81;
+  --code-type: oklch(57.842% 0.0117 261.774);
+  --code-operator: #767a81;
+  --code-operator: oklch(57.842% 0.0117 261.774);
+  --code-name: #757a84;
+  --code-name: oklch(57.863% 0.0164 264.439);
+  --code-name-class: #757a84;
+  --code-name-class: oklch(57.863% 0.0164 264.439);
+  --code-name-constant: #757a84;
+  --code-name-constant: oklch(57.863% 0.0164 264.439);
+  --code-name-decorator: #757a84;
+  --code-name-decorator: oklch(57.863% 0.0164 264.439);
+  --code-name-entity: #757a84;
+  --code-name-entity: oklch(57.863% 0.0164 264.439);
+  --code-name-exception: #757a84;
+  --code-name-exception: oklch(57.863% 0.0164 264.439);
+  --code-name-function: #757a84;
+  --code-name-function: oklch(57.863% 0.0164 264.439);
+  --code-name-label: #757a84;
+  --code-name-label: oklch(57.863% 0.0164 264.439);
+  --code-name-namespace: #757a84;
+  --code-name-namespace: oklch(57.863% 0.0164 264.439);
+  --code-name-property: #757a84;
+  --code-name-property: oklch(57.863% 0.0164 264.439);
+  --code-name-tag: #8a7668;
+  --code-name-tag: oklch(58.056% 0.0326 57.005);
+  --code-name-variable: #757a84;
+  --code-name-variable: oklch(57.863% 0.0164 264.439);
+  --code-name-attribute: #757a84;
+  --code-name-attribute: oklch(57.863% 0.0164 264.439);
+  --code-name-builtin: #767a81;
+  --code-name-builtin: oklch(57.842% 0.0117 261.774);
+  --code-string: #bd5a71;
+  --code-string: oklch(59.459% 0.129 7.194);
+  --code-string-affix: #7f7a66;
+  --code-string-affix: oklch(57.822% 0.0301 95.557);
+  --code-string-delim: #ab6a46;
+  --code-string-delim: oklch(58.733% 0.0975 49.045);
+  --code-string-escape: #9f7131;
+  --code-string-escape: oklch(58.323% 0.099 72.484);
+  --code-string-regex: #b36634;
+  --code-string-regex: oklch(58.821% 0.1181 51.423);
+  --code-string-doc: #acb9cd;
+  --code-string-doc: oklch(78.207% 0.032 258.943);
+  --code-number: #aa6b3e;
+  --code-number: oklch(58.671% 0.1007 54.863);
+  --code-error: #2b2f37;
+  --code-error: oklch(30.456% 0.0155 264.313);
+  --code-inserted: #687b98;
+  --code-inserted: oklch(57.855% 0.0502 258.725);
+  --code-deleted: #2b2f37;
+  --code-deleted: oklch(30.456% 0.0155 264.313);
+  --code-strong: #2b2f37;
+  --code-strong: oklch(30.456% 0.0155 264.313);
+  --code-emph: #2b2f37;
+  --code-emph: oklch(30.456% 0.0155 264.313);
+}
+
+/* stellar:fonts-families.css */
+:root {
+  --font-antique:
+    Superclarendon,
+    "Bookman Old Style",
+    "URW Bookman",
+    "URW Bookman L",
+    "Georgia Pro",
+    Georgia,
+    serif;
+  --font-classical-humanist:
+    Optima,
+    Candara,
+    "Noto Sans",
+    source-sans-pro,
+    sans-serif;
+  --font-didone:
+    Didot,
+    "Bodoni MT",
+    "Noto Serif Display",
+    "URW Palladio L",
+    P052,
+    Sylfaen,
+    serif;
+  --font-geometric-humanist:
+    Avenir,
+    Montserrat,
+    Corbel,
+    "URW Gothic",
+    source-sans-pro,
+    sans-serif;
+  --font-handwritten:
+    "Segoe Print",
+    "Bradley Hand",
+    Chilanka,
+    TSCu_Comic,
+    casual,
+    cursive;
+  --font-humanist:
+    Seravek,
+    "Gill Sans Nova",
+    Ubuntu,
+    Calibri,
+    "DejaVu Sans",
+    source-sans-pro,
+    sans-serif;
+  --font-industrial:
+    Bahnschrift,
+    "DIN Alternate",
+    "Franklin Gothic Medium",
+    "Nimbus Sans Narrow",
+    sans-serif-condensed,
+    sans-serif;
+  --font-mono:
+    "Dank Mono",
+    "Operator Mono",
+    Inconsolata,
+    "Fira Mono",
+    ui-monospace,
+    "SF Mono",
+    Monaco,
+    "Droid Sans Mono",
+    "Source Code Pro",
+    "Cascadia Code",
+    Menlo,
+    Consolas,
+    "DejaVu Sans Mono",
+    monospace;
+  --font-monospace-code:
+    "Dank Mono",
+    "Operator Mono",
+    Inconsolata,
+    "Fira Mono",
+    ui-monospace,
+    "SF Mono",
+    Monaco,
+    "Droid Sans Mono",
+    "Source Code Pro",
+    "Cascadia Code",
+    Menlo,
+    Consolas,
+    "DejaVu Sans Mono",
+    monospace;
+  --font-monospace-slab-serif:
+    "Nimbus Mono PS",
+    "Courier New",
+    monospace;
+  --font-neo-grotesque:
+    Inter,
+    Roboto,
+    "Helvetica Neue",
+    "Arial Nova",
+    "Nimbus Sans",
+    Arial,
+    sans-serif;
+  --font-old-style:
+    "Iowan Old Style",
+    "Palatino Linotype",
+    "URW Palladio L",
+    P052,
+    serif;
+  --font-rounded-sans:
+    ui-rounded,
+    "Hiragino Maru Gothic ProN",
+    Quicksand,
+    Comfortaa,
+    Manjari,
+    "Arial Rounded MT",
+    "Arial Rounded MT Bold",
+    Calibri,
+    source-sans-pro,
+    sans-serif;
+  --font-sans: system-ui, sans-serif;
+  --font-serif: ui-serif, serif;
+  --font-slab-serif:
+    Rockwell,
+    "Rockwell Nova",
+    "Roboto Slab",
+    "DejaVu Serif",
+    "Sitka Small",
+    serif;
+  --font-transitional:
+    Charter,
+    "Bitstream Charter",
+    "Sitka Text",
+    Cambria,
+    serif;
+}
+
+/* stellar:fonts-weights.css */
+:root {
+  --font-weight-thin: 100;
+  --font-weight-extra-light: 200;
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra-bold: 800;
+  --font-weight-black: 900;
+  --font-weight-extra-black: 950;
+}
+
+/* stellar:general-viewport.css */
+:root {
+  --viewport-min: 320px;
+  --viewport-max: 1440px;
+}
+
+/* stellar:fonts-sizes.css */
+:root {
+  --font-size--2: clamp(0.694444rem, calc(0.667108rem + 0.136684vw), 0.790123rem);
+  --font-size--1: clamp(0.833333rem, calc(0.81746rem + 0.079365vw), 0.888889rem);
+  --font-size-0: 1rem;
+  --font-size-1: clamp(1.125rem, calc(1.103571rem + 0.107143vw), 1.2rem);
+  --font-size-2: clamp(1.265625rem, calc(1.215804rem + 0.249107vw), 1.44rem);
+  --font-size-3: clamp(1.423828rem, calc(1.336922rem + 0.434531vw), 1.728rem);
+  --font-size-4: clamp(1.601807rem, calc(1.467009rem + 0.673991vw), 2.0736rem);
+  --font-size-5: clamp(1.802032rem, calc(1.60595rem + 0.980411vw), 2.48832rem);
+  --font-size-6: clamp(2.027287rem, calc(1.753373rem + 1.369568vw), 2.985984rem);
+  --font-size-7: clamp(2.280697rem, calc(1.908559rem + 1.860691vw), 3.583181rem);
+  --font-size-8: clamp(2.565785rem, calc(2.070347rem + 2.477189vw), 4.299817rem);
+  --font-size-9: clamp(2.886508rem, calc(2.237001rem + 3.247533vw), 5.15978rem);
+  --font-size-10: clamp(3.247321rem, calc(2.406059rem + 4.206308vw), 6.191736rem);
+  --font-size-11: clamp(3.653236rem, calc(2.574137rem + 5.395497vw), 7.430084rem);
+  --font-size-12: clamp(4.109891rem, calc(2.736688rem + 6.866014vw), 8.9161rem);
+}
+
+/* stellar:fonts-line-heights.css */
+:root {
+  --font-line-height--3: 1.234804rem;
+  --font-line-height--2: 1.317536rem;
+  --font-line-height--1: 1.405811rem;
+  --font-line-height-0: 1.5rem;
+  --font-line-height-1: 1.6005rem;
+  --font-line-height-2: 1.707733rem;
+  --font-line-height-3: 1.822152rem;
+  --font-line-height-4: 1.944236rem;
+}
+
+/* stellar:fonts-spacing.css */
+:root {
+  --font-letter-spacing--2: calc(calc(-1 * max(0, 0.025) * pow(max(1, calc(1.778 + 0.222 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1))), 1)) * 1em);
+  --font-letter-spacing--1: calc(calc(-1 * max(0, 0.025)) * 1em);
+  --font-letter-spacing-0: calc(calc(max(0, 0.025) - max(0, 0.025)) * 1em);
+  --font-letter-spacing-1: calc(max(0, 0.025) * 1em);
+  --font-letter-spacing-2: calc(calc(max(0, 0.025) * pow(max(1, calc(1.778 + 0.222 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1))), 1)) * 1em);
+  --font-letter-spacing-3: calc(calc(max(0, 0.025) * pow(max(1, calc(1.778 + 0.222 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1))), 2)) * 1em);
+}
+
+/* stellar:general-size.css */
+:root {
+  --size--2: clamp(0.439179rem, calc(0.346404rem + 0.463872vw), 0.763889rem);
+  --size--1: clamp(0.468604rem, calc(0.340586rem + 0.64009vw), 0.916667rem);
+  --size-0: clamp(0.5rem, calc(0.328571rem + 0.857143vw), 1.1rem);
+  --size-1: clamp(0.5335rem, calc(0.308786rem + 1.123571vw), 1.32rem);
+  --size-2: clamp(0.569244rem, calc(0.279314rem + 1.449651vw), 1.584rem);
+  --size-3: clamp(0.607384rem, calc(0.237836rem + 1.847737vw), 1.9008rem);
+  --size-4: clamp(0.648079rem, calc(0.181541rem + 2.332688vw), 2.28096rem);
+  --size-5: clamp(0.6915rem, calc(0.107028rem + 2.92236vw), 2.737152rem);
+  --size-6: clamp(0.73783rem, calc(0.010187rem + 3.638217vw), 3.284582rem);
+  --size-7: clamp(0.787265rem, calc(-0.113945rem + 4.506048vw), 3.941499rem);
+  --size-8: clamp(0.840012rem, calc(-0.271356rem + 5.556838vw), 4.729799rem);
+  --size-9: clamp(0.896293rem, calc(-0.469269rem + 6.827808vw), 5.675758rem);
+  --size-10: clamp(0.956344rem, calc(-0.716389rem + 8.363666vw), 6.81091rem);
+  --size-11: clamp(1.020419rem, calc(-1.023202rem + 10.218104vw), 8.173092rem);
+  --size-12: clamp(1.088787rem, calc(-1.402334rem + 12.455605vw), 9.80771rem);
+}
+
+/* stellar:general-aspect-ratio.css */
+:root {
+  --aspect-ratio-portrait: 0.75;
+  --aspect-ratio-widescreen: 1.7778;
+  --aspect-ratio-square: 1;
+  --aspect-ratio-landscape: 1.3333;
+  --aspect-ratio-cinematic: 2.35;
+  --aspect-ratio-ultrawide: 3.5556;
+}
+
+/* stellar:general-zindex.css */
+:root {
+  --zindex-drawer: 700;
+  --zindex-dialog: 800;
+  --zindex-dropdown: 900;
+  --zindex-toast: 950;
+  --zindex-tooltip: 1000;
+  --zindex-important: 18014398509481984;
+}
+
+/* stellar:border-width.css */
+:root {
+  --border-width-0: 0.1rem;
+  --border-width-1: clamp(0.1125rem, calc(0.104243rem + 0.041286vw), 0.1414rem);
+  --border-width-2: clamp(0.126562rem, calc(0.105598rem + 0.104824vw), 0.19994rem);
+  --border-width-3: clamp(0.142383rem, calc(0.102288rem + 0.200474vw), 0.282715rem);
+  --border-width-4: clamp(0.160181rem, calc(0.09173rem + 0.342254vw), 0.399758rem);
+  --border-width-5: clamp(0.180203rem, calc(0.070187rem + 0.550079vw), 0.565258rem);
+}
+
+/* stellar:border-radius.css */
+:root {
+  --border-radius-0: clamp(0.125rem, calc(0.017857rem + 0.535714vw), 0.5rem);
+  --border-radius-1: clamp(0.15625rem, calc(0.022321rem + 0.669643vw), 0.625rem);
+  --border-radius-2: clamp(0.195312rem, calc(0.027902rem + 0.837054vw), 0.78125rem);
+  --border-radius-3: clamp(0.244141rem, calc(0.034877rem + 1.046317vw), 0.976562rem);
+  --border-radius-4: clamp(0.305176rem, calc(0.043597rem + 1.307896vw), 1.220703rem);
+  --border-radius-5: clamp(0.38147rem, calc(0.054496rem + 1.63487vw), 1.525879rem);
+  --border-radius-6: clamp(0.476837rem, calc(0.06812rem + 2.043588vw), 1.907349rem);
+  --border-radius-1-2: clamp(0.351562rem, calc(0.050223rem + 1.506696vw), 1.40625rem);
+  --border-radius-2-3: clamp(0.439453rem, calc(0.062779rem + 1.883371vw), 1.757812rem);
+  --border-radius-3-4: clamp(0.549316rem, calc(0.078474rem + 2.354213vw), 2.197266rem);
+  --border-radius-4-5: clamp(0.686646rem, calc(0.098092rem + 2.942766vw), 2.746582rem);
+  --border-radius-5-6: clamp(0.858307rem, calc(0.122615rem + 3.678458vw), 3.433228rem);
+}
+
+/* stellar:border-generate.css */
+:root {
+  --radius-blob-1: 55% 30% 56% 33% / 30% 55% 30% 55%;
+  --radius-blob-2: 34% 30% 60% 60% / 60% 58% 36% 35%;
+  --radius-blob-3: 39% 64% 35% 62% / 61% 32% 62% 33%;
+  --radius-blob-4: 34% 34% 37% 68% / 66% 67% 66% 38%;
+  --radius-blob-5: 69% 36% 39% 38% / 43% 70% 70% 70%;
+  --radius-drawn-1: 0.625rem 8.438rem 0.625rem 8.125rem / 7.813rem 1.563rem 8.75rem 0.625rem;
+  --radius-drawn-2: 9.063rem 2.813rem 2.188rem 9.375rem / 0.625rem 9.063rem 8.438rem 1.25rem;
+  --radius-drawn-3: 11.563rem 2.188rem 10rem 0.625rem / 1.875rem 11.563rem 2.813rem 11.563rem;
+  --radius-drawn-4: 13.125rem 0.625rem 2.5rem 1.25rem / 1.563rem 12.813rem 12.188rem 12.188rem;
+  --radius-drawn-5: 2.188rem 14.375rem 2.188rem 1.25rem / 14.063rem 2.188rem 14.063rem 14.688rem;
+  --radius-drawn-6: 4.688rem 15.938rem 4.063rem 3.125rem / 15.938rem 1.563rem 15.938rem 15.938rem;
+}
+
+/* stellar:animations.css */
+:root {
+  --anim-duration-base: calc(calc(0.18 + 0.06 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-scale-base: 1;
+  --anim-distance-0: calc(calc(0.25 + 0.35 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-1: calc(calc(0.28125 + 0.46875 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-2: calc(calc(0.316406 + 0.621094 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-3: calc(calc(0.355957 + 0.815918 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-4: calc(calc(0.400452 + 1.064392 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-duration--2: calc(calc(0.105403 + 0.033486 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration--1: calc(calc(0.112465 + 0.054202 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-0: calc(calc(0.12 + 0.08 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-1: calc(calc(0.12804 + 0.11196 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-2: calc(calc(0.136619 + 0.151381 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-3: calc(calc(0.145772 + 0.199828 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-4: calc(calc(0.155539 + 0.259181 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-opacity-0: calc(0.2 + 0.4 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-opacity-1: calc(0.2134 + 0.4268 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-opacity-2: calc(0.227698 + 0.455396 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-rotate--1: calc(calc(3.748828 + 2.917838 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-0: calc(calc(4 + 4 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-1: calc(calc(4.268 + 5.332 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-2: calc(calc(4.553956 + 6.966044 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-scale--2: calc(0.834439 + 0.061485 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale--1: calc(0.890347 + 0.065604 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale-0: calc(0.95 + 0.07 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale-1: calc(1.01365 + 0.07469 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale-2: calc(1.081565 + 0.079694 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-distance-none: 0rem;
+  --anim-distance-xs: calc(calc(0.125 + 0.075 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-sm: calc(calc(0.25 + 0.1 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-md: calc(calc(0.5 + 0.2 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-lg: calc(calc(0.75 + 0.25 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-distance-xl: calc(calc(1.25 + 0.35 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1rem);
+  --anim-duration-none: 0s;
+  --anim-duration-instant: 0.01s;
+  --anim-duration-fast: calc(calc(0.12 + 0.06 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-slow: calc(calc(0.28 + 0.08 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1s);
+  --anim-duration-long: 0.7s;
+  --anim-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --anim-ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+  --anim-ease-entrance: cubic-bezier(0.16, 1, 0.3, 1);
+  --anim-ease-bounce: linear(0, 0.011 2.9%, 0.045 5.8%, 0.1 8.6%, 0.176 11.5%, 0.273 14.4%, 0.391 17.3%, 0.53 20.2%, 0.69 23%, 0.871 25.9%, 1.068 28.8%, 1.156 30.3%, 1.171 30.8%, 1.171 31.6%, 1.163 32.4%, 1.138 33.3%, 1.017 36.7%, 0.977 38.1%, 0.945 39.5%, 0.93 40.9%, 0.928 42.4%, 0.937 43.8%, 0.958 45.2%, 1.075 49.2%, 1.101 50.8%, 1.11 52.1%, 1.105 53.4%, 1.062 56.2%, 1.017 58.1%, 0.991 60.2%, 0.98 62.7%, 0.985 65.2%, 1 68.1%, 1.036 74.2%, 1.046 77.4%, 1.044 80.4%, 1.028 83.5%, 1.001 86.9%, 0.999 99.9%);
+  --anim-ease-shake: linear(0, 0.5 12%, 0.25 22%, 0.75 32%, 0.35 42%, 0.65 52%, 0.43 62%, 0.57 72%, 0.48 82%, 0.52 90%, 1);
+  --anim-ease-heartbeat: linear(0, 0.38 14%, 0.7 28%, 0.46 36%, 0.84 50%, 0.62 60%, 0.9 74%, 1);
+  --anim-ease-pulse: cubic-bezier(0.42, 0, 0.58, 1);
+  --anim-ease-linear: linear;
+  --anim-opacity-transparent: 0;
+  --anim-opacity-muted: calc(0.4 + 0.2 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-opacity-solid: 1;
+  --anim-rotate-none: 0deg;
+  --anim-rotate-xs: calc(calc(1 + 1 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-sm: calc(calc(3 + 2 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-md: calc(calc(8 + 4 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-lg: calc(calc(15 + 5 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-neg-xs: calc(calc(-2 + 1 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-neg-sm: calc(calc(-5 + 2 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-rotate-neg-md: calc(calc(-12 + 4 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1)) * 1deg);
+  --anim-scale-down-strong: calc(0.88 + 0.04 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale-down: calc(0.96 + 0.02 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale-up: calc(1.03 + 0.03 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+  --anim-scale-up-strong: calc(1.08 + 0.04 * clamp(0, calc((100vw - 320px) / (1440px - 320px)), 1));
+}
+.animate {
+  animation-duration: var(--anim-duration-base);
+  animation-delay: var(--anim-duration-none);
+  animation-timing-function: var(--anim-ease-standard);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  animation-direction: normal;
+  animation-play-state: running;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate {
+    animation-duration: var(--anim-duration-instant);
+    animation-delay: var(--anim-duration-none);
+    animation-timing-function: var(--anim-ease-linear);
+    animation-iteration-count: 1;
+  }
+}
+
+/* stellar:colors-shadows.css */
+:root {
+  --shadow--4:
+    inset 0 1px 9px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--4:
+    inset 0 1px 9px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow--3:
+    inset 0 1px 8px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--3:
+    inset 0 1px 8px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow--2:
+    inset 0 1px 7px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--2:
+    inset 0 1px 7px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow--1:
+    inset 0 1px 5px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--1:
+    inset 0 1px 5px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow-0: none;
+  --shadow-1: 0 1px 3px -3px rgb(13 17 23 / 0.325);
+  --shadow-2: 0 1px 3px -3px rgb(13 17 23 / 0.293), 0 2px 4px -3px rgb(13 17 23 / 0.321);
+  --shadow-3:
+    0 1px 3px -3px rgb(13 17 23 / 0.274),
+    0 1px 3px -3px rgb(13 17 23 / 0.285),
+    0 2px 4px -3px rgb(13 17 23 / 0.296),
+    0 3px 5px -3px rgb(13 17 23 / 0.306),
+    0 7px 8px -3px rgb(13 17 23 / 0.317);
+  --shadow-4:
+    0 1px 3px -3px rgb(13 17 23 / 0.27),
+    0 1px 3px -3px rgb(13 17 23 / 0.279),
+    0 2px 4px -3px rgb(13 17 23 / 0.288),
+    0 4px 6px -3px rgb(13 17 23 / 0.297),
+    0 9px 1px -2px rgb(13 17 23 / 0.306),
+    0 2px 18px -2px rgb(13 17 23 / 0.314);
+  --shadow-5:
+    0 1px 3px -3px rgb(13 17 23 / 0.268),
+    0 1px 3px -3px rgb(13 17 23 / 0.277),
+    0 3px 5px -3px rgb(13 17 23 / 0.286),
+    0 8px 9px -2px rgb(13 17 23 / 0.294),
+    0 21px 19px -2px rgb(13 17 23 / 0.303),
+    0 46px 39px -2px rgb(13 17 23 / 0.312);
+  --shadow-6:
+    0 1px 3px -3px rgb(13 17 23 / 0.265),
+    0 1px 3px -3px rgb(13 17 23 / 0.272),
+    0 3px 5px -3px rgb(13 17 23 / 0.28),
+    0 8px 9px -2px rgb(13 17 23 / 0.287),
+    0 21px 19px -2px rgb(13 17 23 / 0.295),
+    0 47px 4px -2px rgb(13 17 23 / 0.302),
+    0 93px 77px -1px rgb(13 17 23 / 0.31);
+}
+:root.dark {
+  --shadow--4:
+    inset 0 1px 9px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--4:
+    inset 0 1px 9px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow--3:
+    inset 0 1px 8px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--3:
+    inset 0 1px 8px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow--2:
+    inset 0 1px 7px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--2:
+    inset 0 1px 7px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow--1:
+    inset 0 1px 5px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 #fff,
+    inset 0 .5px 0 0 #0001;
+  --shadow--1:
+    inset 0 1px 5px 0 rgb(13 17 23 / 0.347),
+    inset 0 -.5px 0 0 oklch(100% 0 89.876),
+    inset 0 .5px 0 0 oklch(0% 0 0 / 0.067);
+  --shadow-0: none;
+  --shadow-1: 0 1px 3px -3px rgb(13 17 23 / 0.325);
+  --shadow-2: 0 1px 3px -3px rgb(13 17 23 / 0.293), 0 2px 4px -3px rgb(13 17 23 / 0.321);
+  --shadow-3:
+    0 1px 3px -3px rgb(13 17 23 / 0.274),
+    0 1px 3px -3px rgb(13 17 23 / 0.285),
+    0 2px 4px -3px rgb(13 17 23 / 0.296),
+    0 3px 5px -3px rgb(13 17 23 / 0.306),
+    0 7px 8px -3px rgb(13 17 23 / 0.317);
+  --shadow-4:
+    0 1px 3px -3px rgb(13 17 23 / 0.27),
+    0 1px 3px -3px rgb(13 17 23 / 0.279),
+    0 2px 4px -3px rgb(13 17 23 / 0.288),
+    0 4px 6px -3px rgb(13 17 23 / 0.297),
+    0 9px 1px -2px rgb(13 17 23 / 0.306),
+    0 2px 18px -2px rgb(13 17 23 / 0.314);
+  --shadow-5:
+    0 1px 3px -3px rgb(13 17 23 / 0.268),
+    0 1px 3px -3px rgb(13 17 23 / 0.277),
+    0 3px 5px -3px rgb(13 17 23 / 0.286),
+    0 8px 9px -2px rgb(13 17 23 / 0.294),
+    0 21px 19px -2px rgb(13 17 23 / 0.303),
+    0 46px 39px -2px rgb(13 17 23 / 0.312);
+  --shadow-6:
+    0 1px 3px -3px rgb(13 17 23 / 0.265),
+    0 1px 3px -3px rgb(13 17 23 / 0.272),
+    0 3px 5px -3px rgb(13 17 23 / 0.28),
+    0 8px 9px -2px rgb(13 17 23 / 0.287),
+    0 21px 19px -2px rgb(13 17 23 / 0.295),
+    0 47px 4px -2px rgb(13 17 23 / 0.302),
+    0 93px 77px -1px rgb(13 17 23 / 0.31);
+}
+
+/* stellar:colors-gradients.css */
+:root {
+  --gradient-brand-surface:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--primary-6) 100%, var(--secondary-6) 0%) 0%,
+      color-mix(in srgb, var(--primary-6) 88%, var(--secondary-6) 12%) 12%,
+      color-mix(in srgb, var(--primary-6) 75%, var(--secondary-6) 25%) 25%,
+      color-mix(in srgb, var(--primary-6) 62%, var(--secondary-6) 38%) 38%,
+      color-mix(in srgb, var(--primary-6) 50%, var(--secondary-6) 50%) 50%,
+      color-mix(in srgb, var(--primary-6) 38%, var(--secondary-6) 62%) 62%,
+      color-mix(in srgb, var(--primary-6) 25%, var(--secondary-6) 75%) 75%,
+      color-mix(in srgb, var(--primary-6) 12%, var(--secondary-6) 88%) 88%,
+      color-mix(in srgb, var(--primary-6) 0%, var(--secondary-6) 100%) 100%);
+  --gradient-brand-diagonal:
+    linear-gradient(
+      315deg,
+      color-mix(in srgb, var(--primary-6) 100%, var(--secondary-5) 0%) 0%,
+      color-mix(in srgb, var(--primary-6) 88%, var(--secondary-5) 12%) 12%,
+      color-mix(in srgb, var(--primary-6) 75%, var(--secondary-5) 25%) 25%,
+      color-mix(in srgb, var(--primary-6) 62%, var(--secondary-5) 38%) 38%,
+      color-mix(in srgb, var(--primary-6) 50%, var(--secondary-5) 50%) 50%,
+      color-mix(in srgb, var(--primary-6) 38%, var(--secondary-5) 62%) 62%,
+      color-mix(in srgb, var(--primary-6) 25%, var(--secondary-5) 75%) 75%,
+      color-mix(in srgb, var(--primary-6) 12%, var(--secondary-5) 88%) 88%,
+      color-mix(in srgb, var(--primary-6) 0%, var(--secondary-5) 100%) 100%);
+  --gradient-vapor:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--primary-6) 100%, var(--tertiary-6) 0%) 0%,
+      color-mix(in srgb, var(--primary-6) 88%, var(--tertiary-6) 12%) 6%,
+      color-mix(in srgb, var(--primary-6) 75%, var(--tertiary-6) 25%) 12%,
+      color-mix(in srgb, var(--primary-6) 62%, var(--tertiary-6) 38%) 19%,
+      color-mix(in srgb, var(--primary-6) 50%, var(--tertiary-6) 50%) 25%,
+      color-mix(in srgb, var(--primary-6) 38%, var(--tertiary-6) 62%) 31%,
+      color-mix(in srgb, var(--primary-6) 25%, var(--tertiary-6) 75%) 38%,
+      color-mix(in srgb, var(--primary-6) 12%, var(--tertiary-6) 88%) 44%,
+      color-mix(in srgb, var(--primary-6) 0%, var(--tertiary-6) 100%) 50%,
+      color-mix(in srgb, var(--tertiary-6) 100%, var(--secondary-6) 0%) 50%,
+      color-mix(in srgb, var(--tertiary-6) 88%, var(--secondary-6) 12%) 56%,
+      color-mix(in srgb, var(--tertiary-6) 75%, var(--secondary-6) 25%) 62%,
+      color-mix(in srgb, var(--tertiary-6) 62%, var(--secondary-6) 38%) 69%,
+      color-mix(in srgb, var(--tertiary-6) 50%, var(--secondary-6) 50%) 75%,
+      color-mix(in srgb, var(--tertiary-6) 38%, var(--secondary-6) 62%) 81%,
+      color-mix(in srgb, var(--tertiary-6) 25%, var(--secondary-6) 75%) 88%,
+      color-mix(in srgb, var(--tertiary-6) 12%, var(--secondary-6) 88%) 94%,
+      color-mix(in srgb, var(--tertiary-6) 0%, var(--secondary-6) 100%) 100%);
+  --gradient-spotlight:
+    radial-gradient(
+      circle,
+      color-mix(in srgb, var(--primary-5) 100%, var(--neutral-2) 0%) 0%,
+      color-mix(in srgb, var(--primary-5) 88%, var(--neutral-2) 12%) 12%,
+      color-mix(in srgb, var(--primary-5) 75%, var(--neutral-2) 25%) 25%,
+      color-mix(in srgb, var(--primary-5) 62%, var(--neutral-2) 38%) 38%,
+      color-mix(in srgb, var(--primary-5) 50%, var(--neutral-2) 50%) 50%,
+      color-mix(in srgb, var(--primary-5) 38%, var(--neutral-2) 62%) 62%,
+      color-mix(in srgb, var(--primary-5) 25%, var(--neutral-2) 75%) 75%,
+      color-mix(in srgb, var(--primary-5) 12%, var(--neutral-2) 88%) 88%,
+      color-mix(in srgb, var(--primary-5) 0%, var(--neutral-2) 100%) 100%);
+  --gradient-qualitative-sweep:
+    conic-gradient(
+      from 0deg,
+      color-mix(in srgb, var(--chart-qualitative-1) 50%, var(--chart-qualitative-2) 50%) 0%,
+      color-mix(in srgb, var(--chart-qualitative-1) 50%, var(--chart-qualitative-2) 50%) 9%,
+      color-mix(in srgb, var(--chart-qualitative-2) 50%, var(--chart-qualitative-3) 50%) 9%,
+      color-mix(in srgb, var(--chart-qualitative-2) 50%, var(--chart-qualitative-3) 50%) 18%,
+      color-mix(in srgb, var(--chart-qualitative-3) 50%, var(--chart-qualitative-4) 50%) 18%,
+      color-mix(in srgb, var(--chart-qualitative-3) 50%, var(--chart-qualitative-4) 50%) 27%,
+      color-mix(in srgb, var(--chart-qualitative-4) 50%, var(--chart-qualitative-5) 50%) 27%,
+      color-mix(in srgb, var(--chart-qualitative-4) 50%, var(--chart-qualitative-5) 50%) 36%,
+      color-mix(in srgb, var(--chart-qualitative-5) 50%, var(--chart-qualitative-6) 50%) 36%,
+      color-mix(in srgb, var(--chart-qualitative-5) 50%, var(--chart-qualitative-6) 50%) 45%,
+      color-mix(in srgb, var(--chart-qualitative-6) 50%, var(--chart-qualitative-7) 50%) 45%,
+      color-mix(in srgb, var(--chart-qualitative-6) 50%, var(--chart-qualitative-7) 50%) 54%,
+      color-mix(in srgb, var(--chart-qualitative-7) 50%, var(--chart-qualitative-8) 50%) 54%,
+      color-mix(in srgb, var(--chart-qualitative-7) 50%, var(--chart-qualitative-8) 50%) 63%,
+      color-mix(in srgb, var(--chart-qualitative-8) 50%, var(--chart-qualitative-9) 50%) 63%,
+      color-mix(in srgb, var(--chart-qualitative-8) 50%, var(--chart-qualitative-9) 50%) 72%,
+      color-mix(in srgb, var(--chart-qualitative-9) 50%, var(--chart-qualitative-10) 50%) 72%,
+      color-mix(in srgb, var(--chart-qualitative-9) 50%, var(--chart-qualitative-10) 50%) 81%,
+      color-mix(in srgb, var(--chart-qualitative-10) 50%, var(--chart-qualitative-11) 50%) 81%,
+      color-mix(in srgb, var(--chart-qualitative-10) 50%, var(--chart-qualitative-11) 50%) 90%,
+      color-mix(in srgb, var(--chart-qualitative-11) 50%, var(--chart-qualitative-12) 50%) 90%,
+      color-mix(in srgb, var(--chart-qualitative-11) 50%, var(--chart-qualitative-12) 50%) 100%);
+  --gradient-neutral-soft:
+    linear-gradient(
+      180deg,
+      var(--neutral-variant-5) 0%,
+      var(--neutral-variant-7) 100%);
+  --gradient-striped:
+    repeating-linear-gradient(
+      45deg,
+      color-mix(in srgb, var(--neutral-6) 100%, var(--neutral-6) 0%) 0%,
+      color-mix(in srgb, var(--neutral-6) 88%, var(--neutral-6) 12%) 1%,
+      color-mix(in srgb, var(--neutral-6) 75%, var(--neutral-6) 25%) 2%,
+      color-mix(in srgb, var(--neutral-6) 62%, var(--neutral-6) 38%) 3%,
+      color-mix(in srgb, var(--neutral-6) 50%, var(--neutral-6) 50%) 4%,
+      color-mix(in srgb, var(--neutral-6) 38%, var(--neutral-6) 62%) 5%,
+      color-mix(in srgb, var(--neutral-6) 25%, var(--neutral-6) 75%) 6%,
+      color-mix(in srgb, var(--neutral-6) 12%, var(--neutral-6) 88%) 7%,
+      color-mix(in srgb, var(--neutral-6) 0%, var(--neutral-6) 100%) 8%,
+      color-mix(in srgb, var(--secondary-6) 100%, var(--secondary-6) 0%) 8%,
+      color-mix(in srgb, var(--secondary-6) 88%, var(--secondary-6) 12%) 9%,
+      color-mix(in srgb, var(--secondary-6) 75%, var(--secondary-6) 25%) 10%,
+      color-mix(in srgb, var(--secondary-6) 62%, var(--secondary-6) 38%) 11%,
+      color-mix(in srgb, var(--secondary-6) 50%, var(--secondary-6) 50%) 12%,
+      color-mix(in srgb, var(--secondary-6) 38%, var(--secondary-6) 62%) 13%,
+      color-mix(in srgb, var(--secondary-6) 25%, var(--secondary-6) 75%) 14%,
+      color-mix(in srgb, var(--secondary-6) 12%, var(--secondary-6) 88%) 15%,
+      color-mix(in srgb, var(--secondary-6) 0%, var(--secondary-6) 100%) 16%);
+  --gradient-diverging:
+    linear-gradient(
+      120deg,
+      color-mix(in srgb, var(--secondary-6) 100%, var(--error-6) 0%) 0%,
+      color-mix(in srgb, var(--secondary-6) 88%, var(--error-6) 12%) 12%,
+      color-mix(in srgb, var(--secondary-6) 75%, var(--error-6) 25%) 25%,
+      color-mix(in srgb, var(--secondary-6) 62%, var(--error-6) 38%) 38%,
+      color-mix(in srgb, var(--secondary-6) 50%, var(--error-6) 50%) 50%,
+      color-mix(in srgb, var(--secondary-6) 38%, var(--error-6) 62%) 62%,
+      color-mix(in srgb, var(--secondary-6) 25%, var(--error-6) 75%) 75%,
+      color-mix(in srgb, var(--secondary-6) 12%, var(--error-6) 88%) 88%,
+      color-mix(in srgb, var(--secondary-6) 0%, var(--error-6) 100%) 100%);
+}
+
+/* stellar:index.css */

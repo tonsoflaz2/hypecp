@@ -182,3 +182,15 @@ Route::get('demos/datastar-one', [OneController::class, 'show']);
 Route::get('demos/datastar-one/long-request', [OneController::class, 'long']);
 
 
+
+// ======================> STAR FEDERATION ARCHIVE (raw Datastar + Rocket + Stellar demo)
+Route::get('datastar/podcast', [\App\Http\Controllers\Datastar\ArchiveController::class, 'index']);
+Route::get('datastar/podcast/search', [\App\Http\Controllers\Datastar\ArchiveController::class, 'search']);
+Route::get('datastar/podcast/video/{stage}', [\App\Http\Controllers\Datastar\ArchiveController::class, 'stage']);
+Route::get('search', [\App\Http\Controllers\Datastar\ArchiveController::class, 'filmSearch']);
+Route::get('film/{name}', [\App\Http\Controllers\Datastar\ArchiveController::class, 'filmStage']);
+
+// ======================> STAR FEDERATION ARCHIVE, full text (datastar/pro)
+// Every word of every episode, indexed into database/pro.sqlite by `pro:build`.
+Route::get('datastar/pro', [\App\Http\Controllers\Datastar\ProController::class, 'index']);
+Route::get('datastar/pro/search', [\App\Http\Controllers\Datastar\ProController::class, 'search']);

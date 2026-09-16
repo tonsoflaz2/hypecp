@@ -1,0 +1,766 @@
+/* Star Federation Archive — thin layer over Stellar CSS design tokens. */
+
+/* Theming. Stellar derives every surface/text/border color from its gray
+   ramp, and this build ships that ramp dark-first (--gray-0 is near-black).
+   Single dark space theme; the tuner rewrites tokens via Datastar signals. */
+:root {
+    color-scheme: dark;
+    /* accent family — every accent on the page derives from one hue token */
+    --accent-hue: 305;
+    --accent: oklch(0.58 0.17 var(--accent-hue));
+    --accent-soft: oklch(0.42 0.10 var(--accent-hue) / 0.45);
+    --accent-ink: oklch(0.90 0.05 var(--accent-hue));
+    /* HypeApps glass grammar: glass-16 bg-#FFFFFF14 border-#FFFFFF24/2E */
+    --glass-blur: 16px;
+    --glass-bg: rgb(255 255 255 / 0.08);
+    --glass-bg-strong: rgb(255 255 255 / 0.12);
+    --glass-border: rgb(255 255 255 / 0.16);
+    --glass-shadow: 0 8px 28px rgb(0 0 0 / 0.25);
+    --star: rgb(255 255 255 / 0.9);
+    --planet-hi: oklch(0.52 0.13 var(--accent-hue));
+    --planet-lo: oklch(0.10 0.04 var(--accent-hue));
+    --planet-glow: oklch(0.72 0.17 var(--accent-hue) / 0.55);
+    --gray-0: oklch(0.185 0.03 285);
+    --gray-1: oklch(0.25 0.02 270);
+    --gray-2: oklch(0.28 0.02 264);
+    --gray-3: oklch(0.31 0.02 258);
+    --gray-4: oklch(0.35 0.02 250);
+    --gray-5: oklch(0.39 0.02 240);
+    --gray-6: oklch(0.50 0.02 220);
+    --gray-7: oklch(0.58 0.02 205);
+    --gray-8: oklch(0.65 0.02 190);
+    --gray-9: oklch(0.72 0.01 175);
+    --gray-10: oklch(0.80 0.01 160);
+    --gray-11: oklch(0.88 0.01 145);
+    --gray-12: oklch(0.95 0.01 130);
+}
+
+.wrap {
+    max-width: 68rem;
+    margin-inline: auto;
+    padding: var(--size-5) var(--size-4) var(--size-8);
+}
+
+/* space background — one SVG, theme-aware because it strokes with ramp tokens */
+.space-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+}
+.space-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(60rem 42rem at 88% -12%, oklch(0.5 0.16 300 / 0.24), transparent 65%),
+        radial-gradient(44rem 30rem at 30% 45%, oklch(0.5 0.14 265 / 0.14), transparent 65%),
+        radial-gradient(50rem 36rem at -8% 112%, oklch(0.55 0.13 250 / 0.20), transparent 65%);
+}
+.space-bg svg { width: 100%; height: 100%; display: block; }
+
+/* ---- starfield: 7 tiers modeled on real skies — mostly faint dust, few
+   bright, rare brilliant w/ halos and subtle temperature tints. --stars
+   (0-100, default 50) gates each tier via its mask so the slider adds stars;
+   twinkle animates opacity per-layer at staggered rates, so they compose. */
+.space-bg .stars {
+    position: absolute;
+    inset: -20% 0 0 0;
+    background-repeat: repeat;
+    will-change: transform, opacity;
+    mask-image: linear-gradient(to bottom,
+        rgb(0 0 0 / var(--tier, 1)) 38%,
+        rgb(0 0 0 / calc(var(--tier, 1) * 0.45)) 72%,
+        transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom,
+        rgb(0 0 0 / var(--tier, 1)) 38%,
+        rgb(0 0 0 / calc(var(--tier, 1) * 0.45)) 72%,
+        transparent 95%);
+}
+.space-bg svg {
+    --tier: clamp(0, calc(var(--stars, 50) / 35), 1);
+    mask-image: linear-gradient(to bottom,
+        rgb(0 0 0 / var(--tier, 1)) 38%,
+        rgb(0 0 0 / calc(var(--tier, 1) * 0.45)) 72%,
+        transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom,
+        rgb(0 0 0 / var(--tier, 1)) 38%,
+        rgb(0 0 0 / calc(var(--tier, 1) * 0.45)) 72%,
+        transparent 95%);
+    transform: translateY(calc(var(--scroll, 0) * -0.1 * 1px));
+}
+/* s1: dust — the faint majority */
+.space-bg .s1 {
+    --tier: clamp(0, calc(var(--stars, 50) / 30), 1);
+    background-image:
+        radial-gradient(0.7px 0.7px at 11px 27px, rgb(255 255 255 / 0.55), transparent),
+        radial-gradient(0.6px 0.6px at 43px 91px, rgb(255 255 255 / 0.45), transparent),
+        radial-gradient(0.8px 0.8px at 78px 12px, rgb(255 255 255 / 0.6), transparent),
+        radial-gradient(0.5px 0.5px at 102px 133px, rgb(255 255 255 / 0.4), transparent),
+        radial-gradient(0.7px 0.7px at 134px 61px, rgb(255 255 255 / 0.5), transparent),
+        radial-gradient(0.6px 0.6px at 161px 172px, rgb(255 255 255 / 0.45), transparent),
+        radial-gradient(0.8px 0.8px at 189px 38px, rgb(255 255 255 / 0.55), transparent),
+        radial-gradient(0.5px 0.5px at 24px 158px, rgb(255 255 255 / 0.4), transparent),
+        radial-gradient(0.7px 0.7px at 67px 189px, rgb(255 255 255 / 0.5), transparent),
+        radial-gradient(0.6px 0.6px at 120px 102px, rgb(255 255 255 / 0.45), transparent),
+        radial-gradient(0.7px 0.7px at 154px 9px, rgb(255 255 255 / 0.5), transparent),
+        radial-gradient(0.5px 0.5px at 196px 127px, rgb(255 255 255 / 0.42), transparent),
+        radial-gradient(0.6px 0.6px at 35px 58px, rgb(255 255 255 / 0.48), transparent),
+        radial-gradient(0.7px 0.7px at 91px 165px, rgb(255 255 255 / 0.52), transparent);
+    background-size: 210px 200px;
+    transform: translateY(calc(var(--scroll, 0) * -0.015 * 1px));
+    animation: twinkle-soft 6.1s ease-in-out infinite;
+}
+/* s2: faint */
+.space-bg .s2 {
+    --tier: clamp(0, calc((var(--stars, 50) - 5) / 35), 1);
+    background-image:
+        radial-gradient(1px 1px at 31px 44px, rgb(255 255 255 / 0.8), transparent),
+        radial-gradient(0.9px 0.9px at 118px 156px, rgb(230 238 255 / 0.7), transparent),
+        radial-gradient(1.1px 1.1px at 202px 71px, rgb(255 255 255 / 0.75), transparent),
+        radial-gradient(0.8px 0.8px at 265px 214px, rgb(255 248 235 / 0.65), transparent),
+        radial-gradient(1px 1px at 72px 245px, rgb(255 255 255 / 0.7), transparent),
+        radial-gradient(0.9px 0.9px at 158px 12px, rgb(255 255 255 / 0.72), transparent),
+        radial-gradient(1.1px 1.1px at 241px 138px, rgb(235 242 255 / 0.78), transparent),
+        radial-gradient(0.9px 0.9px at 12px 118px, rgb(255 255 255 / 0.68), transparent),
+        radial-gradient(1px 1px at 187px 262px, rgb(255 244 226 / 0.7), transparent),
+        radial-gradient(0.8px 0.8px at 99px 88px, rgb(255 255 255 / 0.66), transparent);
+    background-size: 290px 280px;
+    transform: translateY(calc(var(--scroll, 0) * -0.03 * 1px));
+    animation: twinkle-soft 4.3s ease-in-out -1.7s infinite;
+}
+/* s3: medium, temperature tints show */
+.space-bg .s3 {
+    --tier: clamp(0, calc((var(--stars, 50) - 15) / 35), 1);
+    background-image:
+        radial-gradient(1.5px 1.5px at 58px 39px, rgb(214 228 255 / 0.9), transparent),
+        radial-gradient(1.3px 1.3px at 199px 240px, rgb(255 255 255 / 0.85), transparent),
+        radial-gradient(1.7px 1.7px at 322px 108px, rgb(255 240 214 / 0.88), transparent),
+        radial-gradient(1.4px 1.4px at 110px 187px, rgb(255 255 255 / 0.8), transparent),
+        radial-gradient(1.6px 1.6px at 268px 320px, rgb(255 226 183 / 0.85), transparent),
+        radial-gradient(1.3px 1.3px at 30px 296px, rgb(228 238 255 / 0.82), transparent),
+        radial-gradient(1.5px 1.5px at 370px 214px, rgb(255 255 255 / 0.86), transparent);
+    background-size: 410px 370px;
+    transform: translateY(calc(var(--scroll, 0) * -0.045 * 1px));
+    animation: twinkle-mid 3.4s ease-in-out -0.9s infinite;
+}
+/* s4: bright, soft halos */
+.space-bg .s4 {
+    --tier: clamp(0, calc((var(--stars, 50) - 20) / 40), 1);
+    background-image:
+        radial-gradient(4px 4px at 130px 90px, rgb(255 255 255 / 0.95) 25%, rgb(210 225 255 / 0.3) 55%, transparent),
+        radial-gradient(3.4px 3.4px at 420px 300px, rgb(255 245 228 / 0.9) 25%, rgb(255 235 200 / 0.25) 55%, transparent),
+        radial-gradient(3.8px 3.8px at 555px 140px, rgb(222 234 255 / 0.92) 25%, rgb(200 220 255 / 0.28) 55%, transparent),
+        radial-gradient(3.2px 3.2px at 250px 430px, rgb(255 255 255 / 0.85) 25%, rgb(255 255 255 / 0.22) 55%, transparent);
+    background-size: 620px 500px;
+    transform: translateY(calc(var(--scroll, 0) * -0.06 * 1px));
+    animation: twinkle-strong 2.7s ease-in-out infinite;
+}
+/* s5: rare brilliant stars, big halos, strong scintillation */
+.space-bg .s5 {
+    --tier: clamp(0, calc((var(--stars, 50) - 30) / 40), 1);
+    background-image:
+        radial-gradient(6px 6px at 240px 160px, rgb(255 255 255 / 1) 18%, rgb(214 228 255 / 0.4) 40%, rgb(214 228 255 / 0.12) 65%, transparent),
+        radial-gradient(5px 5px at 700px 470px, rgb(255 238 210 / 0.95) 18%, rgb(255 220 170 / 0.35) 42%, transparent),
+        radial-gradient(5.5px 5.5px at 520px 640px, rgb(228 238 255 / 0.95) 18%, rgb(210 225 255 / 0.35) 42%, transparent);
+    background-size: 880px 740px;
+    transform: translateY(calc(var(--scroll, 0) * -0.075 * 1px));
+    animation: twinkle-strong 1.9s ease-in-out -0.7s infinite;
+}
+/* s6-s7: bonus density, fade in above ~45% and ~60% */
+.space-bg .s6 {
+    --tier: clamp(0, calc((var(--stars, 50) - 45) / 35), 1);
+    background-image:
+        radial-gradient(1px 1px at 21px 66px, rgb(255 255 255 / 0.85), transparent),
+        radial-gradient(1.3px 1.3px at 96px 141px, rgb(255 255 255 / 0.9), transparent),
+        radial-gradient(0.9px 0.9px at 172px 33px, rgb(238 245 255 / 0.8), transparent),
+        radial-gradient(1.5px 1.5px at 234px 199px, rgb(255 246 228 / 0.92), transparent),
+        radial-gradient(1.1px 1.1px at 61px 232px, rgb(255 255 255 / 0.85), transparent),
+        radial-gradient(1.2px 1.2px at 141px 92px, rgb(255 255 255 / 0.88), transparent),
+        radial-gradient(1px 1px at 208px 118px, rgb(255 255 255 / 0.82), transparent),
+        radial-gradient(1.4px 1.4px at 33px 172px, rgb(224 236 255 / 0.9), transparent),
+        radial-gradient(1.1px 1.1px at 118px 258px, rgb(255 255 255 / 0.85), transparent),
+        radial-gradient(1.2px 1.2px at 251px 58px, rgb(255 250 238 / 0.87), transparent),
+        radial-gradient(1px 1px at 88px 12px, rgb(255 255 255 / 0.8), transparent),
+        radial-gradient(1.3px 1.3px at 182px 226px, rgb(255 255 255 / 0.9), transparent),
+        radial-gradient(0.9px 0.9px at 259px 154px, rgb(255 255 255 / 0.78), transparent),
+        radial-gradient(1.1px 1.1px at 47px 108px, rgb(230 240 255 / 0.84), transparent);
+    background-size: 230px 220px;
+    transform: translateY(calc(var(--scroll, 0) * -0.025 * 1px));
+    animation: twinkle-soft 5.2s ease-in-out -2.9s infinite;
+}
+.space-bg .s7 {
+    --tier: clamp(0, calc((var(--stars, 50) - 55) / 35), 1);
+    background-image:
+        radial-gradient(1.8px 1.8px at 71px 52px, rgb(255 255 255 / 0.95), transparent),
+        radial-gradient(1.4px 1.4px at 189px 174px, rgb(226 237 255 / 0.9), transparent),
+        radial-gradient(2.6px 2.6px at 302px 88px, rgb(255 255 255 / 0.95) 30%, rgb(255 255 255 / 0.25) 60%, transparent),
+        radial-gradient(1.6px 1.6px at 122px 288px, rgb(255 240 216 / 0.92), transparent),
+        radial-gradient(2px 2px at 258px 249px, rgb(255 255 255 / 0.95), transparent),
+        radial-gradient(1.5px 1.5px at 27px 197px, rgb(255 255 255 / 0.88), transparent),
+        radial-gradient(2.3px 2.3px at 344px 322px, rgb(255 228 190 / 0.92) 30%, transparent 60%),
+        radial-gradient(1.4px 1.4px at 217px 21px, rgb(255 255 255 / 0.85), transparent),
+        radial-gradient(1.7px 1.7px at 156px 122px, rgb(216 230 255 / 0.9), transparent),
+        radial-gradient(1.3px 1.3px at 89px 342px, rgb(255 255 255 / 0.82), transparent);
+    background-size: 300px 280px;
+    transform: translateY(calc(var(--scroll, 0) * -0.05 * 1px));
+    animation: twinkle-mid 3.1s ease-in-out -1.3s infinite;
+}
+@keyframes twinkle-soft {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+}
+@keyframes twinkle-mid {
+    0%, 100% { opacity: 1; }
+    42% { opacity: 0.35; }
+    58% { opacity: 0.7; }
+}
+@keyframes twinkle-strong {
+    0%, 100% { opacity: 1; }
+    38% { opacity: 0.15; }
+    52% { opacity: 0.75; }
+    70% { opacity: 0.35; }
+}
+
+.space-bg .fill { fill: var(--gray-12); stroke: none; opacity: 0.45; }
+.space-bg .line { fill: none; stroke: var(--gray-12); stroke-width: 1.4; opacity: 0.14; }
+.space-bg .accent { fill: none; stroke: var(--accent); stroke-width: 1.6; opacity: 0.35; }
+
+/* hero */
+.hero {
+    padding-block: var(--size-6) var(--size-4);
+}
+.kicker {
+    font-size: var(--font-size-0);
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: var(--size-2);
+}
+/* Stellar alpha ships broken --font-size-fluid-* values, so clamp by hand. */
+.hero h1 {
+    font-size: clamp(2.2rem, 1.2rem + 3vw, 3.4rem);
+    max-inline-size: none;
+}
+.lede {
+    max-inline-size: 60ch;
+    margin-top: var(--size-3);
+}
+
+/* search */
+search { display: block; margin-block: var(--size-4); }
+.searchbar {
+    position: relative;
+    max-width: 34rem;
+}
+.searchbar input {
+    width: 100%;
+    font-size: var(--font-size-2);
+    padding: var(--size-2) var(--size-3);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: var(--radius-round);
+    color: var(--text-1);
+}
+.searchbar input:focus-visible { border-color: var(--accent); }
+.spinner {
+    position: absolute;
+    right: var(--size-3);
+    top: 50%;
+    width: var(--size-3);
+    height: var(--size-3);
+    margin-top: calc(var(--size-3) / -2);
+    border: 2px solid var(--accent);
+    border-top-color: transparent;
+    border-radius: var(--radius-round);
+    animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(1turn); } }
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-1);
+    margin-block: var(--size-3);
+}
+.chip {
+    font-size: var(--font-size-0);
+    padding: var(--size-1) var(--size-2);
+    border-radius: var(--radius-round);
+    border: 1px solid var(--glass-border);
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: inherit;
+    box-shadow: none;
+}
+.chip:hover { background: var(--glass-bg-strong); }
+.chip small { color: var(--gray-6); }
+.chip.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: white;
+}
+.chip.active small { color: white; opacity: 0.75; }
+
+.meta {
+    display: flex;
+    gap: var(--size-4);
+    align-items: center;
+    font-size: var(--font-size-0);
+    color: var(--gray-6);
+}
+.meta label { display: inline-flex; gap: var(--size-1); align-items: center; }
+
+/* browse view */
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: var(--size-3);
+    margin-top: var(--size-3);
+}
+.episode {
+    display: block;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--radius-3);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: box-shadow 0.15s var(--ease-2), translate 0.15s var(--ease-2), background 0.15s var(--ease-2);
+}
+.episode:hover { background: var(--glass-bg-strong); translate: 0 -2px; }
+.episode img { width: 100%; height: auto; display: block; }
+.episode h3 {
+    font-size: var(--font-size-1);
+    max-inline-size: none;
+    padding: var(--size-2) var(--size-2) 0;
+}
+.episode p {
+    font-size: var(--font-size-0);
+    color: var(--gray-6);
+    padding: var(--size-1) var(--size-2) var(--size-2);
+}
+
+/* mention cards — differentiated by surface, not borders */
+.mention {
+    display: block;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--radius-3);
+    padding: 0;
+    margin-block: var(--size-3);
+    overflow: hidden;   /* thumb bleeds into the rounded top corner */
+}
+/* episode header band: title left, thumb flush to the top-right corner,
+   solid separator spanning the whole card */
+.ep-head {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: var(--size-3);
+    border-bottom: 1px solid rgb(255 255 255 / 0.22);
+}
+.ep-head-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+    padding: var(--size-2) 0 var(--size-2) var(--size-3);
+    min-width: 0;
+}
+.mention .body { padding: var(--size-2) var(--size-3) var(--size-3); }
+.ep-head .thumb-link { display: block; width: 13rem; aspect-ratio: 16 / 9; flex-shrink: 0; }
+.mention .thumb {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+    transition: opacity 0.15s var(--ease-2);
+}
+.mention .thumb-link:hover .thumb { opacity: 0.85; }
+
+.mention blockquote {
+    display: block;   /* stellar makes blockquote a grid — that blockifies inline children (marks, spans) */
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: var(--font-size-1);
+    line-height: 1.55;
+    margin-block: var(--size-1) 0;
+}
+
+.badge {
+    font-size: var(--font-size-00);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    border-radius: var(--radius-round);
+    padding: 2px var(--size-2);
+}
+.ep-name {
+    font-weight: var(--font-weight-6);
+    color: inherit;
+    text-decoration: none;
+}
+.ep-name:hover { color: var(--accent); text-decoration: underline; }
+.mention time { color: var(--gray-6); font-size: var(--font-size-0); }
+.clip-count { color: var(--gray-6); font-size: var(--font-size-0); }
+/* stacked quotes inside one episode card */
+.mention .quote { border-top: 1px solid var(--glass-border); margin-top: var(--size-2); padding-top: var(--size-2); }
+.mention .quote:first-of-type { border-top: none; margin-top: var(--size-1); padding-top: 0; }
+.mention blockquote {
+    margin-block: var(--size-2);
+    max-inline-size: none;
+}
+.context { color: var(--gray-6); font-size: var(--font-size-0); }
+.compact .context, .compact .thumb-link { display: none; }
+.compact .mention { margin-block: var(--size-2); }
+.compact .mention .body { padding: var(--size-1) var(--size-3) var(--size-2); }
+.compact .ep-head-text { padding-block: var(--size-1); }
+.compact .mention blockquote { margin-block: var(--size-1); padding-block: 0; }
+.mention footer, .q-meta { display: flex; gap: var(--size-2); flex-wrap: wrap; align-items: center; }
+.q-meta time {
+    font-weight: var(--font-weight-7);
+    font-size: var(--font-size-0);
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+}
+.q-spacer { flex: 1; }
+/* yt-clip: buttons sit in the footer row; the player breaks onto a full row */
+yt-clip, yt-clip .clip { display: contents; }
+yt-clip .player {
+    flex-basis: 100%;
+    display: grid;
+    gap: var(--size-2);
+    justify-items: start;
+    margin-top: var(--size-1);
+}
+yt-clip iframe {
+    width: min(100%, 40rem);
+    aspect-ratio: 16 / 9;
+    border: none;
+    border-radius: var(--radius-3);
+    background: black;
+}
+/* Stellar's .btn recipe targets buttons; normalize anchors + rocket buttons. */
+.mention footer .btn, .q-meta .btn {
+    display: inline-block;
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-6);
+    padding: var(--size-1) var(--size-2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-round);
+    background: var(--glass-bg);
+    color: inherit;
+    text-decoration: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+.mention footer .btn:hover, .q-meta .btn:hover { border-color: var(--accent); color: var(--accent); }
+copy-link .btn.copied { background: var(--green-6); border-color: var(--green-6); color: white; }
+
+.muted { color: var(--gray-6); }
+
+
+.site-footer {
+    margin-top: var(--size-8);
+    border-top: 1px solid var(--gray-4);
+    padding-top: var(--size-3);
+    font-size: var(--font-size-0);
+    color: var(--gray-6);
+}
+
+
+/* Stellar's classless mark renders as a full-width bar inside our quotes —
+   pin it to an inline, accent-tinted highlight instead */
+.mention mark {
+    display: inline;
+    inline-size: auto;
+    background: oklch(0.82 0.13 var(--accent-hue) / 0.95);
+    color: oklch(0.22 0.06 var(--accent-hue));
+    padding: 0 0.15em;
+    border-radius: 0.25em;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+
+/* planet horizon — scroll to the bottom and the curve of a planet rises.
+   Pure CSS gradients, colored from the same --accent-hue token as everything
+   else, so the tuner and the theme re-light the planet too. */
+.planet-horizon {
+    position: relative;
+    height: 52vh;
+    margin-top: var(--size-8);
+    overflow: hidden;
+    pointer-events: none;
+}
+/* atmosphere as one smooth radial wash — no clipped-shadow seam */
+.planet-horizon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(130% 170% at 50% 128%,
+        var(--planet-glow) 30%,
+        oklch(0.6 0.12 var(--accent-hue) / 0.10) 52%,
+        transparent 74%);
+}
+.planet {
+    position: absolute;
+    left: 50%;
+    top: 7vh;
+    width: 300vw;
+    max-width: 5200px;
+    aspect-ratio: 1;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background:
+        radial-gradient(120% 120% at 50% 30%,
+            var(--planet-hi) 0%,
+            color-mix(in oklch, var(--planet-hi), var(--planet-lo) 55%) 14%,
+            var(--planet-lo) 34%,
+            oklch(0.06 0.02 285) 60%);
+    box-shadow:
+        0 -3px 22px 3px var(--planet-glow),
+        inset 0 26px 42px -18px oklch(0.95 0.05 var(--accent-hue) / 0.65),
+        inset 0 90px 160px -40px var(--planet-glow);
+}
+
+/* episode timeline — one line down the middle, month nodes, cards alternate */
+.timeline { position: relative; margin-top: var(--size-4); }
+.timeline::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom,
+        transparent,
+        oklch(0.72 0.13 var(--accent-hue) / 0.55) 4% 96%,
+        transparent);
+}
+.tl-month { position: relative; padding-block: var(--size-3) var(--size-2); }
+.tl-stamp {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: var(--size-2);
+    margin-bottom: var(--size-4);
+    max-inline-size: none;
+}
+.tl-stamp small { color: var(--gray-6); font-size: var(--font-size-0); }
+.tl-stamp span {
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-6);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    background: var(--glass-bg-strong);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    border-radius: var(--radius-round);
+    padding: var(--size-1) var(--size-3);
+}
+.tl-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--size-3) var(--size-7);
+}
+.tl-items > * { width: 100%; max-width: 26rem; }
+.tl-items > :nth-child(odd) { grid-column: 1; justify-self: end; }
+.tl-items > :nth-child(even) { grid-column: 2; justify-self: start; }
+.tl-flip .tl-items > :nth-child(odd) { grid-column: 2; justify-self: start; }
+.tl-flip .tl-items > :nth-child(even) { grid-column: 1; justify-self: end; }
+/* mention cards on the timeline: grid gap handles vertical spacing */
+.tl-items .mention { max-width: 30rem; margin-block: 0; }
+@media (width < 44rem) {
+    .timeline::before { left: 5px; transform: none; }
+    .tl-stamp { justify-content: flex-start; padding-left: var(--size-6); }
+    .tl-items { grid-template-columns: 1fr; padding-left: var(--size-6); }
+    .tl-items > :nth-child(odd), .tl-items > :nth-child(even) { grid-column: 1; justify-self: stretch; }
+}
+
+
+/* shared bits (chevron, swatches) once used by the token bar */
+.tb-chev { display: inline-block; transition: rotate 0.3s var(--ease-2); }
+.howmade.open .tb-chev { rotate: 180deg; }
+.tb-swatches { display: flex; gap: var(--size-1); }
+.swatch {
+    width: 1.15rem;
+    height: 1.15rem;
+    padding: 0;
+    border-radius: var(--radius-round);
+    border: 1px solid var(--glass-border);
+    background: oklch(0.6 0.17 var(--sw));
+    box-shadow: none;
+    cursor: pointer;
+}
+.swatch:hover { scale: 1.15; }
+.swatch.active {
+    outline: 2px solid rgb(255 255 255 / 0.85);
+    outline-offset: 2px;
+}
+
+/* "how this site was made" — fixed bottom bar; drawer rises above the toggle */
+.howmade {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 20;
+    background: rgb(20 18 32 / 0.62);
+    border-top: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+}
+.hm-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--size-2);
+    width: 100%;
+    text-align: left;
+    padding: var(--size-1) var(--size-3);
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-6);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gray-9);
+    cursor: pointer;
+}
+.hm-toggle:hover { color: var(--gray-11); }
+.hm-toggle .tb-chev { margin-left: auto; }
+.howmade.open .tb-chev { rotate: 180deg; }
+.hm-drawer {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.4s var(--ease-3);
+}
+.howmade.open .hm-drawer { grid-template-rows: 1fr; }
+.hm-inner {
+    overflow: hidden;
+    min-height: 0;
+    opacity: 0;
+    transition: opacity 0.3s var(--ease-2);
+}
+.howmade.open .hm-inner { opacity: 1; overflow-y: auto; max-height: 70vh; }
+.hm-inner .made-with {
+    max-width: 68rem;
+    margin-inline: auto;
+    padding-inline: var(--size-3);
+}
+.made-with {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--size-3);
+    margin-block: var(--size-3) var(--size-2);
+}
+@media (width < 52rem) { .made-with { grid-template-columns: 1fr; } }
+.made-with { perspective: 1800px; }
+.made-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s var(--ease-3);
+}
+.made-card.flipped { transform: rotateY(180deg); }
+.mc-face {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    -webkit-backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--glass-shadow);
+    border-radius: var(--radius-3);
+    padding: var(--size-3);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    min-height: 100%;
+}
+.mc-back {
+    position: absolute;
+    inset: 0;
+    transform: rotateY(180deg);
+    overflow-y: auto;
+}
+.mc-flip {
+    position: absolute;
+    top: var(--size-2);
+    right: var(--size-2);
+    z-index: 1;
+    font-family: var(--font-mono, monospace);
+}
+.made-card h3 {
+    font-size: var(--font-size-1);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    max-inline-size: none;
+    margin-bottom: var(--size-2);
+}
+.made-card p { font-size: var(--font-size-0); max-inline-size: none; color: var(--gray-11); }
+.made-card code { font-size: 0.85em; }
+.made-card pre {
+    margin-top: var(--size-2);
+    padding: var(--size-2);
+    background: rgb(0 0 0 / 0.35);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-2);
+    font-size: var(--font-size-00);
+    line-height: 1.5;
+    overflow-x: auto;
+    max-inline-size: none;
+    box-shadow: none;
+}
+.made-demo { margin-top: var(--size-3); }
+.made-demo .btn {
+    font-size: var(--font-size-0);
+    font-weight: var(--font-weight-6);
+    padding: var(--size-1) var(--size-2);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-round);
+    background: var(--glass-bg);
+    box-shadow: none;
+    text-shadow: none;
+    color: inherit;
+}
+.made-demo .btn.copied { background: var(--green-6); border-color: var(--green-6); color: white; }
+.token-controls {
+    display: grid;
+    gap: var(--size-2);
+    margin-top: var(--size-3);
+    padding-top: var(--size-3);
+    border-top: 1px solid var(--glass-border);
+}
+.token-controls label {
+    display: grid;
+    grid-template-columns: 3.4rem 1fr 3rem;
+    align-items: center;
+    gap: var(--size-2);
+    font-size: var(--font-size-0);
+    color: var(--gray-9);
+}
+.token-controls input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+.token-controls output { text-align: right; color: var(--gray-6); font-variant-numeric: tabular-nums; }
+.token-controls .chip { justify-self: start; }

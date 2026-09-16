@@ -1,0 +1,47 @@
+<!doctype html>
+<html data-signals="{query: '', term: ''}">
+<head>
+<link rel="stylesheet" href="/stellar.css">
+<style>
+  :root {
+    --hue: 305;
+    --accent: oklch(0.58 0.17 var(--hue));
+    --glass: rgb(255 255 255 / 0.08);
+  }
+  main { background: var(--glass); border-radius: var(--radius-3); }
+  input, button { accent-color: var(--accent); }
+</style>
+<script type="module" src="/datastar-pro.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Not a Space Cult</h1>
+  <p>Every space-adjacent utterance on the Datastar podcast.</p>
+</header>
+
+<!-- search: signals up, HTML down -->
+<input data-bind:query
+  data-on:input__debounce.300ms="@get('/search')">
+<main id="results" data-init="@get('/search')">
+</main>
+
+<script type="module">
+import { rocket } from '/datastar-pro.js'
+// each instance owns $$playing (fixes the shared-$playing bug)
+
+rocket('yt-clip', {
+  mode: 'light',
+  props: ({ string, number }) => ({
+    video: string, start: number.min(0),
+  }),
+  setup: ({ $$ }) => { $$.playing = false },
+  render: ({ html, props: { video, start } }) => html`
+    <button data-on:click="$$playing = true">Watch</button>
+    <template data-if="$$playing">
+      <iframe src="https://www.youtube-nocookie.com/embed/${video}?start=${start}"></iframe>
+    </template>`,
+})
+</script>
+</body>
+</html>
